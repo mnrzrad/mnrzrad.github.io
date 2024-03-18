@@ -1,5 +1,6 @@
 ---
 layout: archive
+title: "About me"
 permalink: /about/
 published: true
 ---
