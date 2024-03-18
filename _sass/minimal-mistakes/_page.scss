@@ -580,3 +580,24 @@ body {
     }
   }
 }
+
+.page__title-and-tabs {
+  text-align: left; /* Align the title and tabs to the left */
+  margin-bottom: 20px; /* Adjust spacing as needed */
+}
+
+.tabs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tabs li {
+  display: inline-block;
+  margin-right: 10px; /* Adjust spacing between tabs as needed */
+}
+
+.tabs a {
+  text-decoration: none;
+  color: #333; /* Adjust tab color as needed */
+}
