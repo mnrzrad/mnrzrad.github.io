@@ -1,0 +1,17 @@
+---
+layout: archive
+title: "Testing the independence of variables for specific covariance structures: A simulation study"
+collection: publications
+permalink: /publications/MDNB2023
+published: true
+excerpt: " "
+---
+
+Marques, F. J.,  Diogo, J., Norouzirad, M., and Bispo, R. (2023). Testing the independence of variables for specific covariance structures: A simulation study, Mathematical Methods in the Applied Sciences, 46(9): 10421–10434. 
+
+[Download Paper](https://onlinelibrary.wiley.com/doi/abs/10.1002/mma.9130)
+
+
+## Abstract 
+----
+In this work, we show how it is possible to test the nullity of covariances, in a set of variables, using a simple univariate procedure. The methodology proposed enables us to perform the multivariate test of independence of several variables, under specific conditions for the covariance structure. The methodology proposed may be used in the high-dimensional setting and, given its simplicity, allows to overcome the difficulties in using the exact distribution of the statistic used in the likelihood ratio testing procedure. A simulation study is provided to assess the power and significance level, in different scenarios, of the testing procedure proposed when compared with different likelihood ratio tests and a methodology available in the literature.
