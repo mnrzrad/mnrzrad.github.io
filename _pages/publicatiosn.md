@@ -6,7 +6,7 @@ published: true
 
 ---
 
-# 2023
+### 2023
 [Combining Kibria-Lukman and Principal Component Estimators for the Distributed Lag Models](/publications/LMMM2023)
 
 Lukman, A.F., Norouzirad, M., Marques, F.J., Mazarei, D., (2023). Combining Kibria-Lukman and Principal Component Estimators for the Distributed Lag Models, Behaviormetrika, 50, 621–652.
