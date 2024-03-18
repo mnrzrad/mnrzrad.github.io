@@ -88,6 +88,10 @@ body {
 }
 
 .page__content {
+  max-width: 900px; /* Adjust this value to increase or decrease the width */
+  margin-left: auto;
+  margin-right: auto;
+  
   h2 {
     padding-bottom: 0.5em;
     border-bottom: 1px solid $border-color;
