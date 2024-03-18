@@ -15,3 +15,7 @@ Lukman, A.F., Norouzirad, M., Marques, F.J., Mazarei, D., (2023). Combining Kibr
 [Regularized Generalized Linear Models to Disclose Host-Microbiome Associations in Colorectal Cancer](/publications/INML2023)
 
 Ibrahimi, E., Norouzirad, M., Meto, M., Lopes, M. B., (2023). Regularized Generalized Linear Models to Disclose Host-Microbiome Associations in Colorectal Cancer,  ICoMS '23: Proceedings of the 2023 6th International Conference on Mathematics and Statistics,  98–102.
+
+[Testing the independence of variables for specific covariance structures: A simulation study](/publications/MDNB2023)
+
+Marques, F. J.,  Diogo, J., Norouzirad, M., and Bispo, R. (2023). Testing the independence of variables for specific covariance structures: A simulation study, Mathematical Methods in the Applied Sciences, 46(9): 10421–10434. 
