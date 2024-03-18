@@ -228,7 +228,12 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
-
+# Collections
+collections:
+  publications:
+    output: true
+    permalink: /:collection/:path/
+    
 # Sass/SCSS
 sass:
   sass_dir: _sass
@@ -309,3 +314,12 @@ defaults:
       comments: # true
       share: true
       related: true
+
+defaults:
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page  
+      author_profile: true 
