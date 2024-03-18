@@ -19,7 +19,7 @@
   animation-delay: 0.3s;
 
   @include breakpoint($x-large) {
-    max-width: $x-large;
+    max-width: none;
   }
 
   ol {
@@ -346,7 +346,7 @@
     display: none;
   }
 
-  @include breakpoint(max-width $large - 1px) {
+  @include breakpoint(-width $large - 1px) {
     label {
       position: relative;
       display: inline-block;
