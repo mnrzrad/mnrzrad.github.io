@@ -1,0 +1,9 @@
+/* Custom styles */
+body {
+    max-width: 800px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the content */
+}
+
+p {
+    font-size: 16px; /* Decrease font size */
+}
