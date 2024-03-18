@@ -18,6 +18,18 @@
     {% include_cached skip-links.html %}
     {% include_cached masthead.html %}
 
+    <!-- Add a container for the title and tabs -->
+    <div class="page__title-and-tabs">
+      <h1>{{ page.title }}</h1>
+      <nav>
+        <ul class="tabs">
+          <li><a href="/publications/">Publications</a></li>
+          <li><a href="/resume/">Resume</a></li>
+          <!-- Add more tabs here if needed -->
+        </ul>
+      </nav>
+    </div>
+    
     <div class="initial-content">
       {{ content }}
     </div>
