@@ -1,16 +1,5 @@
 ---
-defaults:
-  - scope:
-      path: ''
-      type: pages
-    values:
-      show_date: true
-      layout: archive
-      author_profile: true
-      read_time: true
-      comments: null
-      share: null
-      related: null
+layout: archive
 permalink: /about/
 published: true
 ---
