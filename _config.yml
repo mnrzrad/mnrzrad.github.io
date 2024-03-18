@@ -232,7 +232,7 @@ kramdown:
 collections:
   publications:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:title/
     
 # Sass/SCSS
 sass:
