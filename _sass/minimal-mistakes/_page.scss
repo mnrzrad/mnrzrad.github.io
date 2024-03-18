@@ -223,9 +223,11 @@ body {
       padding-left: 1em;
       padding-right: 1em;
 
-      @include breakpoint($x-large) {
-        max-width: none;
-      }
+      max-width: none;
+
+      // @include breakpoint($x-large) {
+      //   max-width: none;
+      // }
     }
 
     .page__title,
