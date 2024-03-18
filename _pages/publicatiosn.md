@@ -6,7 +6,7 @@ published: true
 
 ---
 
-
+# 2023
 [Combining Kibria-Lukman and Principal Component Estimators for the Distributed Lag Models](/publications/LMMM2023)
 
 Lukman, A.F., Norouzirad, M., Marques, F.J., Mazarei, D., (2023). Combining Kibria-Lukman and Principal Component Estimators for the Distributed Lag Models, Behaviormetrika, 50, 621–652.
@@ -19,3 +19,7 @@ Ibrahimi, E., Norouzirad, M., Meto, M., Lopes, M. B., (2023). Regularized Genera
 [Testing the independence of variables for specific covariance structures: A simulation study](/publications/MDNB2023)
 
 Marques, F. J.,  Diogo, J., Norouzirad, M., and Bispo, R. (2023). Testing the independence of variables for specific covariance structures: A simulation study, Mathematical Methods in the Applied Sciences, 46(9): 10421–10434. 
+
+[Predicting COVID-19 Hospital Stays with Kolmogorov–Gabor Polynomials: Charting the Future of Care](/publications/MNTAMMLSM2023)
+
+Marateb H, Norouzirad M, Tavakolian K, Aminorroaya F, Mohebbian M, Mañanas MÁ, Lafuente SR, Sami R, Mansourian M. Predicting COVID-19 Hospital Stays with Kolmogorov–Gabor Polynomials: Charting the Future of Care. Information. 2023; 14(11):590.
