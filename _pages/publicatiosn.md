@@ -29,3 +29,10 @@ Marateb H, Norouzirad M, Tavakolian K, Aminorroaya F, Mohebbian M, Mañanas MÁ,
 Norouzirad, M., Rao, G. R., and Mazarei, D. (2023). Neutrosophic Generalized Rayleigh Distribution with Application, Neutrosophic Sets and Systems, 58, 248-262.
 
 
+[Neutrosophic Generalized Exponential Distribution with Application](/publications/RNM2023)
+
+Rao, G. S., .Norouzirad, M., and Mazarei, D. (2023). Neutrosophic Generalized Exponential Distribution with Application, Neutrosophic Sets and Systems, 55, 471-485.
+
+[Feasible Stein-Type and Preliminary Test Estimations in the System Regression Model](/publications/NAMM2023)
+
+Norouzirad, M., Arashi, M., Marques, F. J.,  Mamod Khan, N. A. (2023). Feasible Stein-Type and Preliminary Test Estimations in the System Regression Model, Statistics, Optimization & Information Computing, 11(2), 258-275.
