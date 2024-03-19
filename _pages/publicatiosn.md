@@ -43,9 +43,30 @@ Norouzirad, M., Arashi, M., Marques, F. J.,  Mamod Khan, N. A. (2023). Feasible 
 Norouzirad, M., Arashi, M., Marques, F.J., Esmaeili, F. (2022). Robust Estimation Through Preliminary Testing Based on the LAD-LASSO. In: Bekker, A., Ferreira, J.T., Arashi, M., Chen, DG. (eds) Innovations in Multivariate Statistical Modeling. Emerging Topics in Statistics and Biostatistics . Springer, Cham. 
 
 [Differenced-Based Double Shrinking in Partial Linear Models](/publications/NAR2022)
+
 Norouzirad, M., Arashi, M., & Roozbeh, M. (2022). Differenced-Based Double Shrinking in Partial Linear Models. Journal of Data Science and Modeling, 1(1), 21-32. 
 
 ### 2021
 [A High-Dimensional Counterpart for the Ridge Estimator in Multicollinear Situations](/publications/ANRK2021)
 
 Arashi, M., Norouzirad, M., Roozbeh, M., Khan, N.M. (2021). A High-Dimensional Counterpart for the Ridge Estimator in Multicollinear Situations, Mathematics. 9(23):3057.
+
+### 2020
+[LAD, LASSO and Related Strategies in Regression Models](/publications/YAAN2020)
+
+Yüzbaşı, B., Ahmed, S.E., Arashi, M., Norouzirad, M. (2020). LAD, LASSO and Related Strategies in Regression Models. In: Xu, J., Ahmed, S., Cooke, F., Duca, G. (eds) 
+Proceedings of the Thirteenth International Conference on Management Science and Engineering Management. ICMSEM 2019. Advances in Intelligent Systems and Computing, vol 1001. Springer, Cham. 
+
+### 2019
+[A Note on Preliminary Test Estimator in High Dimensional Regression Model](/publications/AN2019)
+
+Arashi, M. and Norouzirad, M., (2019). A Note on Preliminary Test Estimator in High Dimensional Regression Model, Biostatistics and Biometrics Open Access Journal, 9(2), 31-33. 
+
+[Preliminary test and Stein-type shrinkage ridge estimators in robust regression](/publications/NA2019)
+
+Norouzirad, M., Arashi, M. (2019). Preliminary test and Stein-type shrinkage ridge estimators in robust regression.  Statistical Papers, 60, 1849–1882. 
+
+### 2018
+[Rank theory approach to ridge, LASSO, preliminary test and Stein-type estimators: A comparative study](/publications/SNN2018)
+
+Saleh, A.K.M.E., Navrátil, R. and Norouzirad, M. (2018), Rank theory approach to ridge, LASSO, preliminary test and Stein-type estimators: A comparative study. The Canadian Journal of Statistics, 46, 690-704.
