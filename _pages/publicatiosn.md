@@ -80,4 +80,31 @@ Saleh, A. K. Md. E., and Norouzirad, M. (2018). On Shrinkage Estimation: Non-ort
 Norouzirad, M., Hossain, S., and Arashi, M. (2018). Shrinkage and penalized estimators in weighted least absolute deviations regression models, Journal of Statistical Computation and Simulation, 88(8), 1557-1575.
 
 [Preliminary test and Stein-type shrinkage LASSO-based estimators](/publications/NA2018)
+
 Norouzirad, M. and Arashi, M. (2018). Preliminary test and Stein-type shrinkage LASSO-based estimators, SORT-Statistics and Operations Research Transactions, 42(1), 45-58.
+
+### 2017
+[Improved robust ridge M-estimation](/publications/NAA2017)
+
+Norouzirad, M., Arashi. M. and Ahmed, S. E. (2017). Improved robust ridge M-estimation, Journal of Statistical Computation and Simulation, 87(18), 3469-3490.
+
+### 2015
+[Singular Ridge Regression With Stochastic Constraints](/publications/AJN2015)
+
+Arashi, M., Janfada, M. and Norouzirad, M. (2015). Singular Ridge Regression With Stochastic Constraints, Communications in Statistics - Theory and Methods, 44(6), 1281-1292.
+
+### 2014
+[Bayesian analysis in multivariate regression models with conjugate priors](/publications/AINS2014)
+
+Arashi, M., Iranmanesh, A., Norouzirad, M., and Salarzadeh Jenatabadi, H. (2014). Bayesian analysis in multivariate regression models with conjugate priors, Statistics, 48(6), 1324-1334.
+
+[Improved preliminary test and Stein-rule Liu estimators for the ill-conditioned elliptical linear regression model](/publications/AKNN2014)
+
+​Arashi, M., Kibria, B. M. G., Norouzirad, M., Nadarajah, S. (2014). Improved preliminary test and Stein-rule Liu estimators for the ill-conditioned elliptical linear regression model. Journal of Multivariate Analysis, 126, 53-74.
+
+### 2012
+[A note on loss estimation](/publications/NA2012)
+
+Norouzirad, M. and Arashi, M. (2012). A note on loss estimation, 25(4), 779-783.
+
+
