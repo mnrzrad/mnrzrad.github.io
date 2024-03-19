@@ -23,3 +23,9 @@ Marques, F. J.,  Diogo, J., Norouzirad, M., and Bispo, R. (2023). Testing the in
 [Predicting COVID-19 Hospital Stays with Kolmogorov–Gabor Polynomials: Charting the Future of Care](/publications/MNTAMMLSM2023)
 
 Marateb H, Norouzirad M, Tavakolian K, Aminorroaya F, Mohebbian M, Mañanas MÁ, Lafuente SR, Sami R, Mansourian M. (2023). Predicting COVID-19 Hospital Stays with Kolmogorov–Gabor Polynomials: Charting the Future of Care. Information. 14(11):590.
+
+[Neutrosophic Generalized Rayleigh Distribution with Application](publications/NRM2023)
+
+Norouzirad, M., Rao, G. R., and Mazarei, D. (2023). Neutrosophic Generalized Rayleigh Distribution with Application, Neutrosophic Sets and Systems, 58, 248-262.
+
+
