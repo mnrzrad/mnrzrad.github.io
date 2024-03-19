@@ -6,6 +6,8 @@ main:
     url: /publications/
   - title: "Books"
     url: /books/
+  - title: "Softwares"
+    url: /softwares/
   # - title: "Quick-Start Guide"
   #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
