@@ -22,4 +22,4 @@ Marques, F. J.,  Diogo, J., Norouzirad, M., and Bispo, R. (2023). Testing the in
 
 [Predicting COVID-19 Hospital Stays with Kolmogorov–Gabor Polynomials: Charting the Future of Care](/publications/MNTAMMLSM2023)
 
-Marateb H, Norouzirad M, Tavakolian K, Aminorroaya F, Mohebbian M, Mañanas MÁ, Lafuente SR, Sami R, Mansourian M. Predicting COVID-19 Hospital Stays with Kolmogorov–Gabor Polynomials: Charting the Future of Care. Information. 2023; 14(11):590.
+Marateb H, Norouzirad M, Tavakolian K, Aminorroaya F, Mohebbian M, Mañanas MÁ, Lafuente SR, Sami R, Mansourian M. (2023). Predicting COVID-19 Hospital Stays with Kolmogorov–Gabor Polynomials: Charting the Future of Care. Information. 14(11):590.
