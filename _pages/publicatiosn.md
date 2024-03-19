@@ -24,7 +24,7 @@ Marques, F. J.,  Diogo, J., Norouzirad, M., and Bispo, R. (2023). Testing the in
 
 Marateb H, Norouzirad M, Tavakolian K, Aminorroaya F, Mohebbian M, Mañanas MÁ, Lafuente SR, Sami R, Mansourian M. (2023). Predicting COVID-19 Hospital Stays with Kolmogorov–Gabor Polynomials: Charting the Future of Care. Information. 14(11):590.
 
-[Neutrosophic Generalized Rayleigh Distribution with Application](publications/NRM2023)
+[Neutrosophic Generalized Rayleigh Distribution with Application](/publications/NRM2023)
 
 Norouzirad, M., Rao, G. R., and Mazarei, D. (2023). Neutrosophic Generalized Rayleigh Distribution with Application, Neutrosophic Sets and Systems, 58, 248-262.
 
@@ -36,3 +36,13 @@ Rao, G. S., .Norouzirad, M., and Mazarei, D. (2023). Neutrosophic Generalized Ex
 [Feasible Stein-Type and Preliminary Test Estimations in the System Regression Model](/publications/NAMM2023)
 
 Norouzirad, M., Arashi, M., Marques, F. J.,  Mamod Khan, N. A. (2023). Feasible Stein-Type and Preliminary Test Estimations in the System Regression Model, Statistics, Optimization & Information Computing, 11(2), 258-275.
+
+### 2022
+[Robust Estimation Through Preliminary Testing Based on the LAD-LASSO](/publications/NAME2022)
+
+Norouzirad, M., Arashi, M., Marques, F.J., Esmaeili, F. (2022). Robust Estimation Through Preliminary Testing Based on the LAD-LASSO. In: Bekker, A., Ferreira, J.T., Arashi, M., Chen, DG. (eds) Innovations in Multivariate Statistical Modeling. Emerging Topics in Statistics and Biostatistics . Springer, Cham. 
+
+### 2021
+[A High-Dimensional Counterpart for the Ridge Estimator in Multicollinear Situations](/publications/ANRK2021)
+
+Arashi, M., Norouzirad, M., Roozbeh, M., Khan, N.M. (2021). A High-Dimensional Counterpart for the Ridge Estimator in Multicollinear Situations, Mathematics. 9(23):3057.
