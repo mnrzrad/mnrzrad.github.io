@@ -1,6 +1,5 @@
 ---
 layout: archive
-title: "Journal papers"
 permalink: /publications/
 published: true
 
