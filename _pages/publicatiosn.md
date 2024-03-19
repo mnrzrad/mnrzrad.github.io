@@ -42,6 +42,9 @@ Norouzirad, M., Arashi, M., Marques, F. J.,  Mamod Khan, N. A. (2023). Feasible 
 
 Norouzirad, M., Arashi, M., Marques, F.J., Esmaeili, F. (2022). Robust Estimation Through Preliminary Testing Based on the LAD-LASSO. In: Bekker, A., Ferreira, J.T., Arashi, M., Chen, DG. (eds) Innovations in Multivariate Statistical Modeling. Emerging Topics in Statistics and Biostatistics . Springer, Cham. 
 
+[Differenced-Based Double Shrinking in Partial Linear Models](/publications/NAR2022)
+Norouzirad, M., Arashi, M., & Roozbeh, M. (2022). Differenced-Based Double Shrinking in Partial Linear Models. Journal of Data Science and Modeling, 1(1), 21-32. 
+
 ### 2021
 [A High-Dimensional Counterpart for the Ridge Estimator in Multicollinear Situations](/publications/ANRK2021)
 
