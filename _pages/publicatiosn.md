@@ -70,3 +70,14 @@ Norouzirad, M., Arashi, M. (2019). Preliminary test and Stein-type shrinkage rid
 [Rank theory approach to ridge, LASSO, preliminary test and Stein-type estimators: A comparative study](/publications/SNN2018)
 
 Saleh, A.K.M.E., Navrátil, R. and Norouzirad, M. (2018), Rank theory approach to ridge, LASSO, preliminary test and Stein-type estimators: A comparative study. The Canadian Journal of Statistics, 46, 690-704.
+
+[On Shrinkage Estimation: Non-orthogonal Case](/publications/SN2018)
+
+Saleh, A. K. Md. E., and Norouzirad, M. (2018). On Shrinkage Estimation: Non-orthogonal Case. Statistics, Optimization & Information Computing, 6(3), 427-451.
+
+[Shrinkage and penalized estimators in weighted least absolute deviations regression models](/publications/NHA2018)
+
+Norouzirad, M., Hossain, S., and Arashi, M. (2018). Shrinkage and penalized estimators in weighted least absolute deviations regression models, Journal of Statistical Computation and Simulation, 88(8), 1557-1575.
+
+[Preliminary test and Stein-type shrinkage LASSO-based estimators](/publications/NA2018)
+Norouzirad, M. and Arashi, M. (2018). Preliminary test and Stein-type shrinkage LASSO-based estimators, SORT-Statistics and Operations Research Transactions, 42(1), 45-58.
