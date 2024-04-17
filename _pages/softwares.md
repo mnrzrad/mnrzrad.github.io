@@ -26,5 +26,4 @@ Synthetic Dataset. R package version 1.0.0. 2023.
 
 [R Package "ntsDists"](https://cran.r-project.org/web/packages/ntsDists/index.html)
 
-D. Mazarei, F. Esmaeili, A. Roshani, M. Norouzirad, and G. S. Rao. ntsDists: Neutrosophic Distribu-
-tions. R package version 2.0.0. 2023.
+Mazarei, D., Norouzirad, M., Roshani, A., Rao, G. S., Esmaeili, F. ntsDists: Neutrosophic distributions. R package version 2.1.0, 2023.
