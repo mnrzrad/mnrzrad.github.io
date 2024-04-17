@@ -6,6 +6,13 @@ published: true
 
 ---
 
+
+[R Package "TestIndVars"](https://cran.r-project.org/web/packages/TestIndVars/index.html)
+
+Marques, F. J., Norouzirad, M., Diogo, J., Bispo, R. TestIndVars: Testing the Independence of Variables 
+for Specific Covariance Structures. R package version 0.1.0. 2024.
+
+
 [R Package "ImpShrinkage"](https://cran.r-project.org/web/packages/ImpShrinkage/index.html)
 
 M. Norouzirad, D. Mazarei, and R. Moura. ImpShrinkage: Improved Shrinkage Estimations for Multiple
