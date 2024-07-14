@@ -5,6 +5,10 @@ permalink: /publications/
 published: true
 
 ---
+### 2024
+[Marginalized LASSO in the low-dimensional difference-based partially linear model for variable selection](/publications/NMAM2024)
+
+Norouzirad, M., Moura, R., Arashi, M., & Marques, F. J., (2024). Marginalized LASSO in the low-dimensional difference-based partially linear model for variable selection. Journal of Applied Statistics, 1–29. https://doi.org/10.1080/02664763.2024.2372676.
 
 ### 2023
 [Combining Kibria-Lukman and Principal Component Estimators for the Distributed Lag Models](/publications/LMMM2023)
