@@ -6,6 +6,19 @@ published: true
 
 ---
 
+[R Package "ntsDatasets"](https://cran.r-project.org/web/packages/ntsDatasets/index.html)
+
+Roshani, A., Norouzirad, M. Mazarei, D. ntsDatasets: Neutrosophic Data Sets. R package version 0.1.0, 2024.
+
+
+[R Package "CBPE"](https://cran.r-project.org/web/packages/CBPE/index.html)
+
+Arashi, M., Rahimi, M., Norouzirad, M. CBPE: Correlation-Based Penalized Estimators. 
+R package version 0.1.0, 2024.
+
+Marques, F. J., Norouzirad, M., Diogo, J., Bispo, R. TestIndVars: Testing the Independence of Variables 
+for Specific Covariance Structures. R package version 0.1.0. 2024.
+
 
 [R Package "TestIndVars"](https://cran.r-project.org/web/packages/TestIndVars/index.html)
 
