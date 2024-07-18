@@ -6,9 +6,13 @@ published: true
 
 ---
 ### 2024
+[Comparing Estimation Methods for the Power–Pareto Distribution ](/publications/CN2024)
+
+Caeiro, F. and Norouzirad, M. (2024). Comparing Estimation Methods for the Power–Pareto Distribution, Econometrics 2024, 12, 20. 
+
 [Marginalized LASSO in the low-dimensional difference-based partially linear model for variable selection](/publications/NMAM2024)
 
-Norouzirad, M., Moura, R., Arashi, M., & Marques, F. J., (2024). Marginalized LASSO in the low-dimensional difference-based partially linear model for variable selection. Journal of Applied Statistics, 1–29. https://doi.org/10.1080/02664763.2024.2372676.
+Norouzirad, M., Moura, R., Arashi, M., Marques, F. J., (2024). Marginalized LASSO in the low-dimensional difference-based partially linear model for variable selection, Journal of Applied Statistics, 1–29. 
 
 ### 2023
 [Combining Kibria-Lukman and Principal Component Estimators for the Distributed Lag Models](/publications/LMMM2023)
