@@ -6,6 +6,10 @@ published: true
 
 ---
 ### 2024
+[Testing the hypothesis of a nested block covariance matrix structure with applications to medicine and natural sciences](/publications/CNM2024)
+
+Coelho, C. A., Norouzirad, M., Marques, F. J. (2024). Testing the hypothesis of a nested block covariance matrix structure with applications to medicine and natural sciences, Mathematical Methods in the Applied Sciences, 1–35, DOI 10.1002/mma.10377.
+
 [Comparing Estimation Methods for the Power–Pareto Distribution ](/publications/CN2024)
 
 Caeiro, F. and Norouzirad, M. (2024). Comparing Estimation Methods for the Power–Pareto Distribution, Econometrics 2024, 12, 20. 
