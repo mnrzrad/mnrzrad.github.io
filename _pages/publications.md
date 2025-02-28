@@ -6,8 +6,7 @@ published: true
 
 ---
 ### 2025
-[Testing the hypothesis of a nested block covariance matrix structure with applications to medicine and natural sciences](/publications/CNM2025
-)
+[Testing the hypothesis of a nested block covariance matrix structure with applications to medicine and natural sciences](/publications/CNM2025)
 
 Coelho, C. A., Norouzirad, M., Marques, F. J. (2025). Testing the hypothesis of a nested block covariance matrix structure with applications to medicine and natural sciences, Mathematical Methods in the Applied Sciences, 48(1), 1163-1197.
 
