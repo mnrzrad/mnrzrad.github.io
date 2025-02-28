@@ -5,18 +5,20 @@ permalink: /publications/
 published: true
 
 ---
+### 2025
+[Testing the hypothesis of a nested block covariance matrix structure with applications to medicine and natural sciences](/publications/CNM2025
+)
+
+Coelho, C. A., Norouzirad, M., Marques, F. J. (2025). Testing the hypothesis of a nested block covariance matrix structure with applications to medicine and natural sciences, Mathematical Methods in the Applied Sciences, 48(1), 1163-1197.
+
+[Marginalized LASSO in the low-dimensional difference-based partially linear model for variable selection](/publications/NMAM2025)
+
+Norouzirad, M., Moura, R., Arashi, M., & Marques, F. J. (2025). Marginalized LASSO in the low-dimensional difference-based partially linear model for variable selection. Journal of Applied Statistics, 52(2), 400-428.
+
 ### 2024
-[Testing the hypothesis of a nested block covariance matrix structure with applications to medicine and natural sciences](/publications/CNM2024)
-
-Coelho, C. A., Norouzirad, M., Marques, F. J. (2024). Testing the hypothesis of a nested block covariance matrix structure with applications to medicine and natural sciences, Mathematical Methods in the Applied Sciences, 1–35, DOI 10.1002/mma.10377.
-
 [Comparing Estimation Methods for the Power–Pareto Distribution ](/publications/CN2024)
 
 Caeiro, F. and Norouzirad, M. (2024). Comparing Estimation Methods for the Power–Pareto Distribution, Econometrics 2024, 12, 20. 
-
-[Marginalized LASSO in the low-dimensional difference-based partially linear model for variable selection](/publications/NMAM2024)
-
-Norouzirad, M., Moura, R., Arashi, M., Marques, F. J., (2024). Marginalized LASSO in the low-dimensional difference-based partially linear model for variable selection, Journal of Applied Statistics, 1–29. 
 
 ### 2023
 [Combining Kibria-Lukman and Principal Component Estimators for the Distributed Lag Models](/publications/LMMM2023)
