@@ -10,7 +10,7 @@ main:
     url: /certifications/
     children:
       - title: "Conference Attendance"
-        url: /certificates/conference/
+        url: /certifications/conference/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
