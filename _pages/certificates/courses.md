@@ -1,5 +1,5 @@
 ---
-title: "Courses & Certifications"
+title: "Courses and Certifications"
 layout: archive
 parent: "Certifications"
 permalink: /certifications/courses/
