@@ -1,4 +1,10 @@
-
+---
+title: "Workshops Attendance"
+layout: archive
+parent: "Certifications"
+permalink: /certifications/workshop/
+published: true
+---
 
 
 # Workshops Attended
