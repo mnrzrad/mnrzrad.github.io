@@ -6,7 +6,6 @@ has_children: true
 published: true
 ---
 
-# Certifications
 Welcome to the certifications page.
 
 {% assign children = site.pages | where: "parent", "Certifications" %}
