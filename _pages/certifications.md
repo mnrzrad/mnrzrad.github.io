@@ -1,8 +1,9 @@
 ---
 title: "Certifications"
-layout: default
+layout: archive
 permalink: /certifications/
 has_children: true
+published: true
 ---
 
 # Certifications
