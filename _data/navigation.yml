@@ -8,6 +8,9 @@ main:
     url: /softwares/
   - title: "Certificates"
     url: /certifications/
+    children:
+      - title: "Conference Attendance"
+        url: /certificates/conference/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
