@@ -30,7 +30,7 @@ Conferences where I presented and participated.
 | The 12th Iranian Statistical Conference                           | Razi University, Kermanshah, Iran            | 2014  | [View Certificate](https://drive.google.com/file/d/1a5hI2xtyyLHwBgnWV0cMn_sZW0ltxKr9/view?usp=sharing) |
 | The International Conference on Intellectual Capital Management (IICM 2012) | Science and Technology Park of Zanjan University, Zanjan, Iran | 2012 | [View Certificate](https://drive.google.com/file/d/16mXdxcI5ThmNLSGJTiIOCxd_cIBNwOJv/view?usp=sharing) |
 | The 11th Iranian Statistical Conference                           | Iran University of Science and Technology, Tehran, Iran | 2012 | [View Certificate](https://drive.google.com/file/d/1DLlljUitmrh6amkyY9O4w7TlOneilgvX/view?usp=sharing) |
-| The 10th Iranian Statistical Conference                           | University of Tabriz, Tabriz, Iran           | 2010  | [View Certificate](https://drive.google.com/file/d/1LwqoTvmuQ6AkJNWqRkkx9XiI2YIsTUhg/view?usp=sharing) |
+| The 10th Iranian Statistical Conference                           | University of Tabriz, Tabriz, Iran           | 2010  | [View Certificate](https://drive.google.com/uc?export=view&id=1LwqoTvmuQ6AkJNWqRkkx9XiI2YIsTUhg) |
 | The 6th National Statistics Seminar                               | Payame Noor University, Ahvaz Center, Iran   | 2010  | [View Certificate](https://drive.google.com/file/d/1agJ66vo5bs-fhLxP28Sk6k_6HvkwOjD_/view?usp=sharing) |
 
 
