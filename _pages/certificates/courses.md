@@ -6,7 +6,6 @@ permalink: /certifications/courses/
 published: true
 ---
 
-### Courses & Certifications
 
 | **Course** | **Issued By** | **Certificate Link** |
 |------------|---------------|----------------------|
