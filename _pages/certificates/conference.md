@@ -1,8 +1,9 @@
 ---
 title: "Conference Attendance"
-layout: default
+layout: archive
 parent: "Certifications"
 permalink: /certifications/conference/
+published: true
 ---
 
 # Conference Attendance
