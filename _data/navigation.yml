@@ -15,6 +15,8 @@ main:
         url: /certifications/invited_talks/
       - title: "Courses and Certifications"
         url: /certifications/courses/
+      - title: "Workshops Attendance"
+        url: /certifications/workshop/
 
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
