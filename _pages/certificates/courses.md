@@ -1,7 +1,8 @@
 ---
 title: "Courses & Certifications"
 layout: archive
-permalink: /courses-and-certifications/
+parent: "Certifications"
+permalink: /certifications/courses/
 published: true
 ---
 
