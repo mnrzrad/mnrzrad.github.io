@@ -12,7 +12,7 @@ Coelho, C. A., Norouzirad, M., Marques, F. J. (2025). Testing the hypothesis of 
 
 [Marginalized LASSO in the low-dimensional difference-based partially linear model for variable selection](/publications/NMAM2025)
 
-Norouzirad, M., Moura, R., Arashi, M., Marques, F. J., (2024). Marginalized LASSO in the low-dimensional difference-based partially linear model for variable selection, Journal of Applied Statistics, 52(2), 400-428. 
+Norouzirad, M., Moura, R., Arashi, M., Marques, F. J., (2025). Marginalized LASSO in the low-dimensional difference-based partially linear model for variable selection, Journal of Applied Statistics, 52(2), 400-428. 
 
 ### 2024
 [Comparing Estimation Methods for the Power–Pareto Distribution ](/publications/CN2024)
