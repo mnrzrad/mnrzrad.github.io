@@ -6,8 +6,6 @@ permalink: /certifications/workshop/
 published: true
 ---
 
-# Workshops Attended
-
 | Year  | Title                                                                                                     | Institution/Organization                                                                                           | Certification                                                                                          |
 |-------|-----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
 | 2023  | Sensitivity, uncertainty and inference in mathematical models of infectious diseases                       | Statistics and Risk Management of Center for Mathematics and Applications (NOVA MATH), New University of Lisbon      | [View Certificate](https://drive.google.com/uc?export=view&id=1Bs1ERCC_nULY_vGpEt-Zl6qYq6ABV0nS)            |
