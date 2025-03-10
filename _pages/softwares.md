@@ -34,8 +34,8 @@ Linear Regression. R package version 1.0.0. 2023.
 
 [R Package "PSinference"](https://cran.r-project.org/web/packages/PSinference/index.html)
 
-R. Moura, M. Norouzirad, and D. Mazarei. PSinference: Inference for Released Plug-in Sampling Single
-Synthetic Dataset. R package version 1.0.0. 2023.
+R. Moura, M. Norouzirad, V. Augusto, and M. Fonseca. PSinference: Inference for Released Plug-in Sampling Single
+Synthetic Dataset. R package version 0.2.2. 2024.
 
 [R Package "ntsDists"](https://cran.r-project.org/web/packages/ntsDists/index.html)
 
