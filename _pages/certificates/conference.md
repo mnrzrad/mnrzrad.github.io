@@ -24,7 +24,7 @@ Conferences where I presented and participated.
 | The 11th Seminar on Probability and Stochastic Processes          | International Imam Khomeini University, Qazvin, Iran | 2017 | [View Certificate](https://drive.google.com/uc?export=view&id=1pvbYDWc8WjOvn5DARH1GvDeuv4RAixoh) |
 | The 44th Annual Meeting of Statistical Society of Canada          | Brock University, St. Catharines, Canada     | 2016  |  |
 | The 1st Nonparametric Seminar and Its Applications                | Allameh Tabataba'i University, Tehran, Iran  | 2016  | [View Certificate](https://drive.google.com/uc?export=view&id=19Y2UGtadmMXKqn7vj0TMUu8xGRKUxOOq) |
-| The 10th Seminar on Probability and Stochastic Processes          | University of Yazd, Yazd, Iran               | 2015  | [View Certificate](https://drive.google.com/uc?export=view&id=1DtRl3n13jabo9YaS98YUU6y5DTn-X_b9) |
+| The 10th Seminar on Probability and Stochastic Processes          | University of Yazd, Yazd, Iran               | 2015  | [View Certificate](https://drive.google.com/uc?export=view&id=10XHzAwhSgPYhHBfzNrkUrwcz3X0Sk1JY) |
 | The 46th Iranian Mathematical Conference                          | University of Yazd, Yazd, Iran               | 2015  | [View Certificate](https://drive.google.com/uc?export=view&id=1pHkVT74UVvZtM2Vb9TMD-lyjVEid6-CN) |
 | The 8th International Conference of Iranian Operations Research Society  | Ferdowsi University of Mashhad, Mashhad, Iran | 2015  | [View Certificate](https://drive.google.com/uc?export=view&id=1au30--JMvK9xUQE3-WGWjTLbY25Wu-pi) |
 | The 12th Iranian Statistical Conference                           | Razi University, Kermanshah, Iran            | 2014  | [View Certificate](https://drive.google.com/uc?export=view&id=1a5hI2xtyyLHwBgnWV0cMn_sZW0ltxKr9) |
