@@ -6,6 +6,11 @@ published: true
 
 ---
 ### 2025
+[Subspace-Restricted Elastic Net Estimation: Applications in Medical Data](/publications/NMM2025)
+Norouzirad, M., Marques, F. J., Mazarei, D. (2025). Subspace-Restricted Elastic Net Estimation: Applications in Medical Data, Mathematical Methods in the Applied Sciences,  https://doi.org/10.1002/mma.10818
+
+
+
 [Testing the hypothesis of a nested block covariance matrix structure with applications to medicine and natural sciences](/publications/CNM2025)
 
 Coelho, C. A., Norouzirad, M., Marques, F. J. (2025). Testing the hypothesis of a nested block covariance matrix structure with applications to medicine and natural sciences, Mathematical Methods in the Applied Sciences,  45(1), 1163-1197.
