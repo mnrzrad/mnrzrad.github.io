@@ -7,7 +7,8 @@ published: true
 ---
 ### 2025
 [Subspace-Restricted Elastic Net Estimation: Applications in Medical Data](/publications/NMM2025)
-Norouzirad, M., Marques, F. J., Mazarei, D. (2025). Subspace-Restricted Elastic Net Estimation: Applications in Medical Data, Mathematical Methods in the Applied Sciences,  https://doi.org/10.1002/mma.10818
+
+Norouzirad, M., Marques, F. J., Mazarei, D. (2025). Subspace-Restricted Elastic Net Estimation: Applications in Medical Data, Mathematical Methods in the Applied Sciences,  DOI: 10.1002/mma.10818
 
 
 
