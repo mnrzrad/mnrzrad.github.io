@@ -1,0 +1,17 @@
+---
+layout: archive
+title: "Subspace-Restricted Elastic Net Estimation: Applications in Medical Data"
+collection: publications
+permalink: /publications/NMM2025
+published: true
+excerpt: " "
+---
+Norouzirad, M., Marques, F. J., Mazarei, D. (2025). Subspace-Restricted Elastic Net Estimation: Applications in Medical Data, Mathematical Methods in the Applied Sciences,  https://doi.org/10.1002/mma.10818
+
+[Download Paper](https://doi.org/10.1002/mma.10818)
+
+
+## Abstract 
+----
+In a regression model, information is always crucial for achieving a more precise estimation. Typically, the level of information is restricted to sample data, and no additional knowledge about the parameters' space is assumed. However, integrating additional information such as sparsity and multicollinearity has been used to improve penalized estimators. Expert suggestions, previous experiments, and studies can further refine these estimates through subspace restrictions. This paper introduces the restricted Elastic net (rEnet) estimator, a novel approach that combines multiple sources of information to improve estimation performance. Extensive Monte Carlo simulations are conducted to evaluate its finite-sample behavior. The method is then applied to two real-world medical datasets, illustrating its practical utility in biomedical research. Our findings show that the restricted Enet estimator consistently outperforms the Enet estimator by producing more accurate and stable estimates of regression parameters, particularly in the presence of multicollinearity and sparsity—challenges common in medical data analysis.
+
