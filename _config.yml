@@ -336,6 +336,3 @@ defaults:
       author_profile: true
       share: true
       comments: true
-      
-exclude:
-  - shiny_docs/
