@@ -18,7 +18,7 @@ main:
       - title: "Workshops Attendance"
         url: /certifications/workshop/
   - title: "Dashboards"
-    url: /shiny_docs/index.html
+    url: /dashboards/
 
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
