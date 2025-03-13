@@ -17,6 +17,8 @@ main:
         url: /certifications/courses/
       - title: "Workshops Attendance"
         url: /certifications/workshop/
+  - title: "Dashboards"
+    url: /dashboards/
 
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
