@@ -52,11 +52,12 @@ published: true
 | Introduction to Data Analysis in R | DataQuest | [View Certificate](https://app.dataquest.io/view_cert/0977CSLMUXEJT2QBV1DZ/) |
 | Intermediate SQL in R | DataQuest | [View Certificate](https://app.dataquest.io/view_cert/JBIONYK5KAWOGPCIT0I7/) |
 | Introduction to Data Visualization in R | DataQuest | [View Certificate](https://app.dataquest.io/view_cert/5QZ45351YBPMVV2GXCDK/) |
-| Introduction to Python | Datacamp | - |
-| Intermediate Python | Datacamp | - |
-| Understanding Data Visualization | Datacamp | - |
-| Supervised Learning with scikit-learn | Datacamp | - |
-| Python Data Science Toolbox | Datacamp | - |
-| Getting Started with Julia | Julia Academy | - |
-| Introduction for Julia (for programming) | Julia Academy | - |
-| Machine Learning in Python | 365 DataScience | - |
+| Introduction to Python | Datacamp | [View Certificate](https://drive.google.com/file/d/1P0islJjoAcF9d809G0PT4OKNeUfrs0IG/view) |
+| Intermediate Python | Datacamp | [View Certificate](https://drive.google.com/file/d/1qPRiRhy7hJoKJZDurCiETG8ql6g36O6x/view) |
+| Understanding Data Visualization | Datacamp | [View Certificate](https://drive.google.com/file/d/1ud1YRnuWtu9thhL51UumWlpMO56_L9iV/view) |
+| Supervised Learning with scikit-learn | Datacamp | [View Certificate](https://drive.google.com/file/d/1pWcGfzaidP4BT2bj5dL8zrp9vX2VW2II/view) |
+| Python Data Science Toolbox | Datacamp | [View Certificate](https://drive.google.com/file/d/1hA3eyM9Bk3CErwdLjtQJ4VpmvohuEfjQ/view) |
+| Getting Started with Julia | Julia Academy | [View Certificate](https://drive.google.com/file/d/1kOF-BGWl3AmWKHRw6GQm_--Cc3l0gLB9/view) |
+| Introduction for Julia (for programming) | Julia Academy | [View Certificate](https://drive.google.com/file/d/11IfMIgmpGD-XlJ8VEiEl6qo4NKKSqPT5/view) |
+| Machine Learning in Python | 365 DataScience | [View Certificate](https://learn.365datascience.com/c/bb3830f1d4/) |
+| Introduction to Jupyter | 365 DataScience | [View Certificate](https://learn.365datascience.com/certificates/CC-FC7B5FB4DF/) |
