@@ -11,11 +11,11 @@ main:
     children:
       - title: "Conference Attendance"
         url: /certifications/conference/
-      - title: "Invited Talks"
+      - title: "Invited Talk"
         url: /certifications/invited_talks/
-      - title: "Courses and Certifications"
+      - title: "Course Certificate"
         url: /certifications/courses/
-      - title: "Workshops Attendance"
+      - title: "Workshop Attendance"
         url: /certifications/workshop/
   - title: "Dashboards"
     url: /dashboards/
