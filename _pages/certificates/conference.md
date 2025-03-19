@@ -10,6 +10,7 @@ Conferences where I presented and participated.
 
 | Conference Name                                                    | Location                                      | Year  | Certificate Link                                   |
 |--------------------------------------------------------------------|-----------------------------------------------|-------|----------------------------------------------------|
+| The 65th Annual Conference of the South African Statistical Association | Stellenbosch, South Africa | 2024  | [View Certificate](https://drive.google.com/uc?export=view&id=1jOIWeX8nYwR7RFAGsSkk33bQGx07l0Rn) |
 | The IX Workshop on Computational Data Analysis and Numerical Methods | Évora, Portugal                              | 2024  | [View Certificate](https://drive.google.com/uc?export=view&id=1NfXiPrBzNXYvFbBk-MBBgGgU2XHUN-qQ) |
 | The 26th International Conference on Computational Statistics (COMPSTAT 2024) | Giessen, Germany                    | 2024  | [View Certificate](https://drive.google.com/uc?export=view&id=1gLYnS2xcPkY8y6jsPTtymmC7Yx6Errt6) |
 | The XXVI Congress of the Portuguese Statistical Society (SPE 2023) | Guimarães, Portugal                         | 2023  | [View Certificate](https://drive.google.com/uc?export=view&id=12KF79JgM6drUYpCWZHYZJn9OfT8PN3yB) |
