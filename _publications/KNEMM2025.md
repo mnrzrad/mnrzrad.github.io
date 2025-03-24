@@ -9,7 +9,7 @@ excerpt: " "
 Karimi, R., Norozirad, M., Esmaeili, F., Mansourian, M., Marateb, H. R. (2025). COVID-19 Vaccination and Cardiovascular Events: A Systematic Review and Bayesian Multivariate Meta-Analysis of Preventive Benefits and Risks, International Journal of Preventive Medicine 16:14. DOI: 10.4103/ijpvm.ijpvm_260_24
 
 
-[Download Paper]([https://onlinelibrary.wiley.com/doi/10.1002/mma.10377](https://journals.lww.com/ijom/fulltext/2025/03210/covid_19_vaccination_and_cardiovascular_events__a.6.aspx))
+[Download Paper](https://journals.lww.com/ijom/fulltext/2025/03210/covid_19_vaccination_and_cardiovascular_events__a.6.aspx)
 
 
 ## Abstract 
