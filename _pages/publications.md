@@ -10,6 +10,10 @@ published: true
 
 Norouzirad, M., Marques, F. J., Mazarei, D. (2025). Subspace-Restricted Elastic Net Estimation: Applications in Medical Data, Mathematical Methods in the Applied Sciences,  DOI: 10.1002/mma.10818
 
+[ COVID-19 Vaccination and Cardiovascular Events: A Systematic Review and Bayesian Multivariate Meta-Analysis of Preventive Benefits and Risks](/publications/KMEMM2025)
+
+Karimi, R., Norozirad, M., Esmaeili, F., Mansourian, M., Marateb, H. R. (2025). COVID-19 Vaccination and Cardiovascular Events: A Systematic Review and Bayesian Multivariate Meta-Analysis of Preventive Benefits and Risks, International Journal of Preventive Medicine 16:14. DOI: 10.4103/ijpvm.ijpvm_260_24
+
 
 
 [Testing the hypothesis of a nested block covariance matrix structure with applications to medicine and natural sciences](/publications/CNM2025)
