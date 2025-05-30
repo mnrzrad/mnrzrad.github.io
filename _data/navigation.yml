@@ -1,7 +1,25 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: "Papers"
+    url: /publications/
+  - title: "Books"
+    url: /books/
+  - title: "Softwares"
+    url: /softwares/
+  - title: "Certificates"
+    url: /certifications/
+    children:
+      - title: "Conference Attendance"
+        url: /certifications/conference/
+      - title: "Invited Talk"
+        url: /certifications/invited_talks/
+      - title: "Course Certificate"
+        url: /certifications/courses/
+      - title: "Workshop Attendance"
+        url: /certifications/workshop/
+  - title: "Dashboards"
+    url: /dashboards/
+
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
