@@ -51,6 +51,56 @@ sections:
     design:
       columns: '1'
   - block: experience
+  content:
+    title: Education
+    date_format: Jan 2006
+    items:
+      - title: Ph.D. in Statistical Inference
+        company: Shahrood University of Technology
+        company_url: 'https://shahroodut.ac.ir/'
+        location: 'Shahrood, Iran'
+        date_start: '2014-09-01'
+        date_end: '2018-12-31'
+        description: |2-
+          **Thesis:** *Improved Estimation Strategies in Some Penalized Regression Models*
+          
+          **Supervisor:** [Prof Mohammad Arashi](https://prof.um.ac.ir/arashi)
+          
+          **Research Impact:**
+          - Presented papers at 7 conferences
+          - Published contributions in 4 journals
+          - Advanced research in penalized regression models
+          
+          [📖 Read Full Thesis](https://www.researchgate.net/publication/376000017_Improved_Estimators_in_Some_Penalized_Linear_Regression_Models)
+          
+      - title: M.Sc. in Mathematical Statistics
+        company: Islamic Azad University, Mashhad Branch
+        location: 'Mashhad, Iran'
+        date_start: '2009-09-01'
+        date_end: '2011-06-30'
+        description: |2-
+          **Thesis:** *On Estimation of Loss Function*
+          
+          **Supervisor:** [Prof Mohammad Arashi](https://prof.um.ac.ir/arashi)
+          
+          **Research Impact:**
+          - Presented papers at 2 conferences
+          - Published contributions in 1 journal
+          - Focus on statistical estimation theory
+          
+      - title: B.Sc. in Pure Mathematics
+        company: Shahrood University of Technology
+        company_url: 'https://shahroodut.ac.ir/'
+        location: 'Shahrood, Iran'
+        date_start: '2004-09-01'
+        date_end: '2008-06-30'
+        description: |2-
+          **Major:** Pure Mathematics
+          
+          Strong foundation in mathematical analysis, algebra, and applied mathematics
+    design:
+      columns: '2'
+  - block: experience
     content:
       title: Experience
       date_format: Jan 2006
