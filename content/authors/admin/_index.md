@@ -55,7 +55,7 @@ education:
       year: 2011
       summary: |
         Thesis on _On Estimation of Loss Function_. Supervised by [Prof Mohammad Arashi](https://prof.um.ac.ir/arashi). Presented papers at 2 conferences with the contributions being published in 1 journal.
-    - course:  B.Sc. in Pure Mathematics
+    - course: B.Sc. in Pure Mathematics
       institution: Shahrood University of Technology
       year: 2008
 
@@ -71,15 +71,14 @@ skills:
         icon_pack: fab
       - name: Data Science
         description: ''
-        percent: 8
+        percent: 85
         icon: chart-line
         icon_pack: fas
       - name: R Programming
         description: ''
         percent: 90
-        icon: rstudio
-        icon_pack: fas
-
+        icon: r-project
+        icon_pack: fab
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
@@ -101,63 +100,60 @@ social:
   - icon: github
     icon_pack: fab
     link: https://github.com/mnrzrad
-    lable: GitHub
+    label: GitHub
     display:
       header: true
   - icon: google-scholar
-    icon_pack: academicons
-    url: https://scholar.google.com/citations?user=Q0R3sgIAAAAJ&hl=en
+    icon_pack: ai
+    link: https://scholar.google.com/citations?user=Q0R3sgIAAAAJ&hl=en
     label: Google Scholar
     display:
       header: true
   - icon: orcid
-    icon_pack: academicons
-    url: https://orcid.org/0000-0003-0311-6888
+    icon_pack: ai
+    link: https://orcid.org/0000-0003-0311-6888
     label: ORCID
     display:
       header: true
   - icon: researchgate
-    icon_pack: academicons
-    url: https://www.researchgate.net/profile/Mina-Norouzirad
+    icon_pack: ai
+    link: https://www.researchgate.net/profile/Mina-Norouzirad
     label: ResearchGate
     display:
       header: true
   - icon: graduation-cap
     icon_pack: fas
-    url: https://mathscinet.ams.org/mathscinet/search/author.html?mrauthid=966732
+    link: https://mathscinet.ams.org/mathscinet/search/author.html?mrauthid=966732
     label: MathSciNet
     display:
       header: true
   - icon: clarivate
-    icon_pack: academicons
-    url: https://www.webofscience.com/wos/author/record/1339076
+    icon_pack: ai
+    link: https://www.webofscience.com/wos/author/record/1339076
     label: Web of Science
     display:
       header: true
   - icon: scopus
-    icon_pack: academicons
-    url: https://www.scopus.com/authid/detail.uri?authorId=53878401000
+    icon_pack: ai
+    link: https://www.scopus.com/authid/detail.uri?authorId=53878401000
     label: Scopus
     display:
       header: true
   - icon: ciencia-vitae
-    icon_pack: academicons
-    url: https://www.cienciavitae.pt/pt/D915-C82C-8F26
+    icon_pack: ai
+    link: https://www.cienciavitae.pt/pt/D915-C82C-8F26
     label: CIÊNCIA ID  
     display:
       header: true
-  
-  
-  # Link to a PDF of your resume/CV.
-  # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.yaml`,
-  # and uncomment the lines below.
   - icon: cv
     icon_pack: ai
     link: uploads/resume.pdf
+    label: CV
+    display:
+      header: true
 
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
 
-Mina Norouzirad is a dedicated researcher and educator in the field of statistics, currently serving as a Junior Researcher at the Center for Mathematics and Applications (NovaMath) in Caparica, Portugal, since April 2024. Previously, she completed a post-doctoral research position at the same institution from March 2021 to March
-2024.
+Mina Norouzirad is a dedicated researcher and educator in the field of statistics, currently serving as a Junior Researcher at the Center for Mathematics and Applications (NovaMath) in Caparica, Portugal, since April 2024. Previously, she completed a post-doctoral research position at the same institution from March 2021 to March 2024.
