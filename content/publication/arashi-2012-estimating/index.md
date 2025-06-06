@@ -73,4 +73,4 @@ links:
     https://www.researchgate.net/publication/372497786_Estimating_loss_function_using_shrinkage_Stein_type_estimators
 ---
 
-
+This paper, written in Persian, is derived from my Master's thesis.

@@ -6,9 +6,9 @@ title: Singular ridge regression with stochastic constraints
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Arashi
-- M. Janfada
-- M. Norouzirad
+- Mohammad Arashi
+- Majid Janfada
+- Admin
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -51,9 +51,9 @@ url_source: ''
 url_video: ''
 
 # Custom links (uncomment lines below)
-# links:
-# - name: Custom Link
-#   url: http://example.org
+links:
+- name: URL
+  url: https://www.tandfonline.com/doi/full/10.1080/03610926.2012.763097
 
 # Publication image
 # Add an image named `featured.jpg/png` to your page's folder then add a caption below.
@@ -70,4 +70,4 @@ image:
 projects: []
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
+

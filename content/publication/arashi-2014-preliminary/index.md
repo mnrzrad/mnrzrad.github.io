@@ -6,8 +6,8 @@ title: Preliminary test approach in high dimensional multivariate regression mod
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Arashi
-- M. Norouzirad
+- Mohammad Arashi
+- Admin
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -29,7 +29,7 @@ publication_short: ''
 
 doi: ''
 
-abstract: ''
+abstract: 'In this paper, we consider the multivariate linear regression model in view of high dimensional data. We formulate the preliminary test approach by estimating the location parameter when it is apriori suspected that may be equal to zero. Then use derive bias, quadratic bias and risk expression through making use of a refinement of test statistic to accommodate the high-dimensional assumption. We support our result by a simulation as well as a real example.'
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -40,7 +40,7 @@ tags: []
 featured: false
 
 # Links
-url_pdf: ''
+url_pdf: https://www.researchgate.net/publication/317717324_Preliminary_test_approach_in_high-dimensional_multivariate_regression_models
 url_code: ''
 url_dataset: ''
 url_poster: ''
@@ -73,4 +73,4 @@ links:
     https://www.researchgate.net/publication/317717324_Preliminary_test_approach_in_high-dimensional_multivariate_regression_models
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
+

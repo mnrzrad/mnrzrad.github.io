@@ -73,3 +73,4 @@ links:
     https://www.researchgate.net/publication/372495988_Estimation_loss_function_in_multivariate_normal_distribution
 ---
 
+This paper, written in Persian, is derived from my Master's thesis.

@@ -69,5 +69,9 @@ image:
 #   E.g. `projects: ['internal-project']` links to `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
 projects: []
+links:
+- name: URL
+  url: 
+    https://www.tandfonline.com/doi/full/10.1080/02331888.2013.809720
 ---
 

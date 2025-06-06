@@ -6,8 +6,8 @@ title: Improved ridge M-estimators
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Arashi
-- M. Norouzirad
+- Mohammad Arashi
+- Admin
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -29,7 +29,7 @@ publication_short: ''
 
 doi: ''
 
-abstract: ''
+abstract: 'The focus of this approach is on parameter in multiple regression model in the presence of multicollinearity and outliers. Some improved ridge M-estimators are defined and their performance is evaluated in a real example.'
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -40,7 +40,7 @@ tags: []
 featured: false
 
 # Links
-url_pdf: ''
+url_pdf: https://www.researchgate.net/publication/284727065_Improved_Ridge_M_Estimators
 url_code: ''
 url_dataset: ''
 url_poster: ''
@@ -72,4 +72,4 @@ links:
   url: https://www.researchgate.net/publication/284727065_Improved_Ridge_M_Estimators
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
+This paper is derived from my Ph.D. thesis.
