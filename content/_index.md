@@ -197,7 +197,7 @@ sections:
   - block: accomplishments
     id: certificates
     content:
-      title: 'Accomplishments'
+      title: 'Certificates'
       subtitle: 'Continuous learning in data science and statistics'
       date_format: Jan 2006
       items:
@@ -226,9 +226,7 @@ sections:
           icon: WQU
           organization: World Quant University
           title: Applied Data Science Lab
-
       text: |-
-        <br>
         [**View All Certifications →**](./certificates/)
     design:
       columns: '2'
