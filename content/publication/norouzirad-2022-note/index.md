@@ -22,7 +22,7 @@ publishDate: '2025-06-05T14:28:08.720958Z'
 # Publication type.
 # A single CSL publication type but formatted as a YAML list (for Hugo requirements).
 publication_types:
-- manuscript
+- abstract
 
 # Publication name and optional abbreviated publication name.
 publication: '*Linear Statistical Inference (LinStat)*'

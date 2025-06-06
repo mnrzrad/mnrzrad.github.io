@@ -1,6 +1,5 @@
 ---
-title: 'Testing the independence of variables for specific covariance structures:
-  a simulation study'
+title: 'Testing the independence of variables for specific covariance structures: a simulation study'
 
 # Authors
 # A YAML list of author names

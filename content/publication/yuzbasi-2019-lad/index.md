@@ -23,7 +23,7 @@ publishDate: '2025-06-05T14:28:08.861992Z'
 # Publication type.
 # A single CSL publication type but formatted as a YAML list (for Hugo requirements).
 publication_types:
-- paper-conference
+- chapter
 
 # Publication name and optional abbreviated publication name.
 publication: '*Proceedings of the Thirteenth International Conference on Management
