@@ -14,10 +14,6 @@ header:
   image: ""
 ---
 
-# Professional Certifications & Development
-
-This page showcases my commitment to continuous learning and professional development in data science, statistics, and programming.
-
 ## Summary
 - **Total Certifications:** 45+
 - **Key Areas:** R Programming, Python, Machine Learning, Data Visualization, Statistics
