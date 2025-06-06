@@ -6,8 +6,8 @@ title: Preliminary test and Stein-type shrinkage LASSO- based estimators
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Norouzirad
-- M. Arashi
+- admin
+- Mohammad Arashi
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -29,7 +29,7 @@ publication_short: ''
 
 doi: 10.2436/20.8080.02.68
 
-abstract: ''
+abstract: 'Suppose the regression vector-parameter is subjected to lie in a subspace hypothesis in a linear regression model. In situations where the use of least absolute and shrinkage selection operator (LASSO) is desired, we propose a restricted LASSO estimator. To improve its performance, LASSO-type shrinkage estimators are also developed and their asymptotic performance is studied. For numerical analysis, we used relative efficiency and mean prediction error to compare the estimators which resulted in the shrinkage estimators to have better performance compared to the LASSO.'
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -40,7 +40,7 @@ tags: []
 featured: false
 
 # Links
-url_pdf: ''
+url_pdf: https://raco.cat/index.php/SORT/article/view/338208/429071
 url_code: ''
 url_dataset: ''
 url_poster: ''
@@ -50,9 +50,9 @@ url_source: ''
 url_video: ''
 
 # Custom links (uncomment lines below)
-# links:
-# - name: Custom Link
-#   url: http://example.org
+links:
+- name: URL
+  url: https://www.raco.cat/index.php/SORT/article/view/338208
 
 # Publication image
 # Add an image named `featured.jpg/png` to your page's folder then add a caption below.
@@ -69,4 +69,4 @@ image:
 projects: []
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
+

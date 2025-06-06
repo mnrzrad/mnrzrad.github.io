@@ -1,14 +1,12 @@
 ---
-title: Dimension Reduction and Shrinkage Estimation in Seemingly Unrelated Regression
-  Models
+title: Dimension Reduction and Shrinkage Estimation in Seemingly Unrelated Regression Models
 
 # Authors
 # A YAML list of author names
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Norouzirad
-
+- admin
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
 author_notes: []
@@ -29,7 +27,7 @@ publication_short: ''
 
 doi: ''
 
-abstract: ''
+abstract: 'This paper considers the preliminary test and shrinkage estimation for a seemingly unrelated regression (SUR) model to improve the ordinary feasible generalized least squares (FGLS) estimator in sense of less risk. The proposed method uses the available auxiliary information by modifying the parameter space; that is, the coefficients $\beta$ can be partitioned as $(\beta_1 , \beta_2)$ where $\beta_2$ has nuisance effects on the estimation process. The aim of this paper is to estimate $\beta_1$ when $\beta_2$ is close to zero, results in reduced dimension. Using the LASSO estimator to find zero-vector $\beta_2$, the preliminary test and shrinkage estimators are suggested and compared their performance with the LASSO estimator. To show the better behavior of the proposed method, a real dataset is used.'
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -73,4 +71,3 @@ links:
     https://www.researchgate.net/publication/372482404_Dimension_Reduction_and_Shrinkage_Estimation_in_Seemingly_Unrelated_Regression_Models
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.

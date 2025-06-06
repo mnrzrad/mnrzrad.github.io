@@ -1,13 +1,12 @@
 ---
-title: Difference-based improved estimation strategies using marginal theory in partial
-  linear model
+title: Difference-based improved estimation strategies using marginal theory in partial linear model
 
 # Authors
 # A YAML list of author names
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Norouzirad
+- admin
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -29,7 +28,7 @@ publication_short: ''
 
 doi: ''
 
-abstract: ''
+abstract: 'In the context of partial linear regression modeling, improved estimation of the parametric as well as non-parametric is studied. In this framework, the coefficients are partitioned into two sub-vector, after a differencing methodology is applied to eliminate the non-parametric component. The first sub-vector gives the main coefficient and the second sub-vector is related to variables that may or may not be controlled. When estimating the first sub-vector, the best estimator may be obtained using either the difference-based full model that includes both sub vectors, or the difference-based reduced model that leaves out the second sub-vector. In this paper, we suggest difference-based preliminary test and shrinkage estimators in the partial linear regression model based on the marginal theory. It is demonstrated that shrinkage estimators which combine two estimators computed for the difference-based full and reduced models outperform the estimator for the full model. The relative dominance picture of suggested estimators is investigated. In particular, suitability of estimating the nonparametric component based on the Speckman approach is explored. A real data example is given to compare the proposed estimators. From numerical analysis, it is obtained that the partial difference-based shrinkage estimators perform better than the difference-based full model in the average prediction error sense.'
 
 # Summary. An optional shortened abstract.
 summary: ''

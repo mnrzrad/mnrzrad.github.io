@@ -6,9 +6,9 @@ title: A note on the restricted Enet estimators
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Norouzirad
-- F. J. Marques
-- D. Mazarei
+- admin
+- Filipe J. Marques
+- Danial Mazarei
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -41,7 +41,7 @@ tags: []
 featured: false
 
 # Links
-url_pdf: ''
+url_pdf: https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=http://www.linstat.ipt.pt/download/355.pdf&ved=2ahUKEwjExsrl79yNAxWbhv0HHS0VPEUQFnoECBYQAQ&usg=AOvVaw218NZ3OG7pT8QqHmp8Xkxm
 url_code: ''
 url_dataset: ''
 url_poster: ''
@@ -74,4 +74,3 @@ links:
     https://www.researchgate.net/publication/372482393_A_Note_on_the_Restricted_Enet_Estimators
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.

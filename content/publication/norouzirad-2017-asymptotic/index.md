@@ -6,9 +6,9 @@ title: Asymptotic properties of shrinkage LAD estimators
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Norouzirad
-- M. Arashi
-- S. E. Ahmed
+- admin
+- Mohammad Arashi
+- S. Ejaz Ahmed
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -30,7 +30,7 @@ publication_short: ''
 
 doi: ''
 
-abstract: ''
+abstract: 'In the context of linear regression models, the least absolute deviations (LAD) is used when there are outliers. Selecting significant variables is very important; however, by choosing these variables, some information may be sacrificed. To prevent this, in our proposal, we can combine the full model estimates toward the candidate sub model, resulting in improved estimators in risk sense. Advantages of the proposed estimators over the usual LAD estimator are demonstrated through a real data example.'
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -74,4 +74,4 @@ links:
     https://www.researchgate.net/publication/372494320_Asymptotic_properties_of_shrinkage_LAD_estimators
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
+

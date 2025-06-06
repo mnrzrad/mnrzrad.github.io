@@ -6,10 +6,10 @@ title: Robust estimation through the preliminary test based on the LAD-LASSO
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Norouzirad
-- M. Arashi
-- F. J. Marques
-- F. Esmaeili
+- admin
+- Mohammad Arashi
+- Filipe J. Marques
+- Foad Esmaeili
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -32,7 +32,7 @@ publication_short: ''
 
 doi: 10.1007/978-3-031-13971-0_19
 
-abstract: ''
+abstract: 'The least absolute deviation (LAD) estimator is an alternative to the ordinary least squares estimator when some outliers exist, or the error term in the regression model has a heavy-tailed distribution. The gist of this chapter is to present a new estimator for sparse and robust linear regression that improves the preliminary test LAD estimator, an estimator which depends on a test decision. Our strategy is to apply auxiliary information in the estimation obtained from employing the LAD-LASSO operator to find the null hypothesis, building the preliminary test estimator and its improvement. A Monte-Carlo simulation study shows that this new estimator is better than others. Moreover, an objective data analysis confirms that our proposed estimator performs better in the prediction error sense than the LAD, LAD-LASSO, and preliminary test estimators.'
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -53,9 +53,9 @@ url_source: ''
 url_video: ''
 
 # Custom links (uncomment lines below)
-# links:
-# - name: Custom Link
-#   url: http://example.org
+links:
+- name: URL
+  url: https://link.springer.com/chapter/10.1007/978-3-031-13971-0_19
 
 # Publication image
 # Add an image named `featured.jpg/png` to your page's folder then add a caption below.
@@ -72,4 +72,3 @@ image:
 projects: []
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.

@@ -6,10 +6,10 @@ title: Feasible Stein-Type and Preliminary Test Estimations in the System Regres
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Norouzirad
-- M. Arashi
-- F. J. Marques
-- N. A. Mamod Khan
+- admin
+- Mohammaad Arashi
+- Filipe J. Marques
+- Naushad Ali Mamode Khan
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -31,7 +31,7 @@ publication_short: ''
 
 doi: 10.19139/soic-2310-5070-1589
 
-abstract: ''
+abstract: 'In a system of regression models, finding a feasible shrinkage is demanding since the covariance structure is unknown and cannot be ignored. On the other hand, specifying sub-space restrictions for adequate shrinkage is vital. This study proposes feasible shrinkage estimation strategies where the sub-space restriction is obtained from LASSO. Therefore, some feasible LASSO-based Stein-type estimators are introduced, and their asymptotic performance is studied. Extensive Monte Carlo simulation and a real-data experiment support the superior performance of the proposed estimators compared to the feasible generalized least-squared estimator.'
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -42,7 +42,7 @@ tags: []
 featured: false
 
 # Links
-url_pdf: ''
+url_pdf: http://www.iapress.org/index.php/soic/article/view/1589/965
 url_code: ''
 url_dataset: ''
 url_poster: ''
@@ -52,9 +52,9 @@ url_source: ''
 url_video: ''
 
 # Custom links (uncomment lines below)
-# links:
-# - name: Custom Link
-#   url: http://example.org
+links:
+- name: URL
+  url: http://www.iapress.org/index.php/soic/article/view/1589
 
 # Publication image
 # Add an image named `featured.jpg/png` to your page's folder then add a caption below.

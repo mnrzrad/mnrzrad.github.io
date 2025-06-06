@@ -6,8 +6,8 @@ title: From Lad-LASSO to PR-LAD estimator
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Norouzirad
-- M. Arashi
+- admin
+- Mohammad Arashi
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -29,7 +29,7 @@ publication_short: ''
 
 doi: ''
 
-abstract: ''
+abstract: 'The least absolute deviation (LAD) estimator is an alternative to the OLS estimator, when outliers exist or the errors are distributed according to a heavy-tailed distribution. In this paper, we propose a shrinkage-type LAD estimator to improve the LAD one in the sense of accurate prediction. Our strategy is to apply an auxiliary information in estimation obtained from employing the LAD-LASSO, which gives the positive rule Stein-type shrinkage estimator as a result. A real data analysis confirms that our proposed estimator performs better in prediction error sense compared to the well-known LAD and LAD-LASSO regression estimator.'
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -72,5 +72,3 @@ links:
   url: 
     https://www.researchgate.net/publication/317717066_From_LAD_LASSO_to_PR_LAD_Estimator
 ---
-
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.

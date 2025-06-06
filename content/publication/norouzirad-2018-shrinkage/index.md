@@ -1,15 +1,14 @@
 ---
-title: Shrinkage and penalized estimators in weighted least absolute deviations regression
-  models
+title: Shrinkage and penalized estimators in weighted least absolute deviations regression models
 
 # Authors
 # A YAML list of author names
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Norouzirad
-- S. Hossain
-- M. Arashi
+- admin
+- Sakhawat Hossain
+- Mohammad Arashi
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -31,7 +30,7 @@ publication_short: ''
 
 doi: 10.1080/00949655.2018.1441415
 
-abstract: ''
+abstract: 'In this paper, we consider the estimation problem of the weighted least absolute deviation (WLAD) regression parameter vector when there are some outliers or heavy-tailed errors in the response and the leverage points in the predictors. We propose the pretest and James–Stein shrinkage WLAD estimators when some of the parameters may be subject to certain restrictions. We derive the asymptotic risk of the pretest and shrinkage WLAD estimators and show that if the shrinkage dimension exceeds two, the asymptotic risk of the shrinkage WLAD estimator is strictly less than the unrestricted WLAD estimator. On the other hand, the risk of the pretest WLAD estimator depends on the validity of the restrictions on the parameters. Furthermore, we study the WLAD absolute shrinkage and selection operator (WLAD-LASSO) and compare its relative performance with the pretest and shrinkage WLAD estimators. A simulation study is conducted to evaluate the performance of the proposed estimators relative to that of the unrestricted WLAD estimator. A real-life data example using body fat study is used to illustrate the performance of the suggested estimators.'
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -71,4 +70,4 @@ image:
 projects: []
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
+

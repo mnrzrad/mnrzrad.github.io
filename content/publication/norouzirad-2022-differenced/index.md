@@ -6,9 +6,9 @@ title: Differenced-based double shrinking in partial linear models
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Norouzirad
-- M. Arashi
-- M. Roozbeh
+- admin
+- Mohammad Arashi
+- Mahdi Roozbeh
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -30,7 +30,7 @@ publication_short: ''
 
 doi: 10.22054/jcsm.2018.33896.1008
 
-abstract: ''
+abstract: 'Partial linear model is very flexible when the relation between the covariates and responses, either parametric and nonparametric. However, estimation of the regression coefficients is challenging since one must also estimate the nonparametric component simultaneously. As a remedy, the differencing approach, to eliminate the nonparametric component and estimate the regression coefficients, can be used. Here, suppose the regression vector-parameter is subjected to lie in a sub-space hypothesis. In situations where the use of difference-based least absolute and shrinkage selection operator (D-LASSO) is desired for, we propose a restricted D-LASSO estimator. To improve its performance, LASSO-type shrinkage estimators are also developed. The relative dominance picture of suggested estimators is investigated. In particular, the suitability of estimating the nonparametric component based on the Speckman approach is explored. A real data example is given to compare the proposed estimators. From the numerical analysis, it is obtained that the partial difference-based shrinkage estimators perform better than the difference-based regression model in average prediction error sense.'
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -41,7 +41,7 @@ tags: []
 featured: false
 
 # Links
-url_pdf: ''
+url_pdf: https://jdscm.atu.ac.ir/article_9254_e1993268f0a1d0173fa539bc28dc4584.pdf
 url_code: ''
 url_dataset: ''
 url_poster: ''
@@ -51,9 +51,9 @@ url_source: ''
 url_video: ''
 
 # Custom links (uncomment lines below)
-# links:
-# - name: Custom Link
-#   url: http://example.org
+links:
+- name: URL
+  url: https://jdscm.atu.ac.ir/article_9254.html
 
 # Publication image
 # Add an image named `featured.jpg/png` to your page's folder then add a caption below.
@@ -70,4 +70,3 @@ image:
 projects: []
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
