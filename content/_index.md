@@ -81,7 +81,7 @@ sections:
         - title: Lecturer
           company: Neyshabour University
           company_url: https://en.neyshabur.ac.ir/en
-          company_logo: neyshabour
+          company_logo: neyshabur
           location: 'Neyshabour, Iran'
           date_start: '2018-09-20'
           date_end: '2019-07-20'
