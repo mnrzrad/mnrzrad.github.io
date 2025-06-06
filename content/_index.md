@@ -82,6 +82,7 @@ sections:
             **Thesis:** *On Estimation of Loss Function*
             
             **Supervisor:** [Prof Mohammad Arashi](https://prof.um.ac.ir/arashi)
+            **Advisor:** Prof. Hassan Sadeghi
             
             **Research Impact:**
             - Presented papers at 2 conferences
@@ -195,43 +196,125 @@ sections:
       columns: '2'
   - block: accomplishments
     content:
-      # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
-      title: 'Accomplish&shy;ments'
-      subtitle:
-      # Date format: https://docs.hugoblox.com/customization/#date-format
+      title: 'Certifications & Professional Development'
+      subtitle: 'Continuous learning in data science and statistics'
       date_format: Jan 2006
-      # Accomplishments.
-      #   Add/remove as many `item` blocks below as you like.
-      #   `title`, `organization`, and `date_start` are the required parameters.
-      #   Leave other parameters empty if not required.
-      #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - certificate_url: https://www.coursera.org
+        # Kaggle Certifications
+        - certificate_url: https://www.kaggle.com/learn/certification/minanorouzirad/data-cleaning
           date_end: ''
-          date_start: '2021-01-25'
-          description: ''
-          icon: coursera
-          organization: Coursera
-          organization_url: https://www.coursera.org
-          title: Neural Networks and Deep Learning
+          date_start: '2023-01-01'
+          description: 'Advanced data cleaning techniques and best practices'
+          icon: kaggle
+          organization: Kaggle
+          organization_url: https://www.kaggle.com
+          title: Data Cleaning
           url: ''
-        - certificate_url: https://www.edx.org
+          
+        # World Quant University
+        - certificate_url: https://www.credly.com/badges/2a9d0993-84e1-45b5-a6a0-0ae2798641ef/linked_in?t=s0mjyj
           date_end: ''
-          date_start: '2021-01-01'
-          description: Formulated informed blockchain models, hypotheses, and use cases.
-          icon: edx
-          organization: edX
-          organization_url: https://www.edx.org
-          title: Blockchain Fundamentals
-          url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
-        - certificate_url: https://www.datacamp.com
-          date_end: '2020-12-21'
-          date_start: '2020-07-01'
-          description: ''
-          icon: datacamp
+          date_start: '2023-01-01'
+          description: 'Practical application of data science methodologies'
+          icon: university
+          organization: World Quant University
+          organization_url: https://www.wqu.edu/
+          title: Applied Data Science Lab
+          url: ''
+          
+        # Udemy Courses
+        - certificate_url: https://www.udemy.com/certificate/UC-1860e348-3e92-489a-b7d3-00812e790603/
+          date_end: ''
+          date_start: '2022-01-01'
+          description: 'Academic writing skills for research publications'
+          icon: udemy
+          organization: Udemy
+          organization_url: https://www.udemy.com
+          title: Writing Academic English for Beginner
+          url: ''
+          
+        - certificate_url: https://www.udemy.com/certificate/UC-7b7d9d2f-6bd0-4847-ad55-2981f2face23/
+          date_end: ''
+          date_start: '2022-01-01'
+          description: 'Fundamentals of Python programming'
+          icon: python
+          organization: Udemy
+          organization_url: https://www.udemy.com
+          title: Python Basics - Bootcamp
+          url: ''
+          
+        - certificate_url: https://www.udemy.com/certificate/UC-1c31b845-d050-40a3-9f3a-72eb60764b59/
+          date_end: ''
+          date_start: '2022-01-01'
+          description: 'Computer vision with Keras and TensorFlow in R'
+          icon: brain
+          organization: Udemy
+          organization_url: https://www.udemy.com
+          title: CNN for Computer Vision with Keras and TensorFlow in R
+          url: ''
+          
+        # DataQuest Key Certifications
+        - certificate_url: https://app.dataquest.io/view_cert/Z24ESCAG9KMHO47MVRCD/
+          date_end: ''
+          date_start: '2022-01-01'
+          description: 'Comprehensive data analysis skills in R'
+          icon: chart-line
+          organization: DataQuest
+          organization_url: https://www.dataquest.io
+          title: Data Analyst in R
+          url: ''
+          
+        - certificate_url: https://app.dataquest.io/verify_cert/MMB2DJBGJCRHVP30T5CR/
+          date_end: ''
+          date_start: '2022-01-01'
+          description: 'Predictive modeling and machine learning techniques'
+          icon: robot
+          organization: DataQuest
+          organization_url: https://www.dataquest.io
+          title: Predictive Modeling and Machine Learning in R
+          url: ''
+          
+        # DataCamp
+        - certificate_url: https://drive.google.com/file/d/1P0islJjoAcF9d809G0PT4OKNeUfrs0IG/view
+          date_end: ''
+          date_start: '2022-01-01'
+          description: 'Python programming fundamentals'
+          icon: python
           organization: DataCamp
           organization_url: https://www.datacamp.com
-          title: 'Object-Oriented Programming in R'
+          title: Introduction to Python
+          url: ''
+          
+        - certificate_url: https://drive.google.com/file/d/1pWcGfzaidP4BT2bj5dL8zrp9vX2VW2II/view
+          date_end: ''
+          date_start: '2022-01-01'
+          description: 'Machine learning with scikit-learn'
+          icon: brain
+          organization: DataCamp
+          organization_url: https://www.datacamp.com
+          title: Supervised Learning with scikit-learn
+          url: ''
+          
+        # Julia Academy
+        - certificate_url: https://drive.google.com/file/d/1kOF-BGWl3AmWKHRw6GQm_--Cc3l0gLB9/view
+          date_end: ''
+          date_start: '2022-01-01'
+          description: 'Introduction to Julia programming language'
+          icon: code
+          organization: Julia Academy
+          organization_url: https://juliaacademy.com/
+          title: Getting Started with Julia
+          url: ''
+          
+        # 365 Data Science
+        - certificate_url: https://learn.365datascience.com/c/bb3830f1d4/
+          date_end: ''
+          date_start: '2022-01-01'
+          description: 'Machine learning implementation in Python'
+          icon: python
+          organization: 365 DataScience
+          organization_url: https://365datascience.com/
+          title: Machine Learning in Python
           url: ''
     design:
       columns: '2'
