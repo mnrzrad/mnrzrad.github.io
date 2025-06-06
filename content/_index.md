@@ -209,13 +209,13 @@ sections:
         
         - certificate_url: https://app.dataquest.io/view_cert/Z24ESCAG9KMHO47MVRCD/
           date_start: '2022-01-01'
-          icon: chart-line
+          icon: dataquest
           organization: DataQuest
           title: Data Analyst in R
         
         - certificate_url: https://app.dataquest.io/verify_cert/MMB2DJBGJCRHVP30T5CR/
           date_start: '2022-01-01'
-          icon: robot
+          icon: dataquest
           organization: DataQuest
           title: Predictive Modeling and Machine Learning in R
         
@@ -227,7 +227,7 @@ sections:
           
         - certificate_url: https://www.credly.com/badges/2a9d0993-84e1-45b5-a6a0-0ae2798641ef/linked_in?t=s0mjyj
           date_start: '2023-01-01'
-          icon: university
+          icon: WQU
           organization: World Quant University
           title: Applied Data Science Lab
       text: |-
