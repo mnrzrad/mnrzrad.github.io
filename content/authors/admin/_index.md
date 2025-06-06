@@ -26,9 +26,9 @@ organizations:
 
 # Short bio (displayed in user profile at end of posts)
 bio: >
-  I am a dedicated researcher and educator in the field of statistics, currently serving as a Junior Researcher
-  at the Center for Mathematics and Applications (NovaMath) in Caparica, Portugal, since April 2024.
-  Previously, I completed a post-doctoral research position at the same institution from March 2021 to March 2024.
+ A dedicated researcher and educator in the field of statistics
+
+
 
 # Interests to show in About widget
 interests:
@@ -157,3 +157,4 @@ highlight_name: true
 ---
 
 Mina Norouzirad is a dedicated researcher and educator in the field of statistics, currently serving as a Junior Researcher at the Center for Mathematics and Applications (NovaMath) in Caparica, Portugal, since April 2024. Previously, she completed a post-doctoral research position at the same institution from March 2021 to March 2024.
+<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=Qm1i4VQUaZG_U0fbYkxC0bb2zyMAT3L0hG8paJjf41Q&cl=ffffff&w=a"></script>
