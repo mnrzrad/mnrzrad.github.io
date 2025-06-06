@@ -77,25 +77,7 @@ skills:
         percent: 90
         icon: rstudio
         icon_pack: fas
-  <!-- - name: Hobbies
-    color: '#eeac02'
-    color_border: '#f0bf23'
-    items:
-      - name: Hiking
-        description: ''
-        percent: 60
-        icon: person-hiking
-        icon_pack: fas
-      - name: Cats
-        description: ''
-        percent: 100
-        icon: cat
-        icon_pack: fas
-      - name: Photography
-        description: ''
-        percent: 80
-        icon: camera-retro
-        icon_pack: fas -->
+
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
@@ -144,7 +126,8 @@ social:
     label: MathSciNet
     display:
       header: true
-  - icon: academicons/clarivate
+  - icon: clarivate
+    icon_pack: academicons
     url: https://www.webofscience.com/wos/author/record/1339076
     label: Web of Science
     display:
@@ -161,15 +144,6 @@ social:
     label: CIÊNCIA ID  
     display:
       header: true
-  <!-- - icon: twitter
-    icon_pack: fab
-    link: https://twitter.com/GeorgeCushen
-    label: Follow me on Twitter
-    display:
-      header: true -->
-  <!-- - icon: graduation-cap # Alternatively, use `google-scholar` icon from `ai` icon pack
-    icon_pack: fas
-    link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ -->
   
   
   # Link to a PDF of your resume/CV.
@@ -185,4 +159,3 @@ highlight_name: true
 
 Mina Norouzirad is a dedicated researcher and educator in the field of statistics, currently serving as a Junior Researcher at the Center for Mathematics and Applications (NovaMath) in Caparica, Portugal, since April 2024. Previously, she completed a post-doctoral research position at the same institution from March 2021 to March
 2024.
-{style="text-align: justify;"}
