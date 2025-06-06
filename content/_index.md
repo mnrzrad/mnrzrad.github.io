@@ -231,7 +231,21 @@ sections:
           organization: World Quant University
           title: Applied Data Science Lab
       text: |-
-        [**View All Certifications →**](./certificates/)
+        <div style="text-align: center; margin-top: 30px;">
+        <a href="./certificates/" style="
+          display: inline-block;
+          padding: 12px 24px;
+          background-color: #007bff;
+          color: white;
+          text-decoration: none;
+          border-radius: 6px;
+          font-weight: bold;
+          transition: all 0.3s;
+          box-shadow: 0 2px 4px rgba(0,123,255,0.3);
+        ">
+          📋 View All 45+ Certifications →
+        </a>
+        </div>
     design:
       columns: '2'
   - block: collection
