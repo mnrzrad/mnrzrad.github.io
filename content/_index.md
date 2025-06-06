@@ -79,6 +79,15 @@ sections:
           description: |2-
             Conducted advanced research in shrinkage estimation methods and robust regression techniques.
         - title: Lecturer
+          company: Shahrood University of Technology
+          company_url: 'https://shahroodut.ac.ir/en/'
+          company_logo: shahrood
+          location: 'Shahrood, Iran'
+          date_start: '2017-09-21'
+          date_end: '2019-07-20'
+          description: |2-
+            Taught various courses in statistics, probability theory, and mathematical modeling.
+        - title: Lecturer
           company: Neyshabour University
           company_url: https://en.neyshabur.ac.ir/en
           company_logo: neyshabur
@@ -99,7 +108,7 @@ sections:
         - title: Visiting Research Student
           company: Carleton University
           company_url: 'https://carleton.ca/'
-          company_logo: ''
+          company_logo: carleton
           location: 'Ottawa, Canada'
           date_start: '2016-11-01'
           date_end: '2017-05-01'
@@ -108,7 +117,7 @@ sections:
         - title: Visiting Research Student
           company: Brock University
           company_url: 'https://brocku.ca/'
-          company_logo: ''
+          company_logo: brock
           location: 'St. Catharines, Canada'
           date_start: '2016-05-28'
           date_end: '2016-10-31'
@@ -116,17 +125,17 @@ sections:
             Research collaboration focusing on penalized regression models and estimation techniques.
         - title: Lecturer
           company: Shahrood University of Technology
-          company_url: 'https://shahroodut.ac.ir/'
-          company_logo: ''
+          company_url: 'https://shahroodut.ac.ir/en/'
+          company_logo: shahrood
           location: 'Shahrood, Iran'
           date_start: '2014-09-21'
-          date_end: '2019-07-20'
+          date_end: '2016-07-27'
           description: |2-
             Taught various courses in statistics, probability theory, and mathematical modeling.
         - title: Lecturer
           company: Islamic Azad University, Mashhad Branch
-          company_url: ''
-          company_logo: ''
+          company_url: 'https://mashhad.iau.ir/en'
+          company_logo: azad
           location: 'Mashhad, Iran'
           date_start: '2011-09-20'
           date_end: '2013-07-20'
