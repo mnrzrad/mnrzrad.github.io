@@ -6,8 +6,8 @@ title: Steinian shrinkage estimation in high dimensional regression
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Arashi
-- M. Norouzirad
+- Mohammad Arashi
+- Admin
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -29,7 +29,7 @@ publication_short: ''
 
 doi: ''
 
-abstract: ''
+abstract: 'In this paper, we suggest Steinian shrinkage ridge regression estimator for a high-dimensional multiple regression model, where the number of predictors p is larger than of samples n, i.e., $p \gg n $. Our strategy is to apply an auxiliary information which obtains from employing the LASSO technique in the Steinian shrinkage technique to improve estimation. Performance of the proposed positive Steinian shrinkage estimator is numerically examined. Both the simulation and real data analyses confirm that our proposed estimator performs much better in risk sense compared to the well-known ridge regression estimator when $p \gg n $ with fixed $n$.'
 
 # Summary. An optional shortened abstract.
 summary: ''
