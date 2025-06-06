@@ -244,28 +244,7 @@ sections:
       title: Gallery
       subtitle: ''
       text: |-
-        {{ $gallery := .Resources.ByType "image" }}
-        {{ if not $gallery }}
-          {{ $gallery = (.Site.GetPage "/").Resources.ByType "image" }}
-        {{ end }}
-        
-        <div class="auto-hugo-gallery" style="margin: 20px 0;">
-          
-          {{ range $index, $image := $gallery }}
-            <div style="margin-bottom: 40px; padding: 20px; border: 2px solid #ddd; border-radius: 10px; background: #f8f9fa;">
-              <h4 style="margin-bottom: 15px; color: #333;">{{ $image.Name }}</h4>
-              <div style="overflow-x: auto; overflow-y: hidden; border: 1px solid #ccc; border-radius: 8px;">
-                <img src="{{ $image.RelPermalink }}" 
-                    alt="{{ $image.Name }} at original size" 
-                    style="width: auto; height: auto; max-width: none; display: block;" />
-              </div>
-              <p style="margin-top: 10px; color: #666; font-size: 14px;">
-                {{ $image.Name }} - Original resolution: {{ $image.Width }}x{{ $image.Height }}px
-              </p>
-            </div>
-          {{ end }}
-          
-        </div>
+         {{< gallery album="demo" >}} 
     design:
       columns: '1'
   - block: collection
