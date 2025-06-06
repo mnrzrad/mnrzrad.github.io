@@ -7,7 +7,7 @@ title: 'PSinference: Inference for Released Plug-in Sampling Single Synthetic Da
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
 - Ricardo Moura
-- Mina Norouzirad
+- admin
 - Vítor Augusto
 - Miguel Fonseca
 
@@ -23,7 +23,7 @@ publishDate: '2025-06-05T14:28:08.795931Z'
 # Publication type.
 # A single CSL publication type but formatted as a YAML list (for Hugo requirements).
 publication_types:
-- book
+- software
 
 # Publication name and optional abbreviated publication name.
 publication: ''
@@ -42,19 +42,14 @@ tags: []
 featured: false
 
 # Links
-url_pdf: ''
+url_pdf: https://cran.r-project.org/web/packages/PSinference/PSinference.pdf
 url_code: ''
 url_dataset: ''
 url_poster: ''
 url_project: ''
 url_slides: ''
-url_source: ''
+url_source: https://github.com/ricardomourarpm/PSinference
 url_video: ''
-
-# Custom links (uncomment lines below)
-# links:
-# - name: Custom Link
-#   url: http://example.org
 
 # Publication image
 # Add an image named `featured.jpg/png` to your page's folder then add a caption below.
@@ -74,4 +69,4 @@ links:
   url: https://cran.r-project.org/package=PSinference
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
+

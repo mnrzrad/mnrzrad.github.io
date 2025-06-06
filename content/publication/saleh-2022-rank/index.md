@@ -1,16 +1,15 @@
 ---
-title: Rank-Based Methods for Shrinkage and Selection With Application to Machine
-  Learning
+title: Rank-Based Methods for Shrinkage and Selection With Application to Machine Learning
 
 # Authors
 # A YAML list of author names
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- A. K. Md. E. Saleh
-- M. Arashi
-- R. A. Saleh
-- M. Norouzirad
+- A. K. Md. Ehsanes Saleh
+- Mohammad Arashi
+- Resve A. Saleh
+- admin
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -32,7 +31,7 @@ publication_short: ''
 
 doi: ''
 
-abstract: ''
+abstract: 'Robust statistics is an important field in contemporary mathematics and applied statistical methods. Rank-Based Methods for Shrinkage and Selection: With Application to Machine Learning describes techniques to produce higher quality data analysis in shrinkage and subset selection to obtain parsimonious models with outlier-free prediction. This book is intended for statisticians, economists, biostatisticians, data scientists and graduate students.'
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -40,7 +39,7 @@ summary: ''
 tags: []
 
 # Display this page in a list of Featured pages?
-featured: false
+featured: true
 
 # Links
 url_pdf: ''
@@ -76,4 +75,4 @@ links:
     https://www.wiley.com/en-us/Rank+Based+Methods+for+Shrinkage+and+Selection:+With+Application+to+Machine+Learning-p-9781119625391
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
+

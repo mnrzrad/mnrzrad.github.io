@@ -6,9 +6,9 @@ title: Neutrosophic Generalized Exponential Distribution with Application
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- G. S. Rao
-- M. Norouzirad
-- D. Mazarei
+- Gadde Srinivasa Rao
+- admin
+- Danial Mazarei
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -30,7 +30,7 @@ publication_short: ''
 
 doi: 10.5281/zenodo.7832786
 
-abstract: ''
+abstract: 'The objective of this article is to create a Neutrosophic Generalized Exponential (NGE) distribution in the presence of uncertainty. It is possible to calculate the mean, variance, moments, and reliability expression of the NGE distribution. With the help of graphs, the nature of the distribution and the reliability and hazard functions are studied. To determine the NGE distribution’s parameters, a maximum likelihood estimation technique is used. The performance of estimated parameters is further tested using simulations. Finally, an actual data set is examined to show how the NGE distribution works. According to a model validity test, the NGE distribution is superior to the existing neutrosophic distributions that can be found in the literature.'
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -41,7 +41,7 @@ tags: []
 featured: false
 
 # Links
-url_pdf: ''
+url_pdf: https://digitalrepository.unm.edu/cgi/viewcontent.cgi?article=2306&context=nss_journal
 url_code: ''
 url_dataset: ''
 url_poster: ''
@@ -51,9 +51,9 @@ url_source: ''
 url_video: ''
 
 # Custom links (uncomment lines below)
-# links:
-# - name: Custom Link
-#   url: http://example.org
+links:
+- name: URL
+  url: https://digitalrepository.unm.edu/nss_journal/vol55/iss1/28/
 
 # Publication image
 # Add an image named `featured.jpg/png` to your page's folder then add a caption below.
@@ -70,4 +70,3 @@ image:
 projects: []
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.

@@ -6,9 +6,9 @@ title: 'ntsDatasets: Neutrosophic Data Sets'
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- A. Roshani
-- M. Norouzirad
-- D. Mazarei
+- Amin Roshani
+- admin
+- Danial Mazarei
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -22,7 +22,7 @@ publishDate: '2025-06-05T14:28:08.781261Z'
 # Publication type.
 # A single CSL publication type but formatted as a YAML list (for Hugo requirements).
 publication_types:
-- book
+- software
 
 # Publication name and optional abbreviated publication name.
 publication: ''
@@ -30,7 +30,7 @@ publication_short: ''
 
 doi: ''
 
-abstract: ''
+abstract: 'This R package provides a collection of datasets related to neutrosophic sets for statistical modeling and analysis.'
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -41,19 +41,14 @@ tags: []
 featured: false
 
 # Links
-url_pdf: ''
+url_pdf: https://cran.r-project.org/web/packages/ntsDatasets/ntsDatasets.pdf
 url_code: ''
 url_dataset: ''
 url_poster: ''
 url_project: ''
 url_slides: ''
-url_source: ''
+url_source: https://github.com/a-roshani/ntsDatasets
 url_video: ''
-
-# Custom links (uncomment lines below)
-# links:
-# - name: Custom Link
-#   url: http://example.org
 
 # Publication image
 # Add an image named `featured.jpg/png` to your page's folder then add a caption below.
@@ -73,4 +68,3 @@ links:
   url: https://cran.r-project.org/package=ntsDatasets
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
