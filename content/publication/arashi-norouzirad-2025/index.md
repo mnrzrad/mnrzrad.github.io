@@ -7,8 +7,8 @@ title: 'Advances in Shrinkage and Penalized Estimation Strategies: Honoring the 
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Arashi
-- M. Norouzirad
+- Mohammad Arashi
+- Mina Norouzirad
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -38,7 +38,7 @@ summary: ''
 tags: []
 
 # Display this page in a list of Featured pages?
-featured: false
+featured: true
 
 # Links
 url_pdf: ''
@@ -51,9 +51,9 @@ url_source: ''
 url_video: ''
 
 # Custom links (uncomment lines below)
-# links:
-# - name: Custom Link
-#   url: http://example.org
+links:
+- name: URL
+  url: https://link.springer.com/book/9783031940491
 
 # Publication image
 # Add an image named `featured.jpg/png` to your page's folder then add a caption below.
@@ -69,5 +69,6 @@ image:
 #   Otherwise, set `projects: []`.
 projects: []
 ---
+This book is a tribute to Professor A. K. Md. Ehsanes Saleh, a distinguished figure in the field of statistics known for his pioneering work, including the development of the "Preliminary Test Approach to Shrinkage Estimation". Although Professor Saleh passed away in September 2023, his legacy will live on through this special volume that explores penalized approaches for statistical analysis and recent developments in shrinkage methods. Covering regression modeling, robust estimation, machine learning, and high-dimensional data analytics, this volume bridges theoretical advancements with practical applications of these methodologies.
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
+In addition to introducing novel research and viewpoints, the book seeks to encourage dialogue among experienced practitioners in the field. This resource is specifically designed for researchers, statisticians, or data science professionals seeking ways to improve their comprehension and application of these methods.

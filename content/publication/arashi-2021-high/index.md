@@ -6,10 +6,10 @@ title: A high-dimensional counterpart for the ridge estimator in multicollinear 
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Arashi
-- M. Norouzirad
-- M. Roozbeh
-- N. Mamode Khan
+- Mohammad Arashi
+- Admin
+- Mahdi Roozbeh
+- Naushad Mamode Khan
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -31,7 +31,7 @@ publication_short: ''
 
 doi: 10.3390/math9233057
 
-abstract: ''
+abstract: 'The ridge regression estimator is a commonly used procedure to deal with multicollinear data. This paper proposes an estimation procedure for high-dimensional multicollinear data that can be alternatively used. This usage gives a continuous estimate, including the ridge estimator as a particular case. We study its asymptotic performance for the growing dimension, i.e., $ p \to \infity$ when $n$ is fixed. Under some mild regularity conditions, we prove the proposed estimator’s consistency and derive its asymptotic properties. Some Monte Carlo simulation experiments are executed in their performance, and the implementation is considered to analyze a high-dimensional genetic dataset.'
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -42,7 +42,7 @@ tags: []
 featured: false
 
 # Links
-url_pdf: ''
+url_pdf: https://www.mdpi.com/2227-7390/9/23/3057/pdf?version=1638926197
 url_code: ''
 url_dataset: ''
 url_poster: ''
@@ -52,9 +52,9 @@ url_source: ''
 url_video: ''
 
 # Custom links (uncomment lines below)
-# links:
-# - name: Custom Link
-#   url: http://example.org
+links:
+- name: URL
+  url: https://www.mdpi.com/2227-7390/9/23/3057
 
 # Publication image
 # Add an image named `featured.jpg/png` to your page's folder then add a caption below.
@@ -71,4 +71,4 @@ image:
 projects: []
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
+

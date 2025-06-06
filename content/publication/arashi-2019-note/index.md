@@ -6,8 +6,8 @@ title: A note on preliminary test estimator in high dimensional regression model
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Arashi
-- M. Norouzirad
+- Mohammad Arashi
+- Admin
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -29,7 +29,7 @@ publication_short: ''
 
 doi: 10.19080/BBOAJ.2019.09.555756
 
-abstract: ''
+abstract: 'In this note, we show how to construct the well-known preliminary test estimator to be practical in the high dimensional linear regression model. The strategy is to use a high dimensional test when it is a priori suspected that the parameter may be equal to zero.'
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -40,7 +40,7 @@ tags: []
 featured: false
 
 # Links
-url_pdf: ''
+url_pdf: https://juniperpublishers.com/bboaj/pdf/BBOAJ.MS.ID.555756.pdf
 url_code: ''
 url_dataset: ''
 url_poster: ''
@@ -67,9 +67,6 @@ image:
 #   E.g. `projects: ['internal-project']` links to `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
 projects: []
-links:
-- name: URL
-  url: https://juniperpublishers.com/bboaj/BBOAJ.MS.ID.555756.php
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
+
