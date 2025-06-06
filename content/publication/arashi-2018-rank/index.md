@@ -7,7 +7,7 @@ title: Rank-based Liu regression
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
 - Mohammad Arashi
-- Admin
+- admin
 - S. Ejaz Ahmed 
 - Bahadır Yüzbaşı
 

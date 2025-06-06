@@ -7,10 +7,10 @@ title: 'Testing the independence of variables for specific covariance structures
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- F. J. Marques
-- J. Diogo
-- M. Norouzirad
-- R. Bispo
+- Filipe J. Marques
+- Joana Diogo
+- admin
+- Regina Bispo
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -32,7 +32,7 @@ publication_short: ''
 
 doi: 10.1002/mma.9130
 
-abstract: ''
+abstract: 'In this work, we show how it is possible to test the nullity of covariances, in a set of variables, using a simple univariate procedure. The methodology proposed enables us to perform the multivariate test of independence of several variables, under specific conditions for the covariance structure. The methodology proposed may be used in the high-dimensional setting and, given its simplicity, allows to overcome the difficulties in using the exact distribution of the statistic used in the likelihood ratio testing procedure. A simulation study is provided to assess the power and significance level, in different scenarios, of the testing procedure proposed when compared with different likelihood ratio tests and a methodology available in the literature.'
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -53,9 +53,9 @@ url_source: ''
 url_video: ''
 
 # Custom links (uncomment lines below)
-# links:
-# - name: Custom Link
-#   url: http://example.org
+links:
+- name: URL
+  url: https://onlinelibrary.wiley.com/doi/full/10.1002/mma.9130
 
 # Publication image
 # Add an image named `featured.jpg/png` to your page's folder then add a caption below.
@@ -72,4 +72,3 @@ image:
 projects: []
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.

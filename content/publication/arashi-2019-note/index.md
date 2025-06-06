@@ -7,7 +7,7 @@ title: A note on preliminary test estimator in high dimensional regression model
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
 - Mohammad Arashi
-- Admin
+- admin
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list

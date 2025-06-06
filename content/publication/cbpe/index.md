@@ -6,9 +6,9 @@ title: 'CBPE: Correlation-Based Penalized Estimators'
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Arashi
-- M. Rahimi
-- M. Norouzirad
+- Mohammad Arashi
+- Mahdi Rahimi
+- admin
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -22,7 +22,7 @@ publishDate: '2025-06-05T14:28:08.527969Z'
 # Publication type.
 # A single CSL publication type but formatted as a YAML list (for Hugo requirements).
 publication_types:
-- book
+- software
 
 # Publication name and optional abbreviated publication name.
 publication: ''
@@ -30,7 +30,7 @@ publication_short: ''
 
 doi: ''
 
-abstract: ''
+abstract: 'R package  *CBPE* provides correlation-based penalty estimators for both linear and logistic regression models by implementing a new regularization method.'
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -47,7 +47,7 @@ url_dataset: ''
 url_poster: ''
 url_project: ''
 url_slides: ''
-url_source: ''
+url_source: https://github.com/mnrzrad/CBPE
 url_video: ''
 
 # Custom links (uncomment lines below)

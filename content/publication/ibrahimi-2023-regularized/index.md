@@ -7,10 +7,10 @@ title: Regularized Generalized Linear Models to Disclose Host-Microbiome Associa
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- E. Ibrahimi
-- M. Norouzirad
-- M. Meto
-- M. b. Lopes
+- Eliana Ibrahimi
+- admin
+- Melisa Meto
+- Marta B. Lopes
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -32,7 +32,7 @@ publication_short: ''
 
 doi: ''
 
-abstract: ''
+abstract: 'Recent studies have shown that gut microbiome is associated with colorectal cancer (CRC) progression and anti-cancer therapy efficacy. This study aims to optimize the ridge, elastic net, and lasso regularized generalized linear models (GLM), widely used for supervised machine learning, for multiclass classification tasks (healthy/adenoma/carcinoma). The models are applied to a benchmark gut microbiome dataset using raw and transformed data. A cross-validation procedure is used to select an optimal value for the shrinkage parameter, $\lambda$. The results show a higher accuracy of the ridge and elastic net models compared to the lasso model. We confirm known associations of several microbiome genera with CRC and adenoma. These findings are expected to contribute to the definition of CRC-microbiome signatures to be further validated in microbiome-related therapy studies.'
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -43,7 +43,7 @@ tags: []
 featured: false
 
 # Links
-url_pdf: ''
+url_pdf: https://dl.acm.org/doi/pdf/10.1145/3613347.3613362
 url_code: ''
 url_dataset: ''
 url_poster: ''
@@ -53,9 +53,9 @@ url_source: ''
 url_video: ''
 
 # Custom links (uncomment lines below)
-# links:
-# - name: Custom Link
-#   url: http://example.org
+links:
+- name: URL
+  url: https://dl.acm.org/doi/10.1145/3613347.3613362
 
 # Publication image
 # Add an image named `featured.jpg/png` to your page's folder then add a caption below.
@@ -72,4 +72,3 @@ image:
 projects: []
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.

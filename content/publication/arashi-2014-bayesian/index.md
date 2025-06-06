@@ -8,7 +8,7 @@ title: Bayesian analysis in multivariate regression models with conjugate priors
 authors:
 - Mohammad Arashi
 - Anis Iranmanesh
-- Admin
+- admin
 - Hashem Salarzadeh Jenatabadi
 
 # Author notes (such as 'Equal Contribution')

@@ -6,9 +6,9 @@ title: Shrinkage estimation through convex optimization
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Norouzirad
-- M. Arashi
-- A. K. Md. E. Saleh
+- admin
+- Mohammad Arashi
+- A. K. Md. Ehsanes Saleh
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -30,7 +30,7 @@ publication_short: ''
 
 doi: ''
 
-abstract: ''
+abstract: 'Following least absolute and shrinkage selection operator (LASSO), we define preliminarily, Stein-type shrinkage and its positive part LASSO estimators and propose an algorithm to derive them using the result of [James et al. (2012)](https://www.semanticscholar.org/paper/The-Constrained-Lasso-James-Paulson/d01879fd336ca22556681a313acdbbc7a3be6afd).'
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -74,4 +74,4 @@ links:
     https://www.researchgate.net/publication/317717075_Shrinkage_Estimation_Through_Convex_Optimization
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
+

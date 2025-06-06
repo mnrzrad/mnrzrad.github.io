@@ -9,7 +9,7 @@ title: Improved preliminary test and Stein-rule Liu estimators for the ill-condi
 authors:
 - Mohammad Arashi
 - B. M. Golam Kibria
-- Admin
+- admin
 - Saralees Nadarajah
 
 # Author notes (such as 'Equal Contribution')

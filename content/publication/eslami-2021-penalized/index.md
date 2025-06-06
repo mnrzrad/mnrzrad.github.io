@@ -6,9 +6,9 @@ title: Penalized estimators in Cox regression model
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- Z. Eslami
-- M. Norouzirad
-- M. Arashi
+- Zahra Eslami
+- admin
+- Mohammad Arashi
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -30,7 +30,7 @@ publication_short: ''
 
 doi: ''
 
-abstract: ''
+abstract: 'The proportional hazard Cox regression models play a key role in analyzing censored survival data. We use penalized methods in high dimensional scenarios to achieve more efficient models. This article reviews the penalized Cox regression for some frequently used penalty functions. Analysis of medical data namely ”mgus2” confirms the penalized Cox regression performs better than the cox regression model. Among all penalty functions, LASSO provides the best fit.'
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -41,7 +41,7 @@ tags: []
 featured: false
 
 # Links
-url_pdf: ''
+url_pdf: https://irstat.ir/andisheyeamari/article-1-783-en.pdf
 url_code: ''
 url_dataset: ''
 url_poster: ''
@@ -73,4 +73,4 @@ links:
   url: https://andisheyeamari.irstat.ir/article-1-783-en.html
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
+This paper is written in Persian.

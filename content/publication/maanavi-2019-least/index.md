@@ -6,9 +6,9 @@ title: Least trimmed ridge estimator under stochastic linear restriction
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Maanavi
-- M. Roozbeh
-- M. Norouzirad
+- Monireh Maanavi
+- Mahdi Roozbeh
+- admin
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -41,7 +41,7 @@ tags: []
 featured: false
 
 # Links
-url_pdf: ''
+url_pdf: https://www.researchgate.net/profile/Mina-Norouzirad/publication/372493948_Least_trimmed_ridge_estimator_under_stochastics_linear_restriction-1398/links/64ba466995bbbe0c6e4fcf84/Least-trimmed-ridge-estimator-under-stochastics-linear-restriction-1398.pdf?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InB1YmxpY2F0aW9uIiwicGFnZSI6InB1YmxpY2F0aW9uIiwicHJldmlvdXNQYWdlIjoiX2RpcmVjdCJ9fQ
 url_code: ''
 url_dataset: ''
 url_poster: ''
@@ -74,4 +74,4 @@ links:
     https://www.researchgate.net/publication/372493948_Least_trimmed_ridge_estimator_under_stochastic_linear_restriction-1398
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
+This paper is written in Persian.

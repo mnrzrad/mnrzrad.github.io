@@ -6,9 +6,9 @@ title: 'ImpShrinkage: Improved Shrinkage Estimations for Multiple Linear Regress
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Norouzirad
-- D. Mazarei
-- R. Moura
+- admin
+- Danial Mazarei
+- Ricardo Moura
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -30,7 +30,7 @@ publication_short: ''
 
 doi: ''
 
-abstract: ''
+abstract: 'This R package provides a variety of improved shrinkage estimators in the area of statistical analysis: unrestricted; restricted; preliminary test; improved preliminary test; Stein; and positive-rule Stein.'
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -41,13 +41,13 @@ tags: []
 featured: false
 
 # Links
-url_pdf: ''
+url_pdf: https://cran.r-project.org/web/packages/ImpShrinkage/ImpShrinkage.pdf
 url_code: ''
 url_dataset: ''
 url_poster: ''
 url_project: ''
 url_slides: ''
-url_source: ''
+url_source: https://github.com/mnrzrad/ImpShrinkage
 url_video: ''
 
 # Custom links (uncomment lines below)
@@ -73,4 +73,4 @@ links:
   url: https://cran.r-project.org/package=ImpShrinkage
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
+

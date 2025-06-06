@@ -7,7 +7,7 @@ title: A high-dimensional counterpart for the ridge estimator in multicollinear 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
 - Mohammad Arashi
-- Admin
+- admin
 - Mahdi Roozbeh
 - Naushad Mamode Khan
 

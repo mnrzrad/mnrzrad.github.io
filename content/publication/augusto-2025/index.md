@@ -6,10 +6,10 @@ title: 'PSInference: A Package for Synthetic Data'
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- V. Augusto
-- R. Moura
-- M. Norouzirad
-- M. Fonseca
+- Vítor Augusto
+- Ricardo Moura
+- admin
+- Miguel Fonseca
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -42,7 +42,7 @@ tags: []
 featured: false
 
 # Links
-url_pdf: ''
+url_pdf: https://arxiv.org/pdf/2503.14711
 url_code: ''
 url_dataset: ''
 url_poster: ''
@@ -52,9 +52,9 @@ url_source: ''
 url_video: ''
 
 # Custom links (uncomment lines below)
-# links:
-# - name: Custom Link
-#   url: http://example.org
+links:
+- name: URL
+  url: https://arxiv.org/abs/2503.14711
 
 # Publication image
 # Add an image named `featured.jpg/png` to your page's folder then add a caption below.
@@ -71,4 +71,4 @@ image:
 projects: []
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
+

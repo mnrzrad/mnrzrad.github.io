@@ -6,9 +6,9 @@ title: Some asymptotic results on improved LASSO estimators
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Norouzirad
-- M. Arashi
-- A. K. Md. E. Saleh
+- admin
+- Mohammad Arashi
+- A. K. Md. Ehsanes Saleh
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -30,7 +30,7 @@ publication_short: ''
 
 doi: ''
 
-abstract: ''
+abstract: 'In the context of regression modeling, when the number of predictors are relatively large with respect to sample size, the least absolute shrinkage and selection operator (LASSO), adds some level of sparsity to the estimation of parameter vector to improve the prediction. When the coefficients are subjected to lie in a subspace hypothesis, we propose to use a restricted LASSO estimator along with its preliminary test and shrinkage versions. Asymptotic distributions with properties of the newly defined LASSO-typed estimators are derived and some graphs are depicted to show the performance of asymptotic relative efficiencies.'
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -74,4 +74,4 @@ links:
     https://www.researchgate.net/publication/284727392_Some_Asymptotic_Results_on_Improved_LASSO_Estimators
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
+

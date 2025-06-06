@@ -6,8 +6,8 @@ title: On the quadratic loss estimation
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Arashi
-- M. Norouzirad
+- Mohammad Arashi
+- admin
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -29,7 +29,7 @@ publication_short: ''
 
 doi: ''
 
-abstract: ''
+abstract: 'It is sometimes interesting to find an estimator of the underlying loss function as a measure of closeness. In this presentation, a general form of an unbiased estimator of the quadratic loss function which is polynomial in coordinated, is derived. It is worthwhile to point that the unbiased estimator of the loss is constructed according and the use of Stein-type shrinkage estimators which are almost biased.'
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -73,4 +73,3 @@ links:
     https://www.researchgate.net/publication/372495880_On_the_Quartic_Loss_Estimation
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.

@@ -6,8 +6,8 @@ title: Comparing Estimation Methods for the PowerPareto Distribution
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- F. Caeiro
-- M. Norouzirad
+- Frederico Caeiro
+- admin
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -40,7 +40,7 @@ tags: []
 featured: false
 
 # Links
-url_pdf: ''
+url_pdf: https://www.mdpi.com/2225-1146/12/3/20/pdf?version=1720692125
 url_code: ''
 url_dataset: ''
 url_poster: ''
@@ -72,4 +72,4 @@ links:
   url: https://www.mdpi.com/2225-1146/12/3/20
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
+

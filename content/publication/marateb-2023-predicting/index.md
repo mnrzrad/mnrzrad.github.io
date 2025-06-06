@@ -7,15 +7,15 @@ title: 'Predicting COVID-19 Hospital Stays with Kolmogorov--Gabor Polynomials: C
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- H. Marateb
-- M. Norouzirad
-- K. Tavakolian
-- F. Aminorroaya
-- M. Mohebbian
-- M.Á. Mañanas
-- S.R. Lafuente
-- R. Sami
-- M. Mansourian
+- Hamidreza Marateb
+- admin
+- Kouhyar Tavakolian
+- Faezeh Aminorroaya 
+- Mohammadreza Mohebbian
+- Miguel Ángel Mañanas
+- Sergio Romero Lafuente
+- Ramin Sami
+- Marjan Mansourian
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -48,7 +48,7 @@ tags: []
 featured: false
 
 # Links
-url_pdf: ''
+url_pdf: https://www.mdpi.com/2078-2489/14/11/590/pdf?version=1698721903
 url_code: ''
 url_dataset: ''
 url_poster: ''
@@ -58,9 +58,9 @@ url_source: ''
 url_video: ''
 
 # Custom links (uncomment lines below)
-# links:
-# - name: Custom Link
-#   url: http://example.org
+links:
+- name: URL
+  url: https://www.mdpi.com/2078-2489/14/11/590
 
 # Publication image
 # Add an image named `featured.jpg/png` to your page's folder then add a caption below.

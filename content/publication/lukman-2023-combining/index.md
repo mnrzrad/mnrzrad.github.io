@@ -7,10 +7,10 @@ title: Combining Kibria-Lukman and Principal Component Estimators for the Distri
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- A. F. Lukman
-- M. Norouzirad
-- F. J. Marques
-- D. Mazarei
+- Adewale Folaranmi Lukman
+- admin
+- Filipe J. Marques
+- Danial Mazarei
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -32,7 +32,7 @@ publication_short: ''
 
 doi: 10.1007/s41237-023-00198-y
 
-abstract: ''
+abstract: 'Researchers are likely to encounter the problem of multicollinearity in the distributed lag model due to its nature. To address multicollinearity, biased estimation techniques such as the Almon ridge estimator may be preferred over the Almon estimator. By integrating the principal component (PC) approach with the Almon Kibria-Lukman (KL) estimator, the Almon principal component Kibria-Lukman estimator is proposed in this paper. The new technique possesses the advantage of the principal component estimator and the Almon-KL estimator. Almon-PC-KL estimator dominates the other estimators considered in this study in terms of theoretical comparison and simulation.'
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -53,9 +53,9 @@ url_source: ''
 url_video: ''
 
 # Custom links (uncomment lines below)
-# links:
-# - name: Custom Link
-#   url: http://example.org
+links:
+- name: URL
+  url: https://link.springer.com/article/10.1007/s41237-023-00198-y
 
 # Publication image
 # Add an image named `featured.jpg/png` to your page's folder then add a caption below.
@@ -72,4 +72,4 @@ image:
 projects: []
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
+

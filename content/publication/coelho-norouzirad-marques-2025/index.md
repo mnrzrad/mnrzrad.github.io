@@ -8,7 +8,7 @@ title: Testing the hypothesis of a nested block covariance matrix structure with
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
 - Carlos A. Coelho
-- Mina Norouzirad
+- admin
 - Filipe J. Marques
 
 # Author notes (such as 'Equal Contribution')
@@ -48,7 +48,7 @@ url_dataset: ''
 url_poster: ''
 url_project: ''
 url_slides: ''
-url_source: ''
+url_source: https://github.com/mnrzrad/NBCCS
 url_video: ''
 
 # Custom links (uncomment lines below)
@@ -74,4 +74,4 @@ links:
   url: https://onlinelibrary.wiley.com/doi/abs/10.1002/mma.10377
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
+
