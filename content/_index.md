@@ -195,6 +195,7 @@ sections:
     design:
       columns: '2'
   - block: accomplishments
+    id: certificates
     content:
       title: 'Key Certifications'
       subtitle: 'Continuous learning in data science and statistics'
@@ -220,7 +221,7 @@ sections:
         
         - certificate_url: https://drive.google.com/file/d/1pWcGfzaidP4BT2bj5dL8zrp9vX2VW2II/view
           date_start: '2022-01-01'
-          icon: python
+          icon: datacamp
           organization: DataCamp
           title: Supervised Learning with scikit-learn
           
