@@ -230,26 +230,26 @@ sections:
         [**View All Certifications →**](./certificates/)
     design:
       columns: '2'
-    - block: markdown
-  content:
-    title: ''
-    text: |-
-      <div style="text-align: center; margin-top: -10px; margin-bottom: 40px;">
-        <a href="./certificates/" style="
-          display: inline-block;
-          padding: 12px 24px;
-          background-color: #007bff;
-          color: white;
-          text-decoration: none;
-          border-radius: 6px;
-          font-weight: bold;
-          box-shadow: 0 2px 4px rgba(0,123,255,0.3);
-        " onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007bff'">
-          📋 View All 45+ Certifications →
-        </a>
-      </div>
-  design:
-    columns: '1'
+  - block: markdown
+    content:
+      title: ''
+      text: |-
+        <div style="text-align: center; margin-top: -10px; margin-bottom: 40px;">
+          <a href="./certificates/" style="
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,123,255,0.3);
+          " onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007bff'">
+            📋 View All 45+ Certifications →
+          </a>
+        </div>
+    design:
+      columns: '1'
   - block: collection
     id: posts
     content:
