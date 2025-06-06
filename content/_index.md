@@ -51,87 +51,87 @@ sections:
     design:
       columns: '1'
   - block: experience
-  content:
-    title: Experience
-    date_format: Jan 2006
-    # Experiences.
-    #   Add/remove as many `experience` items below as you like.
-    #   Required fields are `title`, `company`, and `date_start`.
-    #   Leave `date_end` empty if it's your current employer.
-    #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
-    items:
-      - title: Junior Researcher
-        company: Center for Mathematics and Applications (NOVA Math)
-        company_url: https://novamath.fct.unl.pt/
-        company_logo: novamath
-        location: 'Caparica, Portugal'
-        date_start: '2024-04-04'
-        date_end: ''
-        description: |2-
-          Research focus on statistical inference, machine learning applications, and computational statistics.
-      - title: Post-doctoral Researcher
-        company: Center for Mathematics and Applications (NOVA Math)
-        company_url: https://novamath.fct.unl.pt/
-        company_logo: novamath
-        location: 'Caparica, Portugal'
-        date_start: '2021-03-25'
-        date_end: '2024-04-03'
-        description: |2-
-          Conducted advanced research in shrinkage estimation methods and robust regression techniques.
-      - title: Lecturer
-        company: Neyshabour University
-        company_url: ''
-        company_logo: ''
-        location: 'Neyshabour, Iran'
-        date_start: '2018-09-20'
-        date_end: '2019-07-20'
-        description: |2-
-          Taught undergraduate and graduate courses in statistics and mathematics.
-      - title: Lecturer
-        company: Semnan University
-        company_url: ''
-        company_logo: ''
-        location: 'Semnan, Iran'
-        date_start: '2018-09-20'
-        date_end: '2019-07-20'
-        description: |2-
-          Delivered lectures in statistical methods and mathematical analysis.
-      - title: Visiting Research Student
-        company: Carleton University
-        company_url: 'https://carleton.ca/'
-        company_logo: ''
-        location: 'Ottawa, Canada'
-        date_start: '2016-11-01'
-        date_end: '2017-05-01'
-        description: |2-
-          Collaborative research in advanced statistical methodologies under international supervision.
-      - title: Visiting Research Student
-        company: Brock University
-        company_url: 'https://brocku.ca/'
-        company_logo: ''
-        location: 'St. Catharines, Canada'
-        date_start: '2016-05-28'
-        date_end: '2016-10-31'
-        description: |2-
-          Research collaboration focusing on penalized regression models and estimation techniques.
-      - title: Lecturer
-        company: Shahrood University of Technology
-        company_url: 'https://shahroodut.ac.ir/'
-        company_logo: ''
-        location: 'Shahrood, Iran'
-        date_start: '2014-09-21'
-        date_end: '2019-07-20'
-        description: |2-
-          Taught various courses in statistics, probability theory, and mathematical modeling.
-      - title: Lecturer
-        company: Islamic Azad University, Mashhad Branch
-        company_url: ''
-        company_logo: ''
-        location: 'Mashhad, Iran'
-        date_start: '2011-09-20'
-        date_end: '2013-07-20'
-        description: |2-
-          Early career teaching position covering foundational mathematics and statistics courses.
+    content:
+      title: Experience
+      date_format: Jan 2006
+      # Experiences.
+      #   Add/remove as many `experience` items below as you like.
+      #   Required fields are `title`, `company`, and `date_start`.
+      #   Leave `date_end` empty if it's your current employer.
+      #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
+      items:
+        - title: Junior Researcher
+          company: Center for Mathematics and Applications (NOVA Math)
+          company_url: https://novamath.fct.unl.pt/
+          company_logo: novamath
+          location: 'Caparica, Portugal'
+          date_start: '2024-04-04'
+          date_end: ''
+          description: |2-
+            Research focus on statistical inference, machine learning applications, and computational statistics.
+        - title: Post-doctoral Researcher
+          company: Center for Mathematics and Applications (NOVA Math)
+          company_url: https://novamath.fct.unl.pt/
+          company_logo: novamath
+          location: 'Caparica, Portugal'
+          date_start: '2021-03-25'
+          date_end: '2024-04-03'
+          description: |2-
+            Conducted advanced research in shrinkage estimation methods and robust regression techniques.
+        - title: Lecturer
+          company: Neyshabour University
+          company_url: ''
+          company_logo: ''
+          location: 'Neyshabour, Iran'
+          date_start: '2018-09-20'
+          date_end: '2019-07-20'
+          description: |2-
+            Taught undergraduate and graduate courses in statistics and mathematics.
+        - title: Lecturer
+          company: Semnan University
+          company_url: ''
+          company_logo: ''
+          location: 'Semnan, Iran'
+          date_start: '2018-09-20'
+          date_end: '2019-07-20'
+          description: |2-
+            Delivered lectures in statistical methods and mathematical analysis.
+        - title: Visiting Research Student
+          company: Carleton University
+          company_url: 'https://carleton.ca/'
+          company_logo: ''
+          location: 'Ottawa, Canada'
+          date_start: '2016-11-01'
+          date_end: '2017-05-01'
+          description: |2-
+            Collaborative research in advanced statistical methodologies under international supervision.
+        - title: Visiting Research Student
+          company: Brock University
+          company_url: 'https://brocku.ca/'
+          company_logo: ''
+          location: 'St. Catharines, Canada'
+          date_start: '2016-05-28'
+          date_end: '2016-10-31'
+          description: |2-
+            Research collaboration focusing on penalized regression models and estimation techniques.
+        - title: Lecturer
+          company: Shahrood University of Technology
+          company_url: 'https://shahroodut.ac.ir/'
+          company_logo: ''
+          location: 'Shahrood, Iran'
+          date_start: '2014-09-21'
+          date_end: '2019-07-20'
+          description: |2-
+            Taught various courses in statistics, probability theory, and mathematical modeling.
+        - title: Lecturer
+          company: Islamic Azad University, Mashhad Branch
+          company_url: ''
+          company_logo: ''
+          location: 'Mashhad, Iran'
+          date_start: '2011-09-20'
+          date_end: '2013-07-20'
+          description: |2-
+            Early career teaching position covering foundational mathematics and statistics courses.
     design:
       columns: '2'
   - block: accomplishments
