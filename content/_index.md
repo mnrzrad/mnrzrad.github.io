@@ -200,6 +200,10 @@ sections:
       title: 'Certificates'
       subtitle: 'Continuous learning in data science and statistics'
       date_format: Jan 2006
+      text: |-
+        {{% callout note %}}
+        View All Certifications → (./certificates/).
+        {{% /callout %}}
       items:
         - certificate_url: https://www.kaggle.com/learn/certification/minanorouzirad/data-cleaning
           date_start: '2023-01-01'
@@ -226,8 +230,6 @@ sections:
           icon: WQU
           organization: World Quant University
           title: Applied Data Science Lab
-      text: |-
-        [**View All Certifications →**](./certificates/)
     design:
       columns: '2'
   - block: collection
