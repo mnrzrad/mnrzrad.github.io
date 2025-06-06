@@ -25,8 +25,10 @@ organizations:
     url: https://novamath.fct.unl.pt/
 
 # Short bio (displayed in user profile at end of posts)
-bio: I am a dedicated researcher and educator in the field of statistics, currently serving as a Junior Researcher at the Center for Mathematics and Applications (NovaMath) in Caparica, Portugal, since April 2024. Previously, I completed a post-doctoral research position at the same institution from March 2021 to March
-2024.
+bio: >
+  I am a dedicated researcher and educator in the field of statistics, currently serving as a Junior Researcher
+  at the Center for Mathematics and Applications (NovaMath) in Caparica, Portugal, since April 2024.
+  Previously, I completed a post-doctoral research position at the same institution from March 2021 to March 2024.
 
 # Interests to show in About widget
 interests:
