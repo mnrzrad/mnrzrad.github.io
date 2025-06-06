@@ -6,10 +6,10 @@ title: Bayesian analysis in multivariate regression models with conjugate priors
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Arashi
-- A. Iranmanesh
-- M. Norouzirad
-- H. Salarzadeh Jenatabadi
+- Mohammad Arashi
+- Anis Iranmanesh
+- Admin
+- Hashem Salarzadeh Jenatabadi
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -31,7 +31,7 @@ publication_short: ''
 
 doi: 10.1080/02331888.2013.809720
 
-abstract: ''
+abstract: 'In this paper, we consider the full rank multivariate regression model with matrix elliptically contoured distributed errors. We formulate a conjugate prior distribution for matrix elliptical models and derive the posterior distributions of mean and scale matrices. In the sequel, some characteristics of regression matrix parameters are also proposed.'
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -71,4 +71,3 @@ image:
 projects: []
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.

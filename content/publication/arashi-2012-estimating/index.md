@@ -1,13 +1,13 @@
 ---
-title: Estimating loss function using shrinkage Stein-type estimators
+title: Estimating Loss Function Using Shrinkage Stein-Type Estimators
 
 # Authors
 # A YAML list of author names
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Arashi
-- M. Norouzirad
+- Mohammad Arashi
+- Admin
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -40,7 +40,7 @@ tags: []
 featured: false
 
 # Links
-url_pdf: ''
+url_pdf: https://www.researchgate.net/publication/372497786_Estimating_loss_function_using_shrinkage_Stein_type_estimators_brawrd_tab_zyan_ba_astfadh_az_brawrdgrhay_anqbady_nw_astayn
 url_code: ''
 url_dataset: ''
 url_poster: ''
@@ -73,4 +73,4 @@ links:
     https://www.researchgate.net/publication/372497786_Estimating_loss_function_using_shrinkage_Stein_type_estimators
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
+

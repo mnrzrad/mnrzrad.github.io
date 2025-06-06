@@ -6,8 +6,8 @@ title: Estimation loss function in multivariate normal distribution
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Arashi
-- M. Norouzirad
+- Mohammad Arashi
+- Admin
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -40,7 +40,7 @@ tags: []
 featured: false
 
 # Links
-url_pdf: ''
+url_pdf: https://www.researchgate.net/publication/372495988_Estimation_loss_function_in_multivariate_normal_distribution_brawrd_tab_zyan_dr_mdl_nrmal_chndmtghyrh
 url_code: ''
 url_dataset: ''
 url_poster: ''
@@ -73,4 +73,3 @@ links:
     https://www.researchgate.net/publication/372495988_Estimation_loss_function_in_multivariate_normal_distribution
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
