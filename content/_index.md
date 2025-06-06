@@ -255,13 +255,9 @@ sections:
         folders:
           - publication
         featured_only: true
-        exclude_future: false
-        exclude_past: false
-      count: 0  # Show all featured publications
-      offset: 0
     design:
       columns: '2'
-      view: card
+      view: compact
       flip_alt_rows: false
   - block: collection
     content:
