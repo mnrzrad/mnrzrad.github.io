@@ -202,7 +202,7 @@ sections:
       date_format: Jan 2006
       text: |-
         {{% callout note %}}
-        View All Certifications → (./certificates/).
+        [View All Certifications](./certificates/).
         {{% /callout %}}
       items:
         - certificate_url: https://www.kaggle.com/learn/certification/minanorouzirad/data-cleaning
