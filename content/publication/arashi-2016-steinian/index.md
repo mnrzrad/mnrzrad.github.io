@@ -73,4 +73,3 @@ links:
     https://www.researchgate.net/publication/317717138_Steinian_Shrinkage_Estimation_in_High_Dimensional_Regression
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.

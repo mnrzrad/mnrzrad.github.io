@@ -6,10 +6,10 @@ title: Rank-based Liu regression
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- M. Arashi
-- M. Norouzirad
-- S. E. Ahmed
-- B. Yuzbasi
+- Mohammad Arashi
+- Admin
+- S. Ejaz Ahmed 
+- Bahadır Yüzbaşı
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
@@ -31,7 +31,7 @@ publication_short: ''
 
 doi: 10.1007/s00180-018-0809-8
 
-abstract: ''
+abstract: 'Due to the complicated mathematical and nonlinear nature of ridge regression estimator, Liu (Linear-Unified) estimator has been received much attention as a useful method to overcome the weakness of the least square estimator, in the presence of multicollinearity. In situations where in the linear model, errors are far away from normal or the data contain some outliers, the construction of Liu estimator can be revisited using a rank-based score test, in the line of robust regression. In this paper, we define the Liu-type rank-based and restricted Liu-type rank-based estimators when a sub-space restriction on the parameter of interest holds. Accordingly, some improved estimators are defined and their asymptotic distributional properties are investigated. The conditions of superiority of the proposed estimators for the biasing parameter are given. Some numerical computations support the findings of the paper.'
 
 # Summary. An optional shortened abstract.
 summary: ''
@@ -52,9 +52,9 @@ url_source: ''
 url_video: ''
 
 # Custom links (uncomment lines below)
-# links:
-# - name: Custom Link
-#   url: http://example.org
+links:
+- name: URL
+  url: https://link.springer.com/article/10.1007/s00180-018-0809-8
 
 # Publication image
 # Add an image named `featured.jpg/png` to your page's folder then add a caption below.
@@ -71,4 +71,3 @@ image:
 projects: []
 ---
 
-Add the **full text** or **supplementary notes** for the publication here using Markdown formatting.
