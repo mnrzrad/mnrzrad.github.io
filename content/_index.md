@@ -197,7 +197,7 @@ sections:
   - block: accomplishments
     id: certificates
     content:
-      title: 'Key Certifications'
+      title: 'Accomplishments'
       subtitle: 'Continuous learning in data science and statistics'
       date_format: Jan 2006
       items:
@@ -205,47 +205,29 @@ sections:
           date_start: '2023-01-01'
           icon: kaggle
           organization: Kaggle
-          title: Data Cleaning
-        
+          title: Data Cleaning        
         - certificate_url: https://app.dataquest.io/view_cert/Z24ESCAG9KMHO47MVRCD/
           date_start: '2022-01-01'
           icon: dataquest
           organization: DataQuest
-          title: Data Analyst in R
-        
+          title: Data Analyst in R        
         - certificate_url: https://app.dataquest.io/verify_cert/MMB2DJBGJCRHVP30T5CR/
           date_start: '2022-01-01'
           icon: dataquest
           organization: DataQuest
-          title: Predictive Modeling and Machine Learning in R
-        
+          title: Predictive Modeling and Machine Learning in R        
         - certificate_url: https://drive.google.com/file/d/1pWcGfzaidP4BT2bj5dL8zrp9vX2VW2II/view
           date_start: '2022-01-01'
           icon: datacamp
           organization: DataCamp
-          title: Supervised Learning with scikit-learn
-          
+          title: Supervised Learning with scikit-learn          
         - certificate_url: https://www.credly.com/badges/2a9d0993-84e1-45b5-a6a0-0ae2798641ef/linked_in?t=s0mjyj
           date_start: '2023-01-01'
           icon: WQU
           organization: World Quant University
           title: Applied Data Science Lab
       text: |-
-        <div style="text-align: center; margin-top: 30px;">
-        <a href="./certificates/" style="
-          display: inline-block;
-          padding: 12px 24px;
-          background-color: #007bff;
-          color: white;
-          text-decoration: none;
-          border-radius: 6px;
-          font-weight: bold;
-          transition: all 0.3s;
-          box-shadow: 0 2px 4px rgba(0,123,255,0.3);
-        ">
-          📋 View All 45+ Certifications →
-        </a>
-        </div>
+        [**View All Certifications →**](./certificates/)
     design:
       columns: '2'
   - block: collection
