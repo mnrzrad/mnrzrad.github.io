@@ -226,10 +226,9 @@ sections:
           icon: WQU
           organization: World Quant University
           title: Applied Data Science Lab
-      text: |-
-        [**View All Certifications →**](./certificates/)
     design:
       columns: '2'
+      view: citation
   - block: collection
     id: posts
     content:
