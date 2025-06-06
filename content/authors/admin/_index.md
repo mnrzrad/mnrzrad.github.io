@@ -106,7 +106,7 @@ social:
       header: true
   - icon: google-scholar
     icon_pack: academicons
-    url: url: https://scholar.google.com/citations?user=Q0R3sgIAAAAJ&hl=en
+    url: https://scholar.google.com/citations?user=Q0R3sgIAAAAJ&hl=en
     label: Google Scholar
     display:
       header: true
