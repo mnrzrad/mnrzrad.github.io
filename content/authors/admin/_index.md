@@ -106,7 +106,7 @@ social:
       header: true
   - icon: google-scholar
     icon_pack: academicons
-    url: https://scholar.google.com/citations?user=Q0R3sgIAAAAJ&hl=enresea
+    url: url: https://scholar.google.com/citations?user=Q0R3sgIAAAAJ&hl=en
     label: Google Scholar
     display:
       header: true

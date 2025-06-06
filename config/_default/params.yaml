@@ -109,8 +109,17 @@ extensions:
   academicons:
     enable: true
 
+icons:
+  enable: true
+  icon_pack:
+    - fas
+    - fab
+    - ai
+    - academicons
+
 # Security
 
 security:
   # Allow frame for embedding speaker notes in slides
   allow_frame: true
+
