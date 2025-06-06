@@ -81,7 +81,7 @@ sections:
         - title: Lecturer
           company: Neyshabour University
           company_url: https://en.neyshabur.ac.ir/en
-          company_logo: neyshabour.png
+          company_logo: neyshabour
           location: 'Neyshabour, Iran'
           date_start: '2018-09-20'
           date_end: '2019-07-20'
@@ -90,7 +90,7 @@ sections:
         - title: Lecturer
           company: Semnan University
           company_url: ''
-          company_logo: ''
+          company_logo: semnan
           location: 'Semnan, Iran'
           date_start: '2018-09-20'
           date_end: '2019-07-20'
