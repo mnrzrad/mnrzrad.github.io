@@ -80,8 +80,8 @@ sections:
             Conducted advanced research in shrinkage estimation methods and robust regression techniques.
         - title: Lecturer
           company: Neyshabour University
-          company_url: ''
-          company_logo: ''
+          company_url: https://en.neyshabur.ac.ir/en
+          company_logo: neyshabour.png
           location: 'Neyshabour, Iran'
           date_start: '2018-09-20'
           date_end: '2019-07-20'
