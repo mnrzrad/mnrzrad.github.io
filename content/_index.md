@@ -255,9 +255,14 @@ sections:
         folders:
           - publication
         featured_only: true
+        exclude_future: false
+        exclude_past: false
+      count: 0  # Show all featured publications
+      offset: 0
     design:
       columns: '2'
       view: card
+      flip_alt_rows: false
   - block: collection
     content:
       title: Recent Publications
