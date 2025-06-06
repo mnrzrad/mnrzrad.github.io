@@ -29,13 +29,6 @@ image:
 
 # Custom CSS for memorial styling
 ---
-
-<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px; border-radius: 15px; text-align: center; margin: 30px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-  <h2 style="margin: 0; font-size: 2.5em; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">🌟 Professor A. K. Md. Ehsanes Saleh 🌟</h2>
-  <p style="margin: 10px 0 0 0; font-size: 1.2em; opacity: 0.9;"> A Pioneer in Statistical Inference • A Mentor Beyond Compare</p>
-  <p style="margin: 5px 0 0 0; font-style: italic; opacity: 0.8;"> Forever in our hearts and in the world of statistics</p>
-</div>
-
 ## Dear Professor Saleh,
 
 I wanted to let you know how much you meant to me. Your wisdom and kindness made a big difference in my life. I'm Mina, one of your students.
