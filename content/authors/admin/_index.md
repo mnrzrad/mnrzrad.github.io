@@ -1,23 +1,23 @@
 ---
 # Display name
-title: Mina Norouzirad
+title: Ricardo Moura
 
 # Name pronunciation (optional)
-name_pronunciation: MEE-na no-ROO-zee-rad
+name_pronunciation: ''
 
 # Full name (for SEO)
-first_name: Mina
-last_name: Norouzirad
+first_name: Ricardo
+last_name: Moura
 
 # Status emoji
 status:
-  icon: 🎓
+  icon:🎓
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position/tagline
-role: Researcher
+role: Assistant Professor at Naval Academy
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -26,18 +26,17 @@ organizations:
 
 # Short bio (displayed in user profile at end of posts)
 bio: >
- A dedicated researcher and educator in the field of statistics
+ Statistician and Data Scientist, researcher at CINAV / NOVA Math; focuses on data privacy and maritime analytics.
 
 
 
 # Interests to show in About widget
 interests:
-  - Shrinkage Estimation Methods
-  - Robust Regression Techniques
-  - High-dimensional Statistical Analysis
-  - Machine Learning Applications
-  - Bayesian Statistics
-  - Computational Statistics
+  - Statistical disclosure control & synthetic data
+  - Geospatial and spatio-temporal modelling of maritime phenomena
+  - Decision-support systems, data mining & machine learning (Python / R)
+  - Naval and ocean-related analytics: fisheries, piracy, oil-spill, SST
+  - Teaching & curriculum design in mathematics, statistics and data science
 
 # Education to show in About widget
 education:
@@ -156,5 +155,5 @@ social:
 highlight_name: true
 ---
 
-Mina Norouzirad is a dedicated researcher and educator in the field of statistics, currently serving as a Junior Researcher at the Center for Mathematics and Applications (NovaMath) in Caparica, Portugal, since April 2024. Previously, she completed a post-doctoral research position at the same institution from March 2021 to March 2024.
-<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=Qm1i4VQUaZG_U0fbYkxC0bb2zyMAT3L0hG8paJjf41Q&cl=ffffff&w=a"></script>
+Ricardo Pinto Moura is a Portuguese mathematician and statistician (PhD, FCT-NOVA, 2016). A Fulbright alumnus, he is an integrated researcher at the Naval Research Center (CINAV) and NOVA Math, and a visiting assistant professor at ISEG. His work spans statistical disclosure control, geospatial data analysis and decision-support systems, with papers in Journal of the American Statistical Association and Scientific Data. He has supervised 14 master’s theses and is currently co-supervising a PhD, while maintaining active roles in national R&D projects and the curation of several maritime data sets.
+<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=6WlzYuc_4rGqHIWPzfaLSGzXFIxi4QXe2ZGGYR-ORs4"></script>
