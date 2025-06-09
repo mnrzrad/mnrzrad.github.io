@@ -1,5 +1,5 @@
 ---
-title: COVID-19 Vaccination and Cardiovascular Events: A Systematic Review and Bayesian Multivariate Meta-Analysis of Preventive Benefits and Risks
+title: "COVID-19 Vaccination and Cardiovascular Events: A Systematic Review and Bayesian Multivariate Meta-Analysis of Preventive Benefits and Risks"
 
 # Authors
 # A YAML list of author names
