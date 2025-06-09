@@ -42,3 +42,4 @@ This interactive Shiny application allows users to compare different penalized e
 - **Real-time Visualization** - See how different methods perform with your data
 - **Method Comparison** - Side-by-side comparison of estimation techniques
 - **Educational Tool** - Perfect for teaching penalized regression concepts
+
