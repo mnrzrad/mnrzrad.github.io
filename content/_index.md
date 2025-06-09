@@ -348,16 +348,9 @@ sections:
       autolink: true
       # Email form provider
       form:
-        provider: netlify
-        netlify:
-          captcha: true
+        provider: formspree
+        formspree:
+          id: xdkzkbrk
     design:
       columns: '2'
 ---
-
-<!-- provider: formspree
-        formspree:
-          id: xdkzkbrk
-        netlify:
-          # Enable CAPTCHA challenge to reduce spam?
-          captcha: false -->
