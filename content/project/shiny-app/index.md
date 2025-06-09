@@ -32,3 +32,13 @@ links:
 # Slides (optional)
 # slides: example
 ---
+
+## About This Application
+
+This interactive Shiny application allows users to compare different penalized estimation methods in statistical modeling. The app provides:
+
+### **Key Features:**
+- **Interactive Parameter Selection** - Adjust penalty parameters and compare results
+- **Real-time Visualization** - See how different methods perform with your data
+- **Method Comparison** - Side-by-side comparison of estimation techniques
+- **Educational Tool** - Perfect for teaching penalized regression concepts
