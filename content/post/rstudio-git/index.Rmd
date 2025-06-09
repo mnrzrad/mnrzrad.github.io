@@ -1,0 +1,36 @@
+---
+title: "Connect Rstudio to Git using `usethis` package"
+author: admin
+output: blogdown::html_page
+---
+This tutorial explains how to connect **RStudio** to **Git and GitHub** using the `usethis` package.
+
+## 1. Install and load `usethis`
+
+```{r}
+install.packages("usethis")
+library(usethis)
+```
+
+## 2. Configure Git (once per machine)
+```{r}
+usethis::use_git_config(user.name = "Your Name", user.email = "your@email.com")
+```
+
+## 3. Initialize Git in your RStudio project
+```{r}
+usethis::use_git()
+```
+
+RStudio may restart and add `.gitignore` automatically.
+
+## 4. Connect to GitHub
+```{r}
+usethis::use_github()
+```
+This pushes your repo to GitHub and sets up the remote.
+
+## 5. Check your Git status
+```{r}
+usethis::git_sitrep()
+```
