@@ -4,7 +4,7 @@ summary: 'Interactive Shiny application for comparing different penalized estima
 authors:
 - admin
 tags:
-  - Demo
+  - App
 date: '2024-12-06T00:00:00Z'
 featured: true
 draft: false
