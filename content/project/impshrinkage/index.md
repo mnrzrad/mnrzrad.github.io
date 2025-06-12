@@ -2,66 +2,49 @@
 title: 'ImpShrinkage: Improved Shrinkage Estimations for Multiple Linear Regression'
 
 authors:
-- admin
-- Danial Mazarei
-- Ricardo Moura
+  - admin
+  - Danial Mazarei
+  - Ricardo Moura
 
 author_notes: []
 
 date: '2023-01-01'
 publishDate: '2025-06-05T14:28:08.567811Z'
 
-# Project summary to display on homepage.
 summary: This R package provides a variety of improved shrinkage estimators in the area of statistical analysis: unrestricted; restricted; preliminary test; improved preliminary test; Stein; and positive-rule Stein.
 
-# Tags: can be used for filtering projects.
 tags:
-- R Package
+  - R Package
 
-
-# Optional external URL for project (replaces project detail page).
 external_link: ""
 
-# Featured image
-# To use, add an image named `featured.jpg/png` to your project's folder. 
 image:
   caption: 'ImpShrinkage R Package Logo'
   focal_point: Smart
   preview_only: false
-  # Optional: Set specific placement
-  placement: 1
 
-# Links (optional).
 url_pdf: "https://cran.r-project.org/web/packages/ImpShrinkage/ImpShrinkage.pdf"
 url_slides: ""
 url_video: ""
 url_code: "https://github.com/mnrzrad/ImpShrinkage"
 
-# Slides (optional).
-#   Associate this project with Markdown slides.
-#   Simply enter your slide deck's filename without extension.
-#   E.g. `slides = "example-slides"` references 
-#   `content/slides/example-slides.md`.
-#   Otherwise, set `slides = ""`.
 slides: ""
 
-# Custom links (optional).
-#   Uncomment and edit lines below to show custom links.
 links:
   - name: "CRAN"
     url: "https://cran.r-project.org/package=ImpShrinkage"
     icon_pack: "fab"
     icon: "r-project"
   - name: "Documentation"
-    url: "https://github.com/mnrzrad/ImpShrinkage"
+    url: "https://cran.r-project.org/web/packages/ImpShrinkage/ImpShrinkage.pdf"
     icon_pack: "fas"
     icon: "file-pdf"
   - name: "GitHub"
-    url: "https://cran.r-project.org/web/packages/ImpShrinkage/ImpShrinkage.pdf"
+    url: "https://github.com/mnrzrad/ImpShrinkage"
     icon_pack: "fab"
     icon: "github"
-
 ---
+
 ## Overview
 
 **ImpShrinkage** is an R package that provides a broad collection of classical and modern shrinkage estimators for multiple linear regression.
