@@ -93,9 +93,10 @@ library(PSinference)
 
 ## Authors
 
-- **Ricardo Moura** - Lead Developer
-- **Vítor Augusto** - Contributor  
-- **Miguel Fonseca** - Contributor
+- **Ricardo Moura** : Lead Developer
+- **Mina Norouzirad** : Developer
+- **Vítor Augusto** : Contributor  
+- **Miguel Fonseca** : Contributor
 
 ## Documentation
 
