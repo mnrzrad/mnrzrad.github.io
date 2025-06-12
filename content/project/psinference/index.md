@@ -124,4 +124,4 @@ GPL (>= 2)
 
 ## Contributing
 
-Contributions are welcome! Please see our [GitHub repository](https://github.com/ricardomourarpm/PSinference)
+Contributions are welcome! Please see our [GitHub repository](https://github.com/ricardomourarpm/PSinference/issues)
