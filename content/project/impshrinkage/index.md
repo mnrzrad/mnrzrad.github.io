@@ -1,6 +1,11 @@
 ---
 title: 'ImpShrinkage: Improved Shrinkage Estimations for Multiple Linear Regression'
 
+authors:
+  - admin
+  - Danial Mazarei
+  - Ricardo Moura
+
 date: '2023-01-01'
 
 summary: 'This R package provides a variety of improved shrinkage estimators in the area of statistical analysis: unrestricted; restricted; preliminary test; improved preliminary test; Stein; and positive-rule Stein.'
