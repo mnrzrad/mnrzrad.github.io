@@ -41,18 +41,19 @@ slides: ""
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.
 links:
-- name: CRAN
-  url: https://cran.r-project.org/package=PSinference
-  icon_pack: fab
-  icon: r-project
-- name: Documentation
-  url: https://cran.r-project.org/web/packages/PSinference/PSinference.pdf
-  icon_pack: fas
-  icon: file-pdf
-- name: GitHub
-  url: https://github.com/ricardomourarpm/PSinference
-  icon_pack: fab
-  icon: github
+  - name: "CRAN"
+    url: "https://cran.r-project.org/package=PSinference"
+    icon_pack: "fab"
+    icon: "r-project"
+  - name: "Documentation"
+    url: "https://cran.r-project.org/web/packages/PSinference/PSinference.pdf"
+    icon_pack: "fas"
+    icon: "file-pdf"
+  - name: "GitHub"
+    url: "https://github.com/ricardomourarpm/PSinference"
+    icon_pack: "fab"
+    icon: "github"
+
 
 ## Overview
 
