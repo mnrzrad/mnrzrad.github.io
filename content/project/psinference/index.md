@@ -53,7 +53,6 @@ links:
   url: https://github.com/ricardomourarpm/PSinference
   icon_pack: fab
   icon: github
----
 
 ## Overview
 
@@ -202,3 +201,5 @@ GPL (>= 2)
 ## Contributing
 
 Contributions are welcome! Please see our [GitHub repository](https://github.com/ricardomourarpm/PSinference)
+
+---
