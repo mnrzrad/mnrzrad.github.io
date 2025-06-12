@@ -11,7 +11,8 @@ author_notes: []
 date: '2023-01-01'
 publishDate: '2025-06-05T14:28:08.567811Z'
 
-summary: This R package provides a variety of improved shrinkage estimators in the area of statistical analysis: unrestricted; restricted; preliminary test; improved preliminary test; Stein; and positive-rule Stein.
+summary: "This R package provides a variety of improved shrinkage estimators in the area of statistical analysis: unrestricted; restricted; preliminary test; improved preliminary test; Stein; and positive-rule Stein."
+
 
 tags:
   - R Package
