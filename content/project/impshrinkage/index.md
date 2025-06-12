@@ -1,21 +1,14 @@
 ---
 title: 'ImpShrinkage: Improved Shrinkage Estimations for Multiple Linear Regression'
 
-authors:
-  - admin
-  - Danial Mazarei
-  - Ricardo Moura
-
-author_notes: []
-
 date: '2023-01-01'
-publishDate: '2025-06-05T14:28:08.567811Z'
 
 summary: 'This R package provides a variety of improved shrinkage estimators in the area of statistical analysis: unrestricted; restricted; preliminary test; improved preliminary test; Stein; and positive-rule Stein.'
 
 
+# Tags: can be used for filtering projects.
 tags:
-  - R Package
+- R Package
 
 external_link: ""
 
@@ -23,12 +16,21 @@ image:
   caption: 'ImpShrinkage R Package Logo'
   focal_point: Smart
   preview_only: false
+  # Optional: Set specific placement
+  placement: 1
 
+# Links (optional).
 url_pdf: "https://cran.r-project.org/web/packages/ImpShrinkage/ImpShrinkage.pdf"
 url_slides: ""
 url_video: ""
 url_code: "https://github.com/mnrzrad/ImpShrinkage"
 
+# Slides (optional).
+#   Associate this project with Markdown slides.
+#   Simply enter your slide deck's filename without extension.
+#   E.g. `slides = "example-slides"` references 
+#   `content/slides/example-slides.md`.
+#   Otherwise, set `slides = ""`.
 slides: ""
 
 links:
