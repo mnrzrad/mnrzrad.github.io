@@ -1,6 +1,9 @@
 ---
 title: 'PSinference: Inference for Released Plug-in Sampling Single Synthetic Dataset'
 
+authors:
+  - admin
+
 # Date this page was created.
 date: 2024-01-01T00:00:00Z
 

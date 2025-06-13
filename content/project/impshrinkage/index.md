@@ -3,8 +3,6 @@ title: 'ImpShrinkage: Improved Shrinkage Estimations for Multiple Linear Regress
 
 authors:
   - admin
-  - Danial Mazarei
-  - Ricardo Moura
 
 date: '2023-01-01'
 
