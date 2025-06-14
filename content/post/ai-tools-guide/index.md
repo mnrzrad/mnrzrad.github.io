@@ -24,7 +24,7 @@ This page collects and organizes AI tools for academic writing, thesis developme
 
 ---
 
-## General AI tools
+## 🤖 General AI tools
 | Tool            | Description |
 |-----------------|-------------|
 | [ChatGPT](https://chatgpt.com/) | General-purpose conversational AI |
@@ -172,9 +172,13 @@ This page collects and organizes AI tools for academic writing, thesis developme
 
 ---
 
-## 📁 How to Contribute
+## 🛠️ Contribute
 
-This dataset is community-maintained.  
-If you’d like to suggest a tool or correction, feel free to contact me to update this post.
+This AI tools list is regularly updated.  
+
+If you know a tool that should be included or want to suggest a correction, [get in touch here](/contact/).  
+
+Your contribution is welcome and appreciated!
+
 
 ---
