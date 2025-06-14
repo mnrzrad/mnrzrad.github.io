@@ -10,14 +10,14 @@ tags:
   - Free Books
   - R Programming 
   - Python Programming
-  - Julia Programing
+  - Julia Programming
   - Data Science
   - Machine Learning
 
 categories: 
   - Resources
 
-summary: 'A table of high-quality free books on R, Python, Julia, Statistics, and Machine Learning — ideal for students, researchers, and developers.
+summary: "A table of high-quality free books on R, Python, Julia, Statistics, and Machine Learning — ideal for students, researchers, and developers."
 
 image:
   caption: "Explore powerful books without spending a cent"
