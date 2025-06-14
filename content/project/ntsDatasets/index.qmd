@@ -1,19 +1,18 @@
 ---
 title: 'ntsDatasets: Neutrosophic Data Sets'
-
 authors:
   - admin
-
 date: '2024-01-01'
-
 summary: 'This R package provides a collection of datasets related to neutrosophic sets for statistical modeling and analysis.'
-
-
 # Tags: can be used for filtering projects.
 tags:
 - R Package
 - Neutrosophic
 - Datasets
+
+format: html
+execute: 
+  echo: true
 
 external_link: ""
 
@@ -55,7 +54,7 @@ links:
 
 ## Overview
 
-**ntsDatasets** is an R package that provides a curated collection of datasets designed for modeling and analysis with neutrosophic sets — a generalization of classical and fuzzy sets that accounts for indeterminacy.
+**ntsDatasets** is an R package that provides a collection of datasets designed for modeling and analysis with neutrosophic sets — a generalization of classical and fuzzy sets that accounts for indeterminacy.
 
 This package supports the development and benchmarking of statistical methods that handle uncertainty and partial truth in data.
 

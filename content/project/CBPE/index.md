@@ -54,16 +54,14 @@ links:
 
 ## Overview
 
-**CBPE** is an R package that introduces a novel approach to penalized estimation using correlation-based penalties. It is designed for both linear and logistic regression models and is particularly suitable for high-dimensional datasets or multicollinearity-prone scenarios.
+**CBPE** is an R package that introduces a novel approach to penalized estimation using correlation-based penalties. It is designed for both linear and logistic regression models.
 
-The key feature of CBPE is its use of **correlation structure among predictors** to guide regularization, allowing for adaptive shrinkage based on feature redundancy and informativeness.
+The key feature of CBPE is its use of **correlation structure among predictors** to guide regularization.
 
 ## Features
 
 - Correlation-based penalized **linear regression**
 - Correlation-based penalized **logistic regression**
-- Designed for **high-dimensional** and **collinear** settings
-- Supports **cross-validation** for tuning parameter selection
 
 ## Installation
 
