@@ -166,6 +166,7 @@ This page collects and organizes AI tools for academic writing, thesis developme
 | [Blainy.com](https://blainy.com/) + [sourcely.net](https://www.sourcely.net/)| Reconstructing lost citations |
 | [WriteSonic](https://writesonic.com) | General content generation |
 
+---
 
 ## 🧠 AI for Writing & Detection Avoidance
 
