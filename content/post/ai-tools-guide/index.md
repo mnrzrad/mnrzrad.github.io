@@ -63,7 +63,7 @@ This page collects and organizes AI tools for academic writing, thesis developme
 | [Avidnote.com](https://avidnote.com) | Organize research and notes |
 | [Penelope.ai](https://penelope.ai) | Post-submission editing and polish |
 | [Genspark.ai](https://genspark.ai) | Thesis and proposal generation |
-| [Jetlabs.ir](https://jetlabs.ir) | Proposal writing automation |
+| [Jetlabs.ir](https://jetlabs.ir) | Proposal writing automation (in Persian) |
 
 ---
 
@@ -72,11 +72,11 @@ This page collects and organizes AI tools for academic writing, thesis developme
 | Tool                  | Description |
 |-----------------------|-------------|
 | [Thinkany.ai](https://thinkany.ai) | Introduction and problem statement |
-| [Scolarcy.com](https://scolarcy.com) | Extracts structure and visuals |
+| [Scolarcy.com](https://www.scholarcy.com/) | Extracts structure and visuals |
 | [Bohrium.dp.tech](https://bohrium.dp.tech) | For chapter writing and formatting |
 | [Typeset.io](https://typeset.io) | For chapter writing and formatting |
-| [Qwen](https://qwen.aliyun.com) | Advanced academic summarization |
-| [Gtitle](https://gtitle.ai) | Suggests PhD thesis titles |
+| [Qwen](https://chat.qwen.ai/) | Advanced academic summarization |
+| [Gtitle](https://poe.com/GTitle) | Suggests PhD thesis titles |
 | [Grok3](https://grok.x.ai) | Proposal and article summary support |
 
 ---
@@ -108,6 +108,15 @@ This page collects and organizes AI tools for academic writing, thesis developme
 | [Pictory](https://pictory.ai) | Video summarization |
 | [Remini](https://remini.ai) | AI photo editing |
 | [Fliki](https://fliki.ai) | Text-to-video (TikTok-style) |
+
+---
+
+## 🧬 Biomedical & Scientific AI
+
+| Tool               | Description |
+|--------------------|-------------|
+| [AlphaFold](https://www.deepmind.com/open-source/alphafold) | Predicts 3D protein structures |
+| [BioGPT](https://huggingface.co/microsoft/BioGPT) | Biomedical-specific language model |
 
 ---
 
@@ -154,7 +163,7 @@ This page collects and organizes AI tools for academic writing, thesis developme
 | [prowritingaid.com](https://prowritingaid.com/) | Reviewing article content |
 | [journalfinder.elsevier](https://journalfinder.elsevier.com/) + [journalfinder.springer](https://link.springer.com/journals/)| Journal matching |
 | [bohrium.dp.tech](https://bohrium.dp.tech/) + [Monica.im](https://monica.im/) | Structuring thesis chapters |
-| [Blainy.com](https://blainy.com/) + [sourcely.net/](https://www.sourcely.net/)| Reconstructing lost citations |
+| [Blainy.com](https://blainy.com/) + [sourcely.net](https://www.sourcely.net/)| Reconstructing lost citations |
 | [WriteSonic](https://writesonic.com) | General content generation |
 
 
