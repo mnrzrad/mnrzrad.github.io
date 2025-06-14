@@ -10,10 +10,6 @@ tags:
 - Neutrosophic
 - Datasets
 
-format: html
-execute: 
-  echo: true
-
 external_link: ""
 
 image:
