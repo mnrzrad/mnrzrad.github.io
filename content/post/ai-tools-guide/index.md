@@ -1,10 +1,19 @@
 ---
 title: "AI Tools for Thesis, Research, and Creativity: A Curated Dataset"
+
 date: 2025-06-14
-authors: ["Mina Norouzirad"]
-tags: ["AI Tools", "Academic Writing", "Creative AI", "Dataset", "Thesis Tools"]
-categories: ["AI", "Dataset"]
-summary: "A comprehensive dataset of AI tools organized by function — from writing and reviewing to multimedia creation and thesis proposal automation."
+
+authors: 
+- admin
+
+tags: 
+- AI Tools
+
+categories: 
+- AI
+
+summary: 'A comprehensive dataset of AI tools organized by function — from writing and reviewing to multimedia creation and thesis proposal automation.'
+
 featured: true
 image:
   caption: "A growing dataset of academic and creative AI tools"
