@@ -2,6 +2,11 @@
   command = "hugo --gc --minify -b $URL"
   publish = "public"
 
+[build]
+  command = "quarto render"
+  publish = "public"
+
+
 [build.environment]
   HUGO_VERSION = "0.123.3"
   HUGO_ENABLEGITINFO = "true"
@@ -19,3 +24,5 @@
   package = "netlify-plugin-hugo-cache-resources"
   [plugins.inputs]
     debug = true
+
+

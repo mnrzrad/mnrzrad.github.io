@@ -78,16 +78,8 @@ devtools::install_github("a-roshani/ntsDatasets")
 
 ```r
 library(ntsDatasets)
-
-# List available datasets
-data(package = "ntsDatasets")
-
-# Load an example dataset
 data("balls")
-
-# Explore the dataset
 head(balls)
-
 ```
 
 ## Authors
