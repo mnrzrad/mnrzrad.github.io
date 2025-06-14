@@ -1,0 +1,11 @@
+project:
+  type: website
+
+website:
+  title: "My Hugo + Quarto Site"
+  output-dir: public
+
+format:
+  html:
+    theme: cosmo
+    toc: true
