@@ -87,6 +87,9 @@ Looking for **high-quality books** to learn programming, data science, or AI —
 |------------|-----------|------|
 | Think Julia | Ben Lauwens, Allen B. Downey | [Link](https://benlauwens.github.io/ThinkJulia.jl/latest/book.html) |
 | Introduction to Computational Thinking | MIT / C. Rackauckas | [Link](https://computationalthinking.mit.edu/) |
+| Statistics with Julia | Hayden Klok and Yoni Nazarathy | [Link](https://www.dbooks.org/statistics-with-julia-1534/read/) |
+| Julia Data Science | Jose Storopoli aet al | [Link](https://juliadatascience.io/) |
+
 
 ---
 
