@@ -60,7 +60,7 @@ links:
 ---
 ## Overview
 
-PSinference is an R package designed for statistical inference on synthetic datasets generated using plug-in sampling methods. This package provides researchers with robust analytical tools specifically tailored for working with privacy-preserving synthetic data.
+**PSinference** is an R package designed for statistical inference on synthetic datasets generated using plug-in sampling methods. This package provides researchers with robust analytical tools specifically tailored for working with privacy-preserving synthetic data.
 
 ## Key Features
 

@@ -95,12 +95,12 @@ For detailed documentation, please refer to:
 If you use PSinference in your research, please cite:
 
 ```bibtex
-@Manual{ntsDatasets2024,
-  title = {ntsDatasets: Neutrosophic Data Sets},
-  author = {Amin Roshani and Danial Mazarei},
-  year = {2024},
-  note = {R package},
-  url = {https://cran.r-project.org/package=ntsDatasets}
+@Manual{ntsDatasets2024, 
+    title = {ntsDatasets: Neutrosophic Data Sets}, 
+    author = {Roshani, A. and Norouzirad, M. and Mazarei, D.}, 
+    year = {2024}, 
+    note = {R package version 0.2.0}, 
+    url = {https://cran.r-project.org/package=ntsDatasets}
 }
 ```
 

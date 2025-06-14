@@ -112,12 +112,12 @@ For detailed documentation, please refer to:
 If you use PSinference in your research, please cite:
 
 ```bibtex
-@Manual{CBPE2024,
-  title = {CBPE: Correlation-Based Penalized Estimators},
-  author = {Mohammad Arashi and Mahdi Rahimi},
-  year = {2024},
-  note = {R package},
-  url = {https://cran.r-project.org/package=CBPE}
+@Manual{CBPE, 
+title = {CBPE: Correlation-Based Penalized Estimators}, 
+author = {Arashi, M. and Rahimi, M. and Norouzirad, M.}, 
+year = {2024}, 
+note = {R package version 0.1.0}, 
+url = {https://cran.r-project.org/package=CBPE}
 }
 ```
 
