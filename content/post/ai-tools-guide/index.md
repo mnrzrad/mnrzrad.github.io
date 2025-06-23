@@ -90,6 +90,8 @@ This page collects and organizes AI tools for academic writing, thesis developme
 | [MathGPTPro.com](https://mathgptpro.com) | Solves math problems and outputs LaTeX |
 | [GTtitle](https://gttitle.com) | Research gap analysis and structure suggestions |
 | [STORM](https://storm.genie.stanford.edu/) | 	Scientific task orchestration and modeling |
+| [ChatMind](https://home.chatmind.tech/) | Free AI Online MindMap Tool |
+| 
 
 ---
 
@@ -102,12 +104,19 @@ This page collects and organizes AI tools for academic writing, thesis developme
 | [Stable Diffusion](https://stability.ai) | Open-source image models |
 | [Canva AI](https://www.canva.com/) | 	Design with integrated AI |
 | [SlidesGPT.com](https://slidesgpt.com) | Generate slides from prompts |
+| [GammaAi](https://gamma.app/ai-presentation-generator) | | Generate Slides in 5 minutes |
 | [Clipdrop.co](https://clipdrop.co) | Remove backgrounds, enhance visuals |
 | [Synthesia.io](https://synthesia.io) | AI avatar video creation |
+| [CapCut](https://www.capcut.com/tools/ai-video-editor) | AI Video Editor |
 | [Soundraw](https://soundraw.io) | AI-generated music |
 | [Pictory](https://pictory.ai) | Video summarization |
 | [Remini](https://remini.ai) | AI photo editing |
 | [Fliki](https://fliki.ai) | Text-to-video (TikTok-style) |
+| [AiEase](https://www.aiease.ai/) | Edit and create images |
+| [PicLumen](https://www.piclumen.com/) | Free AI Image Generator |
+| [LeonardoAI](https://leonardo.ai/) | Image Generator - Create Art, Images & Video |
+| 
+
 
 ---
 
@@ -138,7 +147,16 @@ This page collects and organizes AI tools for academic writing, thesis developme
 | [Suno.com](https://suno.com) | Create music from text |
 | [Podcast.adobe.com](https://podcast.adobe.com) | Improve podcast audio |
 | [Promptify.ai](https://promptify.ai) | Generate prompts and audio |
+
+---
+
+## Logo Tools
+
+| Tool                    | Description |
+|-------------------------|-------------|
 | [AILogomaker.io](https://ailogomaker.io) | Create logos with voice prompts |
+| [recraft](https://www.recraft.ai/) | Create Logo |
+
 
 ---
 
