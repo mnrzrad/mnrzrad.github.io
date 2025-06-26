@@ -138,6 +138,7 @@ Looking for **high-quality books** to learn programming, data science, or AI —
 | Data Analysis with R | Joseph Fox | [Link](https://bookdown.org/jaf005/Data-Analysis-with-R/) |
 | Data Analysis and Visualization in R | Stefan Leach | [Link](https://bookdown.org/stefanleach/R_basic/) |
 | Data Science in Action | Kristopher Pruitt | [Link](https://bookdown.org/kristopher_pruitt/DS-for-All/) |
+| Doing Data Science in R: An Introduction for Social Scientists | [Link](https://www.mjandrews.org/book/ddsr/) |
 
 
 
