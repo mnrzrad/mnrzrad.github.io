@@ -59,7 +59,7 @@ This is a list of books:
 | Book Title | Author(s) | Link |
 |------------|-----------|------|
 | Ethical Data Science | Anne L. Washington | [Link](https://global.oup.com/academic/product/ethical-data-science-9780197693025?cc=ir&lang=en&)|
-| Data Science in Context: Foundations, Challenges, Opportunities | Alfred Z. Spector et al. | [Link](https://www.amazon.com/Data-Science-Context-Foundations-Opportunities/dp/1009272209) |
+| Data Science in Context: Foundations, Challenges, Opportunities | Alfred Z. Spector et al. | [Link](https://datascienceincontext.com/) |
 | The Art of Data Science | Roger Peng and Elizabeth Matsui | [Link](https://bookdown.org/rdpeng/artofdatascience/) |
 
 
