@@ -31,7 +31,7 @@ This is a list of books:
 
 | Book Title | Author(s) | Link |
 |------------|-----------|------|
-| Python for Data Analysis |  Wes McKinney  | [Link](https://www.amazon.com/Python-Data-Analysis-Wrangling-Jupyter-dp-109810403X/dp/109810403X?&linkCode=sl1&tag=quantpytho-20&linkId=2d1788b1f52212848d18095cf9972e07&language=en_US&ref_=as_li_ss_tl) and [OpenEdition](https://wesmckinney.com/book/)|
+| Python for Data Analysis |  Wes McKinney  | [OpenEdition](https://wesmckinney.com/book/)|
 | Data Science for Beginners | Andrew Park | [Link](https://www.amazon.com/Data-Science-Beginners-Programming-Learning/dp/1914167007) |
 
 
