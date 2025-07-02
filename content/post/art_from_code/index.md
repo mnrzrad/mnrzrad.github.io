@@ -738,9 +738,7 @@ plt.show()
     
 
 
----
-
-*** More advanced **
+** More advanced **
 
 ```python
 from noise import pnoise2
@@ -776,5 +774,4 @@ plt.axis('off')
 ```
 ![png](output_59_2.png)
 
----
 
