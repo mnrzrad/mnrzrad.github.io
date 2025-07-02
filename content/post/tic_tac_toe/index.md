@@ -1,6 +1,8 @@
 ---
 title: 🎯 Tic Tac Toe - Object-Oriented Python Game
 date: '2025-07-02'
+authors: 
+  - admin
 ---
 
 
@@ -69,14 +71,16 @@ class animal:
 ```
 Here, `self.name` is an attribute. It stores the name. This lets us write `animal('cat')` and get an object with a name.
 
-## 🔍 What is `self`?
-`self` is a special word in Python that refers to the **current object**. When you're inside a class, `self` lets you access that object's data and other methods.
+## 🧩 What Does `self` Mean?
+When you're inside a class, `self` means "this specific object". It lets each method access or change the object's own data.
 
 Think of `self` like saying "this specific object." For example:
 ```python
 def speak(self):
     print(f"{self.name} says Woof!")
 ```
+
+🧠 Tip: Every method must take self as the first parameter so it can interact with the current object.
 
 # 🎮 Applying OOP to Tic Tac Toe
 
@@ -319,3 +323,12 @@ while True:
     
     ✅ You win!
 
+---
+
+## ▶️ Try it Live!
+
+🎮 Want to experience the game directly in your browser?
+
+👉 [Click here to play Tic Tac Toe on Streamlit](https://9301-34-56-254-79.ngrok-free.app/)
+
+---
