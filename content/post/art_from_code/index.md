@@ -737,3 +737,44 @@ plt.show()
 ![png](output_58_0.png)
     
 
+
+---
+
+*** More advanced **
+
+```python
+from noise import pnoise2
+
+width, height = 400, 400
+scale = 100.0
+img = np.zeros((width, height))
+
+for i in range(width):
+    for j in range(height):
+        img[i][j] = pnoise2(i / scale, j / scale, octaves=6)
+
+plt.imshow(img, cmap='magma')
+plt.axis('off')
+plt.show()
+```
+
+![png](output_59_0.png)
+
+
+```python
+gx, gy = np.gradient(img)
+plt.streamplot(np.arange(width), np.arange(height), gx.T, gy.T, density=1, linewidth=0.3, color='k')
+plt.axis('off')
+plt.show()
+```
+![png](output_59_1.png)
+
+```python
+plt.imshow(img, cmap='magma', alpha=0.6)
+plt.imshow(img.T, cmap='cividis', alpha=0.4)
+plt.axis('off')
+```
+![png](output_59_2.png)
+
+---
+
