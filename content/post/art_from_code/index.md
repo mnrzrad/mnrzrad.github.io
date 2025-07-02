@@ -738,7 +738,7 @@ plt.show()
     
 
 
-** More advanced **
+# More advanced 
 
 ```python
 from noise import pnoise2
