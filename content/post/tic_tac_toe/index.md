@@ -2,7 +2,10 @@
 title: 🎯 Tic Tac Toe - Object-Oriented Python Game
 date: '2025-07-02'
 authors: 
-  - admin
+- admin
+
+tags: 
+- Python Programming
 
 image:
   caption: "Tic Tac Tou"
