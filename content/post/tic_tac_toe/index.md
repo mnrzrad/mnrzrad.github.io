@@ -6,7 +6,6 @@ authors:
 
 image:
   caption: "Tic Tac Tou"
-  focal_point: Smart
 ---
 
 
