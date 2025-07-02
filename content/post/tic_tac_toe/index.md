@@ -3,6 +3,10 @@ title: 🎯 Tic Tac Toe - Object-Oriented Python Game
 date: '2025-07-02'
 authors: 
   - admin
+
+image:
+  caption: "Tic Tac Tou"
+  focal_point: Smart
 ---
 
 
@@ -10,7 +14,7 @@ Welcome to the classic game of Tic Tac Toe, implemented using Object-Oriented Pr
 
 Below is a visual representation of a Tic Tac Toe board:
 
-![Tic Tac Toe Grid](https://upload.wikimedia.org/wikipedia/commons/3/32/Tic_tac_toe.svg)
+
 
 # 🎓 Object-Oriented Programming (OOP) in Python
 
