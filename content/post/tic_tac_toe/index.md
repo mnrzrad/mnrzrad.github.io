@@ -138,7 +138,6 @@ class TicTacToe:          # ← defines the blueprint
 Now let’s define our class and see each method in action.
 
 ```python
-from termcolor import colored  # Used to print colored text in terminal
 import time  # Used to pause execution briefly for realism
 import random  # Used by the AI to choose random moves
 
@@ -325,10 +324,29 @@ while True:
 
 ---
 
+## 🚀 More Advanced
+
+We can make the game smarter by asking the user **who should start**: the human player or the AI. To do this, replace the first few lines of the game code with the following:
+
+```python
+game = TicTacToe()
+print("Welcome to Advanced Tic Tac Toe!")
+starter = input("Do you want to start first? (y/n): ").strip().lower()
+
+if starter == 'n':
+    print("AI starts the game.")
+    game.ai_move()
+
+game.print_board()
+```
+
+This enhancement gives the AI the first move if the player types `n`. Otherwise, the human starts as usual.
+
+
 ## ▶️ Try it Live!
 
 🎮 Want to experience the game directly in your browser?
 
-👉 [Click here to play Tic Tac Toe on Streamlit](https://9301-34-56-254-79.ngrok-free.app/)
+👉 [Click here to play Tic Tac Toe on Streamlit](https://69bd-34-56-254-79.ngrok-free.app/)
 
 ---
