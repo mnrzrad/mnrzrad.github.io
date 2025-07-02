@@ -232,37 +232,37 @@ This is a practical example of:
 
 ```python
 game = TicTacToe()
-print(colored("Welcome to Advanced Tic Tac Toe!", attrs=['bold']))
+print("Welcome to Advanced Tic Tac Toe!")
 game.print_board()
 
 while True:
     try:
         move = int(input("Choose your move (1-9): ")) - 1
         if move not in game.available_moves():
-            print(colored("Invalid move! Try again.", 'red'))
+            print("Invalid move! Try again.")
             continue
 
         game.make_move(move, game.current_player)
         game.print_board()
         if game.check_winner(game.current_player):
-            print(colored("✅ You win!", 'green', attrs=['bold']))
+            print("✅ You win!")
             break
         if game.is_draw():
-            print(colored("⚖️ It's a draw!", 'cyan', attrs=['bold']))
+            print("⚖️ It's a draw!")
             break
 
-        print(colored("AI is thinking...", 'yellow'))
+        print("AI is thinking...")
         time.sleep(1)
         game.ai_move()
         game.print_board()
         if game.check_winner(game.ai_player):
-            print(colored("❌ AI wins!", 'yellow', attrs=['bold']))
+            print("❌ AI wins!")
             break
         if game.is_draw():
-            print(colored("⚖️ It's a draw!", 'cyan', attrs=['bold']))
+            print("⚖️ It's a draw!")
             break
     except ValueError:
-        print(colored("Please enter a valid number between 1 and 9.", 'red'))
+        print("Please enter a valid number between 1 and 9.")
 ```
 
     Welcome to Advanced Tic Tac Toe!
