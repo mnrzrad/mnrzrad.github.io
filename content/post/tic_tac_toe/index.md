@@ -348,11 +348,4 @@ game.print_board()
 
 This enhancement gives the AI the first move if the player types `n`. Otherwise, the human starts as usual.
 
-
-## ▶️ Try it Live!
-
-🎮 Want to experience the game directly in your browser?
-
-👉 [Click here to play Tic Tac Toe on Streamlit](https://69bd-34-56-254-79.ngrok-free.app/)
-
 ---
