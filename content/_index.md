@@ -111,13 +111,22 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
+        - title: Assistant Researcher
+          company: Center for Mathematics and Applications (NOVA Math)
+          company_url: https://novamath.fct.unl.pt/
+          company_logo: novamath
+          location: 'Caparica, Portugal'
+          date_start: '2025-08-01'
+          date_end: ''
+          description: |2-
+            Research focus on Data-Driven methods
         - title: Junior Researcher
           company: Center for Mathematics and Applications (NOVA Math)
           company_url: https://novamath.fct.unl.pt/
           company_logo: novamath
           location: 'Caparica, Portugal'
           date_start: '2024-04-04'
-          date_end: ''
+          date_end: '2025-04-03'
           description: |2-
             Research focus on statistical inference, machine learning applications, and computational statistics.
         - title: Post-doctoral Researcher

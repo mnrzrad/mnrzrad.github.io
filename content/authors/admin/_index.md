@@ -28,8 +28,6 @@ organizations:
 bio: >
  A dedicated researcher and educator in the field of statistics
 
-
-
 # Interests to show in About widget
 interests:
   - Shrinkage Estimation Methods
