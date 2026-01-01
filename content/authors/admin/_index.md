@@ -156,5 +156,5 @@ social:
 highlight_name: true
 ---
 
-Mina Norouzirad is a dedicated researcher and educator in the field of statistics, currently serving as a Junior Researcher at the Center for Mathematics and Applications (NOVAMath) in NOVA School of Science and Technology (FCT NOVA) located in Caparica, Portugal, since April 2024. Previously, she completed a post-doctoral research position at the same institution from March 2021 to March 2024.
+**Mina Norouzirad** is a dedicated researcher and educator in the field of statistics. She is currently an Assistant Researcher at the Center for Mathematics and Applications ([NOVAMath](https://novamath.fct.unl.pt/)) at NOVA School of Science and Technology ([FCT NOVA](https://www.fct.unl.pt/)), Caparica, Portugal, a position she has held since 2025. Prior to this role, she served as a Junior Researcher and Postdoctoral Researcher at the same institution, contributing to research in statistical theory and its applications.
 <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=Qm1i4VQUaZG_U0fbYkxC0bb2zyMAT3L0hG8paJjf41Q&cl=ffffff&w=a"></script>
