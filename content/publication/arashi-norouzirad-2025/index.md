@@ -1,6 +1,5 @@
 ---
-title: 'Advances in Shrinkage and Penalized Estimation Strategies: Honoring the Contributions
-  of A. K. Md. Ehsanes Saleh'
+title: 'Advances in Shrinkage and Penalized Estimation Strategies: Honoring the Contributions of A. K. Md. Ehsanes Saleh'
 
 # Authors
 # A YAML list of author names
