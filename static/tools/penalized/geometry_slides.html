@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Geometry of Penalized Estimation</title>
+<style>
+:root{
+  --ink:#172033; --soft:#5A6478; --rule:#D9DEE7; --paper:#FFFFFF; --mist:#F2F5F9;
+  --ridge:#1F7A7A; --lasso:#B8323F; --nonconvex:#C47F12; --structured:#5E4A9C;
+  --sans:-apple-system,"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#E6EAF0;color:var(--ink);font-family:var(--sans);overflow:hidden}
+#viewport{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+#stage{width:1280px;height:720px;position:relative;background:var(--paper);transform-origin:center center;box-shadow:0 2px 30px rgba(23,32,51,.12)}
+.slide{position:absolute;inset:0;padding:40px 60px 52px;display:none;flex-direction:column}
+.slide.active{display:flex}
+.slide h2{font-size:36px;margin:0;font-weight:700;letter-spacing:-.01em}
+.slide .sub{font-size:19px;color:var(--soft);margin-top:5px}
+.bar{display:flex;width:240px;height:5px;margin:12px 0 18px}
+.bar i{flex:1}.bar i:nth-child(1){background:var(--ridge)}.bar i:nth-child(2){background:var(--lasso)}.bar i:nth-child(3){background:var(--nonconvex)}.bar i:nth-child(4){background:var(--structured)}
+.famtag{display:inline-block;font-size:14px;font-weight:600;color:#fff;padding:2px 10px;border-radius:11px;margin-left:12px;vertical-align:6px}
+.body{flex:1;min-height:0;display:flex;gap:34px;font-size:20px;line-height:1.42}
+.col{flex:1;min-width:0;display:flex;flex-direction:column;gap:12px}
+.formula{font-family:var(--serif);font-style:italic;font-size:22px;background:var(--mist);border-radius:5px;padding:10px 16px}
+ul{margin:0;padding-left:1.1em}li{margin:0 0 .4em}li::marker{color:var(--soft)}
+.ctl label{display:flex;justify-content:space-between;font-size:16px;color:var(--soft)}
+.ctl label b{color:var(--ink);font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;accent-color:var(--ink);margin:2px 0 0}
+select{font:inherit;font-size:16px;padding:5px 8px;border:1px solid var(--rule);border-radius:4px;background:#fff;color:var(--ink);width:100%}
+.ctls{display:grid;grid-template-columns:1fr 1fr;gap:6px 18px}
+.read{background:var(--mist);border-left:5px solid var(--ink);border-radius:4px;padding:10px 16px;font-size:19px}
+.read b{font-variant-numeric:tabular-nums}
+.flag{display:inline-block;font-size:14px;padding:2px 10px;border-radius:11px;margin:4px 6px 0 0;color:#fff}
+.hint{font-size:15px;color:var(--soft)}
+.footer{position:absolute;left:60px;right:60px;bottom:16px;display:flex;justify-content:space-between;font-size:13px;color:var(--soft)}
+#progress{position:absolute;left:0;bottom:0;height:3px;background:var(--ink);transition:width .25s}
+table{border-collapse:collapse;width:100%;font-size:18px}
+th,td{padding:8px 12px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
+th{border-bottom:2px solid var(--ink);color:var(--soft);font-weight:600;font-size:16px}
+.gal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px 8px}
+.gal figure{margin:0;text-align:center}
+.gal figcaption{font-size:13px;line-height:1.2;margin-top:1px}
+#notes{position:fixed;left:0;right:0;bottom:0;max-height:32vh;overflow:auto;background:#fff;border-top:3px solid var(--ink);padding:12px 22px;font-size:16px;line-height:1.5;display:none;z-index:5}
+#notes.show{display:block}
+#nav{position:fixed;right:10px;top:8px;display:flex;gap:6px;z-index:6;opacity:0;transition:opacity .2s}
+#nav:hover{opacity:1}
+#nav button{font:inherit;font-size:13px;border:1px solid var(--ink);background:#fff;border-radius:4px;padding:3px 9px;cursor:pointer}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #7FA7D9;outline-offset:2px}
+aside.notes{display:none}
+</style>
+</head>
+<body>
+<div id="viewport"><div id="stage">
+  <div id="slides"></div>
+  <div class="footer"><span>The geometry of penalized estimation</span><span id="pageNum"></span></div>
+  <div id="progress"></div>
+</div></div>
+<div id="notes"></div>
+<div id="nav"><button id="prevB" aria-label="Previous slide">‹</button><button id="nextB" aria-label="Next slide">›</button><button id="notesB">Notes (N)</button><button id="fsB">Full screen (F)</button></div>
+
+<script>
+(function(){
+"use strict";
+const NS="http://www.w3.org/2000/svg";
+function el(tag,attrs,parent,text){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(text!=null)e.textContent=text;if(parent)parent.appendChild(e);return e;}
+const FAM={ridge:"#1F7A7A",lasso:"#B8323F",nonconvex:"#C47F12",structured:"#5E4A9C"};
+const FAMNAME={ridge:"Ridge family",lasso:"LASSO family",nonconvex:"Non-convex",structured:"Structured"};
+const C={ink:"#172033",soft:"#5A6478",rule:"#D9DEE7",grid:"#EEF2F6"};
+
+/* =====================================================================
+   PENALTIES (two coefficients).  P(b, par, o): o = least-squares point.
+   ===================================================================== */
+const scadPen=(b,l,a)=>{b=Math.abs(b);return b<=l?l*b:(b<=a*l?(2*a*l*b-b*b-l*l)/(2*(a-1)):l*l*(a+1)/2);};
+const mcpPen=(b,l,g)=>{b=Math.abs(b);return b<=g*l?l*b-b*b/(2*g):g*l*l/2;};
+const ab=Math.abs;
+const PEN={
+  ridge:(b)=>b[0]*b[0]+b[1]*b[1],
+  lasso:(b)=>ab(b[0])+ab(b[1]),
+  sqrt:(b)=>ab(b[0])+ab(b[1]),
+  relaxed:(b)=>ab(b[0])+ab(b[1]),
+  enet:(b,P)=>P.alpha*(ab(b[0])+ab(b[1]))+(1-P.alpha)*(b[0]*b[0]+b[1]*b[1])/2,
+  alasso:(b,P,o)=>ab(b[0])/Math.pow(Math.max(ab(o[0]),.05),P.gam)+ab(b[1])/Math.pow(Math.max(ab(o[1]),.05),P.gam),
+  aenet:(b,P,o)=>P.alpha*(ab(b[0])/Math.max(ab(o[0]),.05)+ab(b[1])/Math.max(ab(o[1]),.05))+(1-P.alpha)*(b[0]*b[0]+b[1]*b[1])/2,
+  bridge:(b,P)=>Math.pow(ab(b[0]),P.q)+Math.pow(ab(b[1]),P.q),
+  scad:(b,P)=>scadPen(b[0],1,P.a)+scadPen(b[1],1,P.a),
+  mcp:(b,P)=>mcpPen(b[0],1,P.m)+mcpPen(b[1],1,P.m),
+  group:(b)=>Math.SQRT2*Math.hypot(b[0],b[1]),
+  sgl:(b,P)=>P.alpha*(ab(b[0])+ab(b[1]))+(1-P.alpha)*Math.SQRT2*Math.hypot(b[0],b[1]),
+  fused:(b,P)=>ab(b[0])+ab(b[1])+P.fr*ab(b[0]-b[1]),
+  slope:(b,P)=>Math.max(ab(b[0]),ab(b[1]))+P.sr*Math.min(ab(b[0]),ab(b[1])),
+  oscar:(b,P)=>ab(b[0])+ab(b[1])+P.oc*Math.max(ab(b[0]),ab(b[1])),
+  corr:(b,P)=>{const r=Math.max(-.99,Math.min(.99,P.rho));return(b[0]-b[1])**2/(1-r)+(b[0]+b[1])**2/(1+r);},
+};
+
+/* ---------- loss: (b-o)' A (b-o), A = [[1,rho],[rho,1]] ---------- */
+const loss=(b,o,rho)=>{const d0=b[0]-o[0],d1=b[1]-o[1];return d0*d0+2*rho*d0*d1+d1*d1;};
+
+/* ---------- star-shaped region: boundary radius along direction u ---------- */
+function radius(pf,u,t,P,o){let lo=0,hi=12;if(pf([hi*u[0],hi*u[1]],P,o)<t)return hi;
+  for(let i=0;i<44;i++){const m=(lo+hi)/2;if(pf([m*u[0],m*u[1]],P,o)<t)lo=m;else hi=m;}return(lo+hi)/2;}
+function bpt(pf,a,t,P,o){const u=[Math.cos(a),Math.sin(a)],r=radius(pf,u,t,P,o);return[r*u[0],r*u[1]];}
+
+/* ---------- solve: returns {sol, boundary(s), extra} ---------- */
+function solve(key,P,o,n){
+  n=n||1080;const rho=P.rho;
+  if(key==="liu"){ // argmin loss + ||b - d o||^2  ->  (A+I) b = A o + d o
+    const A=[[1,rho],[rho,1]],tgt=[P.d*o[0],P.d*o[1]];
+    const r0=A[0][0]*o[0]+A[0][1]*o[1]+tgt[0],r1=A[1][0]*o[0]+A[1][1]*o[1]+tgt[1];
+    const M=[[2,rho],[rho,2]],det=4-rho*rho;
+    const sol=[(M[1][1]*r0-M[0][1]*r1)/det,(-M[1][0]*r0+M[0][0]*r1)/det];
+    const rr=Math.hypot(sol[0]-tgt[0],sol[1]-tgt[1]);
+    const circ=[];for(let i=0;i<=180;i++){const a=i/180*2*Math.PI;circ.push([tgt[0]+rr*Math.cos(a),tgt[1]+rr*Math.sin(a)]);}
+    return{sol,bound:circ,inside:false,target:tgt};
+  }
+  if(key==="l0"){ // best subset of size 1: the two axes
+    const c1=[o[0]+rho*o[1],0],c2=[0,o[1]+rho*o[0]];
+    const sol=loss(c1,o,rho)<=loss(c2,o,rho)?c1:c2;
+    return{sol,bound:null,inside:false,axes:true};
+  }
+  if(key==="garrote"){ // b_j = s_j o_j, s >= 0, s1 + s2 <= T
+    const T=P.T,v0=[0,0],v1=[T*o[0],0],v2=[0,T*o[1]];const tri=[v0,v1,v2];
+    if(T>=2)return{sol:o.slice(),bound:tri,inside:true,closed:true};
+    let best=Infinity,sol=null;
+    const edges=[[v1,v2],[v0,v1],[v0,v2]];
+    edges.forEach(([a,b])=>{for(let i=0;i<=600;i++){const t=i/600,q=[a[0]+t*(b[0]-a[0]),a[1]+t*(b[1]-a[1])];const L=loss(q,o,rho);if(L<best){best=L;sol=q;}}});
+    return{sol,bound:tri,inside:false,closed:true};
+  }
+  const pk=key==="relaxed"||key==="sqrt"?"lasso":key;
+  const pf=PEN[pk];const t=pf([P.s,0],P,o);
+  const bound=[];for(let i=0;i<n;i++)bound.push(bpt(pf,i/n*2*Math.PI,t,P,o));
+  let sol,inside=pf(o,P,o)<=t;
+  if(inside)sol=o.slice();
+  else{let bi=0,best=Infinity;bound.forEach((q,i)=>{const L=loss(q,o,rho);if(L<best){best=L;bi=i;}});
+    // golden-section refinement of the angle
+    let a0=(bi-1)/n*2*Math.PI,a1=(bi+1)/n*2*Math.PI;const g=(Math.sqrt(5)-1)/2;
+    let x1=a1-g*(a1-a0),x2=a0+g*(a1-a0),f1=loss(bpt(pf,x1,t,P,o),o,rho),f2=loss(bpt(pf,x2,t,P,o),o,rho);
+    for(let i=0;i<40;i++){if(f1<f2){a1=x2;x2=x1;f2=f1;x1=a1-g*(a1-a0);f1=loss(bpt(pf,x1,t,P,o),o,rho);}else{a0=x1;x1=x2;f1=f2;x2=a0+g*(a1-a0);f2=loss(bpt(pf,x2,t,P,o),o,rho);}}
+    sol=bpt(pf,(a0+a1)/2,t,P,o);
+    // snap to exact axis / diagonal corners if they are at least as good
+    [0,Math.PI/2,Math.PI,3*Math.PI/2,Math.PI/4,3*Math.PI/4,5*Math.PI/4,7*Math.PI/4].forEach(a=>{const q=bpt(pf,a,t,P,o);if(loss(q,o,rho)<=loss(sol,o,rho)+1e-10)sol=q;});
+  }
+  const out={sol,bound,inside};
+  if(key==="relaxed"&&!inside){ // refit on the LASSO support, then blend with phi
+    const z0=ab(sol[0])<1e-3,z1=ab(sol[1])<1e-3;
+    let refit=o.slice();if(z1&&!z0)refit=[o[0]+rho*o[1],0];if(z0&&!z1)refit=[0,o[1]+rho*o[0]];
+    out.lassoPt=sol;out.refit=refit;out.sol=[P.phi*sol[0]+(1-P.phi)*refit[0],P.phi*sol[1]+(1-P.phi)*refit[1]];
+  }
+  return out;
+}
+
+/* ---------- drawing ---------- */
+function makeView(svg,lo,hi,size,pad){const S=(size-2*pad)/(hi-lo);return{X:v=>pad+(v-lo)*S,Y:v=>size-pad-(v-lo)*S,lo,hi,S,pad,size,inv:(px,py)=>[lo+(px-pad)/S,lo+(size-pad-py)/S]};}
+function ellPts(o,rho,L){const e1=1+rho,e2=1-rho,pts=[];for(let i=0;i<=120;i++){const a=i/120*2*Math.PI,u=Math.cos(a)*Math.sqrt(L/e1),v=Math.sin(a)*Math.sqrt(L/e2);pts.push([o[0]+(u-v)/Math.SQRT2,o[1]+(u+v)/Math.SQRT2]);}return pts;}
+function draw(svg,key,P,o,opts){
+  opts=opts||{};const small=!!opts.small,size=small?220:520,V=makeView(svg,-2.6,3.4,size,small?6:22);
+  svg.innerHTML="";svg.setAttribute("viewBox",`0 0 ${size} ${size}`);
+  const fam=opts.fam,col=FAM[fam];
+  const path=(pts,close)=>pts.map((p,i)=>(i?"L":"M")+V.X(p[0]).toFixed(1)+","+V.Y(p[1]).toFixed(1)).join("")+(close?"Z":"");
+  if(!small)for(let v=-2;v<=3;v++){el("line",{x1:V.X(v),x2:V.X(v),y1:V.Y(V.lo),y2:V.Y(V.hi),stroke:C.grid},svg);el("line",{x1:V.X(V.lo),x2:V.X(V.hi),y1:V.Y(v),y2:V.Y(v),stroke:C.grid},svg);}
+  el("line",{x1:V.X(V.lo),x2:V.X(V.hi),y1:V.Y(0),y2:V.Y(0),stroke:C.soft,"stroke-width":small?1:1.3},svg);
+  el("line",{x1:V.X(0),x2:V.X(0),y1:V.Y(V.lo),y2:V.Y(V.hi),stroke:C.soft,"stroke-width":small?1:1.3},svg);
+  if(!small){el("line",{x1:V.X(V.lo),x2:V.X(V.hi),y1:V.Y(V.lo),y2:V.Y(V.hi),stroke:C.soft,"stroke-dasharray":"2 6",opacity:.6},svg);
+    el("text",{x:V.X(V.hi)-4,y:V.Y(0)-9,"text-anchor":"end","font-size":17,fill:C.soft},svg,"β₁");
+    el("text",{x:V.X(0)+9,y:V.Y(V.hi)+18,"font-size":17,fill:C.soft},svg,"β₂");}
+  // comparison outline
+  if(opts.cmp&&opts.cmp!==key){const R=solve(opts.cmp,P,o,540);if(R.bound)el("path",{d:path(R.bound,true),fill:"none",stroke:FAM[opts.cmpFam],"stroke-width":2,"stroke-dasharray":"7 5",opacity:.85},svg);}
+  const R=solve(key,P,o,small?360:1080);
+  if(R.axes){[[[V.lo,0],[V.hi,0]],[[0,V.lo],[0,V.hi]]].forEach(seg=>el("path",{d:path(seg),stroke:col,"stroke-width":small?4:7,opacity:.35},svg));}
+  else if(key==="liu"){el("path",{d:path(R.bound,true),fill:col,"fill-opacity":.12,stroke:col,"stroke-width":small?1.8:2.5},svg);
+    el("path",{d:`M${V.X(R.target[0])-6},${V.Y(R.target[1])}h12M${V.X(R.target[0])},${V.Y(R.target[1])-6}v12`,stroke:col,"stroke-width":2.5},svg);
+    if(!small)el("text",{x:V.X(R.target[0])+9,y:V.Y(R.target[1])+18,"font-size":14,fill:col},svg,"target d·βᴼᴸˢ");
+    el("line",{x1:V.X(0),y1:V.Y(0),x2:V.X(o[0]),y2:V.Y(o[1]),stroke:col,"stroke-dasharray":"3 4",opacity:.6},svg);}
+  else el("path",{d:path(R.bound,true),fill:col,"fill-opacity":.16,stroke:col,"stroke-width":small?1.8:2.6},svg);
+  // loss contours through the solution
+  const Lv=Math.max(loss(R.sol,o,P.rho),1e-4);
+  [1,2.3,4.2].forEach((m,i)=>{if(small&&i>1)return;el("path",{d:path(ellPts(o,P.rho,Lv*m),true),fill:"none",stroke:C.ink,"stroke-opacity":.42,"stroke-width":small?1:1.4},svg);});
+  if(R.refit&&!small){el("circle",{cx:V.X(R.lassoPt[0]),cy:V.Y(R.lassoPt[1]),r:7,fill:"#fff",stroke:col,"stroke-width":2.5},svg);
+    el("circle",{cx:V.X(R.refit[0]),cy:V.Y(R.refit[1]),r:6,fill:"#fff",stroke:C.ink,"stroke-width":2},svg);
+    el("line",{x1:V.X(R.lassoPt[0]),y1:V.Y(R.lassoPt[1]),x2:V.X(R.refit[0]),y2:V.Y(R.refit[1]),stroke:col,"stroke-width":1.5,"stroke-dasharray":"4 3"},svg);
+    el("text",{x:V.X(R.refit[0])+10,y:V.Y(R.refit[1])+20,"font-size":14,fill:C.ink},svg,"refit on support");}
+  el("circle",{cx:V.X(R.sol[0]),cy:V.Y(R.sol[1]),r:small?4.5:9,fill:col,stroke:"#fff","stroke-width":small?1.5:2.5},svg);
+  el("circle",{cx:V.X(o[0]),cy:V.Y(o[1]),r:small?4:10,fill:C.ink,style:"cursor:grab"},svg);
+  if(!small)el("text",{x:V.X(o[0])+13,y:V.Y(o[1])-11,"font-size":15,fill:C.ink},svg,"least squares");
+  return{R,V};
+}
+function flags(R,key){
+  const s=R.sol,z0=ab(s[0])<2e-3,z1=ab(s[1])<2e-3,tie=!z0&&!z1&&ab(ab(s[0])-ab(s[1]))<2e-3;let f="";
+  if(R.inside)f+=`<span class="flag" style="background:${C.soft}">constraint not active: least squares</span>`;
+  if(z0||z1)f+=`<span class="flag" style="background:${FAM.lasso}">exact zero: variable selected out</span>`;
+  if(tie)f+=`<span class="flag" style="background:${FAM.structured}">|β̂₁| = |β̂₂|: exact grouping</span>`;
+  if(!R.inside&&!z0&&!z1&&!tie)f+=`<span class="flag" style="background:${FAM.ridge}">both shrunk, both kept</span>`;
+  return{html:f,z0,z1};
+}
+function enableDrag(svg,getV,state,redraw){let drag=false;
+  const pt=e=>{const p=svg.createSVGPoint();p.x=e.clientX;p.y=e.clientY;const q=p.matrixTransform(svg.getScreenCTM().inverse());return getV().inv(q.x,q.y);};
+  svg.addEventListener("pointerdown",e=>{const q=pt(e);if(Math.hypot(q[0]-state.o[0],q[1]-state.o[1])<0.4){drag=true;svg.setPointerCapture(e.pointerId);e.preventDefault();}});
+  svg.addEventListener("pointermove",e=>{if(!drag)return;const q=pt(e);state.o=[Math.max(-2.3,Math.min(3.1,q[0])),Math.max(-2.3,Math.min(3.1,q[1]))];redraw();});
+  svg.addEventListener("pointerup",()=>drag=false);}
+
+/* =====================================================================
+   SLIDE CONTENT
+   ===================================================================== */
+const PARS={
+  s:["Region size (axis intercept)",.3,2.6,.05],rho:["Correlation of the predictors ρ",-.9,.95,.05],
+  alpha:["Mixing α",0,1,.05],gam:["Adaptive weight power γ",.25,3,.25],q:["Bridge q",.2,1.5,.05],
+  a:["SCAD a",2.1,6,.1],m:["MCP γ",1.1,6,.1],fr:["Fusion weight",0,3,.1],sr:["SLOPE λ₂ / λ₁",0,1,.05],
+  oc:["OSCAR c",0,3,.1],d:["Liu d",-1,1,.05],phi:["Relaxation φ",0,1,.05],T:["Budget Σsⱼ ≤ T",0,2.2,.05]};
+const EST=[
+ {key:"ridge",fam:"ridge",name:"Ridge",formula:"P(β) = β₁² + β₂²",pars:["s","rho"],def:{o:[2,.5],rho:.5,s:1.2},cmp:"lasso",
+  pts:["The region is a disc: smooth, with no corners.","The contours touch it at an ordinary point, so both coefficients shrink but neither becomes exactly zero.","Ridge stabilises, it does not select."],
+  note:"Start here. Drag the least-squares point anywhere: the solution never lands on an axis unless the least-squares point is already on it. Increase rho to show the shrinkage acts along the elongated contours."},
+ {key:"liu",fam:"ridge",name:"Liu estimator",formula:"β<sub>d</sub> = argmin ‖y − Xβ‖² + ‖β − d β<sup>OLS</sup>‖²",pars:["d","rho"],def:{o:[2,.5],rho:.7,d:0},
+  pts:["Like ridge, but shrinks towards the target d·β<sup>OLS</sup> (cross) instead of towards zero.","d = 1 returns least squares; d = 0 is ridge with λ = 1; d &lt; 0 shrinks harder.","The penalty contours are circles around the target; there are no corners, so no selection."],
+  note:"Move d from 1 to -1 and watch the target slide along the dashed line from the least-squares point through the origin. The solution is where a circle around the target touches a loss ellipse."},
+ {key:"lasso",fam:"lasso",name:"LASSO",formula:"P(β) = |β₁| + |β₂|",pars:["s","rho"],def:{o:[2,.5],rho:.5,s:1.2},cmp:"ridge",
+  pts:["The region is a diamond with corners on the axes.","The contours very often hit a corner first: one coefficient is then exactly zero.","This is where variable selection comes from: geometry, not a test."],
+  note:"Key slide. Compare with the dashed ridge disc. Drag the least-squares point: over a wide range of positions the solution stays pinned to the corner. Raise rho to 0.9: the corner the contours hit can switch with small moves of the point, which is the instability of the LASSO under correlation."},
+ {key:"enet",fam:"lasso",name:"Elastic net",formula:"P(β) = α(|β₁| + |β₂|) + (1 − α)(β₁² + β₂²)/2",pars:["alpha","s","rho"],def:{o:[1.9,.9],rho:.8,s:1.2,alpha:.5},cmp:"lasso",
+  pts:["A diamond with rounded edges: corners keep selection, curved edges add ridge-type stability.","α = 1 is the LASSO, α = 0 is ridge.","With correlated predictors the curved edges let both coefficients stay in: the grouping effect."],
+  note:"Slide alpha from 1 to 0 and watch the corners soften into the disc. With rho = 0.8 the LASSO (dashed) drops one variable while the elastic net keeps both."},
+ {key:"alasso",fam:"lasso",name:"Adaptive LASSO",formula:"P(β) = |β₁| / |β₁<sup>OLS</sup>|<sup>γ</sup> + |β₂| / |β₂<sup>OLS</sup>|<sup>γ</sup>",pars:["gam","s","rho"],def:{o:[2,.5],rho:.3,s:1.2,gam:1},cmp:"lasso",
+  pts:["A diamond stretched by data-driven weights: long along large least-squares effects, short along small ones.","Large effects are penalised less, small effects more: the oracle property.","Drag the black point and the diamond itself changes shape."],
+  note:"This is the only region here that depends on the data directly. Drag the least-squares point towards an axis: the diamond becomes very elongated along that axis."},
+ {key:"aenet",fam:"lasso",name:"Adaptive elastic net",formula:"P(β) = α Σ |β<sub>j</sub>| / |β<sub>j</sub><sup>OLS</sup>| + (1 − α) Σ β<sub>j</sub>² / 2",pars:["alpha","s","rho"],def:{o:[2,.6],rho:.7,s:1.2,alpha:.5},cmp:"alasso",
+  pts:["Adaptive weights on the L1 part, ridge on the L2 part.","Combines the oracle behaviour of the adaptive LASSO with the grouping of the elastic net."],
+  note:"Compare with the adaptive LASSO outline: the adaptive elastic net region is the same stretched diamond with rounded edges."},
+ {key:"relaxed",fam:"lasso",name:"Relaxed LASSO",formula:"φ · β<sup>LASSO</sup> + (1 − φ) · β<sup>OLS on LASSO support</sup>",pars:["phi","s","rho"],def:{o:[2,.5],rho:.5,s:1.1,phi:0},cmp:"ridge",
+  pts:["Step 1: the LASSO chooses the support (hollow red point).","Step 2: least squares is refitted on that support (hollow black point).","φ blends the two: φ = 1 is the LASSO, φ = 0 removes the shrinkage bias."],
+  note:"Point out that the refit moves along the axis: the zero stays zero, but the surviving coefficient is no longer shrunk."},
+ {key:"garrote",fam:"lasso",name:"Non-negative garrote",formula:"β<sub>j</sub> = s<sub>j</sub> β<sub>j</sub><sup>OLS</sup>,  s<sub>j</sub> ≥ 0,  s₁ + s₂ ≤ T",pars:["T","rho"],def:{o:[2,.5],rho:.5,T:.8},
+  pts:["The region is a triangle in the quadrant of the least-squares estimate: signs can never flip.","Each coefficient is a shrunken copy of its least-squares value.","Its corners on the axes give exact zeros, like the LASSO."],
+  note:"Drag the least-squares point into another quadrant: the triangle follows it. T = 2 contains the least-squares point itself."},
+ {key:"sqrt",fam:"lasso",name:"Square-root LASSO",formula:"minimise ‖y − Xβ‖/√n + λ(|β₁| + |β₂|)",pars:["s","rho"],def:{o:[2,.5],rho:.5,s:1.2},
+  pts:["Same diamond as the LASSO, and the same contours: the square root does not change their shape.","In constraint form it gives the same solution as the LASSO.","The difference is in the penalised form: the right λ no longer depends on the noise level σ."],
+  note:"A good discussion point: geometry alone does not distinguish these two estimators; tuning does."},
+ {key:"bridge",fam:"nonconvex",name:"Bridge",formula:"P(β) = |β₁|<sup>q</sup> + |β₂|<sup>q</sup>",pars:["q","s","rho"],def:{o:[2,.8],rho:.3,s:1.2,q:.5},cmp:"lasso",
+  pts:["q &lt; 1: a star with sharp, inward-curved edges; strong pull towards the axes.","q = 1 is the LASSO, q = 2 is ridge; only q ≤ 1 gives exact zeros.","The region is not convex: several local solutions can exist."],
+  note:"Move q from 0.3 to 2 and watch the shape pass through the diamond (q = 1) to the disc (q = 2)."},
+ {key:"l0",fam:"nonconvex",name:"L0 (best subset)",formula:"at most k non-zero coefficients; here k = 1",pars:["rho"],def:{o:[2,.5],rho:.5},
+  pts:["The feasible set is just the two axes: no shrinkage at all, only a choice.","The solution is least squares on the better single predictor.","Best subset is the limit of the bridge as q → 0."],
+  note:"Drag the least-squares point across the diagonal: the solution jumps from one axis to the other. That discontinuity is why best subset is unstable."},
+ {key:"scad",fam:"nonconvex",name:"SCAD",formula:"P(β) = SCAD(|β₁|; 1, a) + SCAD(|β₂|; 1, a)",pars:["a","s","rho"],def:{o:[2,.5],rho:.4,s:1.2,a:3.7},cmp:"lasso",
+  pts:["Near zero it behaves like the LASSO: corners on the axes, so it selects.","Further out the penalty flattens, so large effects are not shrunk: nearly unbiased.","The region is not convex; its edges bend inwards."],
+  note:"Compare with the LASSO outline: same corners, but concave edges. Increase the region size to see the flattening."},
+ {key:"mcp",fam:"nonconvex",name:"MCP",formula:"P(β) = MCP(|β₁|; 1, γ) + MCP(|β₂|; 1, γ)",pars:["m","s","rho"],def:{o:[2,.5],rho:.4,s:1.2,m:3},cmp:"scad",
+  pts:["Like SCAD: LASSO-like corners, then a penalty that stops growing.","Smaller γ means a more concave region and less bias, but less stability.","γ → ∞ gives back the LASSO."],
+  note:"Lower gamma towards 1.1 and watch the edges bend inwards strongly."},
+ {key:"group",fam:"structured",name:"Group LASSO",formula:"P(β) = √2 · ‖(β₁, β₂)‖₂   (one group)",pars:["s","rho"],def:{o:[2,.5],rho:.5,s:1.2},cmp:"lasso",
+  pts:["With both predictors in one group, the region is a disc: the group is kept or dropped as a whole.","Within a group there is no selection; across groups the penalty acts like the LASSO.","With each predictor in its own group, group LASSO is the LASSO (dashed)."],
+  note:"Explain that the corners of the group LASSO live in the space of groups, not of single coefficients."},
+ {key:"sgl",fam:"structured",name:"Sparse group LASSO",formula:"P(β) = α(|β₁| + |β₂|) + (1 − α)√2 ‖β‖₂",pars:["alpha","s","rho"],def:{o:[2,.5],rho:.5,s:1.2,alpha:.5},cmp:"group",
+  pts:["Between the disc of the group LASSO and the diamond of the LASSO.","Selects whole groups and individual variables within a selected group."],
+  note:"Slide alpha from 0 (group LASSO disc) to 1 (LASSO diamond)."},
+ {key:"fused",fam:"structured",name:"Fused LASSO",formula:"P(β) = |β₁| + |β₂| + w |β₁ − β₂|",pars:["fr","s","rho"],def:{o:[1.7,1.1],rho:.6,s:1.2,fr:1},cmp:"lasso",
+  pts:["The fusion term adds corners on the diagonal β₁ = β₂.","Contours hitting those corners give exactly equal coefficients: neighbours are fused.","Corners on the axes still give exact zeros."],
+  note:"Default position lands on the diagonal corner: exact grouping. Set the fusion weight to 0 to recover the LASSO."},
+ {key:"slope",fam:"structured",name:"SLOPE",formula:"P(β) = λ₁|β|₍₁₎ + λ₂|β|₍₂₎ ,  λ₁ ≥ λ₂",pars:["sr","s","rho"],def:{o:[1.8,1.2],rho:.6,s:1.2,sr:.4},cmp:"lasso",
+  pts:["The largest coefficient is penalised most: an octagon with corners on the axes and on both diagonals.","Diagonal corners tie coefficients of equal size: SLOPE clusters predictors.","λ₂ = λ₁ gives the LASSO; the sequence is chosen to control the false discovery rate."],
+  note:"Slide lambda2/lambda1 from 1 (LASSO) down to 0 (an L-infinity square)."},
+ {key:"oscar",fam:"structured",name:"OSCAR",formula:"P(β) = |β₁| + |β₂| + c · max(|β₁|, |β₂|)",pars:["oc","s","rho"],def:{o:[1.8,1.2],rho:.6,s:1.2,oc:1},cmp:"lasso",
+  pts:["An octagon: corners on the axes (selection) and on the diagonals (exact ties).","Highly correlated predictors land on a diagonal corner and share one coefficient.","OSCAR is a special case of SLOPE with linearly decreasing weights."],
+  note:"Increase rho to 0.9 and drag the point around: the diagonal corner catches the solution over a wide range."},
+ {key:"corr",fam:"structured",name:"Correlation-based penalty",formula:"P(β) = (β₁ − β₂)²/(1 − ρ) + (β₁ + β₂)²/(1 + ρ)",pars:["s","rho"],def:{o:[2.4,1.0],rho:.8,s:.7},cmp:"ridge",
+  pts:["An ellipse stretched along the diagonal, set by the correlation ρ itself.","Equal coefficients for correlated predictors are cheap; unequal ones expensive.","No corners: it groups but never selects. ρ = 0 gives ridge."],
+  note:"The penalty uses the same rho as the data. Move rho from 0 to 0.9 and watch the disc turn into a long ellipse along the diagonal."},
+];
+const BYKEY={};EST.forEach(e=>BYKEY[e.key]=e);
+
+/* =====================================================================
+   BUILD SLIDES
+   ===================================================================== */
+const slidesBox=document.getElementById("slides");
+const famBar='<div class="bar"><i></i><i></i><i></i><i></i></div>';
+function addSlide(html,notes,init){const s=document.createElement("section");s.className="slide";s.innerHTML=html+(notes?`<aside class="notes">${notes}</aside>`:"");slidesBox.appendChild(s);if(init)init(s);return s;}
+function ctlHTML(id,k,v){const [lab,mn,mx,st]=PARS[k];return`<div class="ctl"><label>${lab} <b id="${id}_${k}V">${(+v).toFixed(2)}</b></label><input id="${id}_${k}" type="range" min="${mn}" max="${mx}" step="${st}" value="${v}" aria-label="${lab}"></div>`;}
+const BASE={s:1.2,rho:.5,alpha:.5,gam:1,q:.5,a:3.7,m:3,fr:1,sr:.4,oc:1,d:0,phi:0,T:1};
+
+// 1. title
+addSlide(`<div style="margin:auto 0">${famBar}<div style="font-size:54px;font-weight:800;line-height:1.08;letter-spacing:-.01em">The Geometry of<br>Penalized Estimation</div>
+<div style="font-size:24px;color:var(--soft);margin-top:14px">Nineteen estimators built on ridge and the LASSO, seen through their constraint regions and the least-squares contours</div>
+<div style="display:flex;gap:22px;margin-top:40px;font-size:17px;color:var(--soft)">${Object.keys(FAM).map(f=>`<span><span style="display:inline-block;width:26px;height:5px;background:${FAM[f]};vertical-align:4px;margin-right:8px"></span>${FAMNAME[f]}</span>`).join("")}</div></div>`,
+"Arrow keys or clicker to move. Press N for notes, F for full screen. On every estimator slide the black point is draggable.");
+
+// 2. how to read
+addSlide(`<h2>How to read every picture in this deck</h2><div class="sub">Penalized least squares in constraint form: minimise the loss inside the region P(β) ≤ t</div>${famBar}
+<div class="body"><svg id="introSvg" style="width:520px;height:520px;flex:none;margin-top:-6px;touch-action:none"></svg>
+<div class="col"><ul>
+<li><b>Black point</b>: the least-squares estimate, the centre of the loss.</li>
+<li><b>Grey ellipses</b>: contours of equal loss. Their tilt comes from the correlation ρ between the two predictors.</li>
+<li><b>Shaded region</b>: all coefficient vectors the penalty allows.</li>
+<li><b>Coloured point</b>: the estimate, where the contours first touch the region.</li></ul>
+<div class="formula" style="font-size:20px">corner on an axis → exact zero (selection)<br>corner on a diagonal → exact tie (grouping)<br>smooth boundary → shrinkage only</div>
+<div class="ctls">${ctlHTML("intro","s",1.2)}${ctlHTML("intro","rho",.5)}</div>
+<div class="read" id="introRead"></div></div></div>`,
+"Use the LASSO diamond to explain the reading rules once. Drag the black point; change rho to tilt the ellipses.",
+s=>{const st={o:[2,.5]};const svg=s.querySelector("#introSvg");let V;
+  const redraw=()=>{const P=Object.assign({},BASE,{s:+s.querySelector("#intro_s").value,rho:+s.querySelector("#intro_rho").value});
+    s.querySelector("#intro_sV").textContent=P.s.toFixed(2);s.querySelector("#intro_rhoV").textContent=P.rho.toFixed(2);
+    const r=draw(svg,"lasso",P,st.o,{fam:"lasso"});V=r.V;const F=flags(r.R);
+    s.querySelector("#introRead").innerHTML=`β̂₁ = <b>${F.z0?"0":r.R.sol[0].toFixed(2)}</b> &nbsp; β̂₂ = <b>${F.z1?"0":r.R.sol[1].toFixed(2)}</b><br>${F.html}`;};
+  s.querySelectorAll("input").forEach(i=>i.oninput=redraw);enableDrag(svg,()=>V,st,redraw);redraw();});
+
+// 3. gallery
+addSlide(`<h2>All nineteen regions, same data</h2><div class="sub">One least-squares point and one correlation for every estimator. Drag the black point in any panel.</div>${famBar}
+<div style="display:flex;gap:30px;align-items:flex-start"><div class="gal" id="gal" style="flex:1"></div>
+<div style="width:210px;flex:none" class="col">${ctlHTML("gal","rho",.6)}${ctlHTML("gal","s",1.2)}<p class="hint">Filled point: the estimate. A point on an axis is a selected-out variable; on the diagonal, two tied coefficients.</p></div></div>`,
+"Overview. Ask the audience to spot which shapes have corners on the axes (selection), which on the diagonal (grouping), and which are smooth (shrinkage only).",
+s=>{const st={o:[1.9,.9]};const box=s.querySelector("#gal");const svgs=[];
+  EST.forEach(e=>{const f=document.createElement("figure");f.innerHTML=`<svg style="width:100%;touch-action:none"></svg><figcaption style="color:${FAM[e.fam]}">${e.name}</figcaption>`;box.appendChild(f);svgs.push([e,f.querySelector("svg")]);});
+  let views={};
+  const redraw=()=>{const P=Object.assign({},BASE,{rho:+s.querySelector("#gal_rho").value,s:+s.querySelector("#gal_s").value});
+    s.querySelector("#gal_rhoV").textContent=P.rho.toFixed(2);s.querySelector("#gal_sV").textContent=P.s.toFixed(2);
+    svgs.forEach(([e,svg])=>{const r=draw(svg,e.key,Object.assign({},P,e.key==="garrote"?{T:P.s*0.8}:{}),st.o,{small:true,fam:e.fam});views[e.key]=r.V;});};
+  s.querySelectorAll("input").forEach(i=>i.oninput=redraw);
+  svgs.forEach(([e,svg])=>enableDrag(svg,()=>views[e.key],st,redraw));redraw();});
+
+// 4..22 estimator slides
+EST.forEach((e,idx)=>{
+  const id="e"+idx,P0=Object.assign({},BASE,e.def);
+  const cmpOpts=`<option value="none">no outline</option>`+EST.filter(x=>x.key!==e.key&&!["l0","liu","garrote"].includes(x.key)).map(x=>`<option value="${x.key}"${x.key===e.cmp?" selected":""}>${x.name}</option>`).join("");
+  addSlide(`<h2>${e.name}<span class="famtag" style="background:${FAM[e.fam]}">${FAMNAME[e.fam]}</span></h2>${famBar}
+<div class="body"><svg id="${id}svg" style="width:520px;height:520px;flex:none;margin-top:-4px;touch-action:none"></svg>
+<div class="col"><div class="formula">${e.formula}</div><ul>${e.pts.map(p=>`<li>${p}</li>`).join("")}</ul>
+<div class="ctls">${e.pars.map(k=>ctlHTML(id,k,P0[k])).join("")}<div class="ctl"><label>Compare with (dashed)</label><select id="${id}_cmp">${cmpOpts}</select></div></div>
+<div class="read" id="${id}read"></div></div></div>`,e.note,
+  s=>{const st={o:e.def.o.slice()};const svg=s.querySelector("#"+id+"svg");let V;
+    const redraw=()=>{const P=Object.assign({},P0);e.pars.forEach(k=>{P[k]=+s.querySelector(`#${id}_${k}`).value;s.querySelector(`#${id}_${k}V`).textContent=P[k].toFixed(2);});
+      const cmp=s.querySelector(`#${id}_cmp`).value;
+      const r=draw(svg,e.key,P,st.o,{fam:e.fam,cmp:cmp==="none"?null:cmp,cmpFam:cmp==="none"?null:BYKEY[cmp].fam});V=r.V;const F=flags(r.R);
+      const cmpTxt=cmp!=="none"?`<span class="hint">Dashed outline: ${BYKEY[cmp].name}</span>`:"";
+      s.querySelector("#"+id+"read").innerHTML=`β̂₁ = <b>${F.z0?"0":r.R.sol[0].toFixed(2)}</b> &nbsp; β̂₂ = <b>${F.z1?"0":r.R.sol[1].toFixed(2)}</b> &nbsp; ${cmpTxt}<br>${F.html}`;};
+    s.querySelectorAll("input,select").forEach(i=>i.oninput=redraw);enableDrag(svg,()=>V,st,redraw);redraw();});
+});
+
+// compare two
+addSlide(`<h2>Compare any two estimators</h2><div class="sub">Same least-squares point, same correlation, same region size</div>${famBar}
+<div class="body" style="gap:24px"><div class="col" style="flex:none;width:430px"><select id="cA"></select><svg id="cAsvg" style="width:400px;height:400px;touch-action:none"></svg><div class="read" id="cAread" style="font-size:17px"></div></div>
+<div class="col" style="flex:none;width:430px"><select id="cB"></select><svg id="cBsvg" style="width:400px;height:400px;touch-action:none"></svg><div class="read" id="cBread" style="font-size:17px"></div></div>
+<div class="col">${ctlHTML("cmp","rho",.8)}${ctlHTML("cmp","s",1.2)}<p class="hint">Drag the black point in either panel; both update. Default: LASSO against OSCAR at high correlation.</p></div></div>`,
+"Use this for questions from the audience: put any two estimators side by side.",
+s=>{const st={o:[1.8,1.2]};const A=s.querySelector("#cA"),B=s.querySelector("#cB");EST.forEach(e=>{A.add(new Option(e.name,e.key));B.add(new Option(e.name,e.key));});A.value="lasso";B.value="oscar";
+  const V={};const redraw=()=>{const P=Object.assign({},BASE,{rho:+s.querySelector("#cmp_rho").value,s:+s.querySelector("#cmp_s").value});
+    s.querySelector("#cmp_rhoV").textContent=P.rho.toFixed(2);s.querySelector("#cmp_sV").textContent=P.s.toFixed(2);
+    [[A,"cA"],[B,"cB"]].forEach(([sel,id])=>{const e=BYKEY[sel.value];const r=draw(s.querySelector("#"+id+"svg"),e.key,P,st.o,{fam:e.fam});V[id]=r.V;const F=flags(r.R);
+      s.querySelector("#"+id+"read").innerHTML=`β̂₁ = <b>${F.z0?"0":r.R.sol[0].toFixed(2)}</b> &nbsp; β̂₂ = <b>${F.z1?"0":r.R.sol[1].toFixed(2)}</b><br>${F.html}`;});};
+  s.querySelectorAll("input,select").forEach(i=>i.oninput=redraw);["cA","cB"].forEach(id=>enableDrag(s.querySelector("#"+id+"svg"),()=>V[id],st,redraw));redraw();});
+
+// summary
+addSlide(`<h2>What the shape tells you</h2>${famBar}
+<div class="body"><table>
+<thead><tr><th>Feature of the region</th><th>Effect on the estimate</th><th>Estimators</th></tr></thead><tbody>
+<tr><td>Smooth, no corners</td><td>Shrinkage only; every variable stays in</td><td>Ridge, Liu, correlation-based penalty, group LASSO within a group</td></tr>
+<tr><td>Corners on the axes</td><td>Exact zeros: variable selection</td><td>LASSO, adaptive LASSO, garrote, square-root LASSO, elastic net, SCAD, MCP, bridge</td></tr>
+<tr><td>Corners on the diagonals</td><td>Exact ties: grouping of correlated predictors</td><td>Fused LASSO, OSCAR, SLOPE</td></tr>
+<tr><td>Rounded edges between axis corners</td><td>Selection, but correlated variables can stay in together</td><td>Elastic net, adaptive elastic net, sparse group LASSO</td></tr>
+<tr><td>Edges bending inwards (non-convex)</td><td>Large effects left nearly unshrunk; possible local solutions</td><td>Bridge (q &lt; 1), SCAD, MCP, L0</td></tr>
+<tr><td>Shape set by the data</td><td>Weights or tilt adapt to the least-squares fit or to ρ</td><td>Adaptive LASSO and elastic net, garrote, correlation-based penalty</td></tr>
+</tbody></table></div>`,
+"Close with this table: one geometric feature, one statistical consequence.");
+
+/* =====================================================================
+   NAVIGATION
+   ===================================================================== */
+const slides=[...document.querySelectorAll(".slide")];
+const stage=document.getElementById("stage"),notes=document.getElementById("notes"),pageNum=document.getElementById("pageNum"),progress=document.getElementById("progress");
+let cur=0;
+function fit(){const s=Math.min(window.innerWidth/1280,window.innerHeight/720);stage.style.transform="scale("+s+")";}
+window.addEventListener("resize",fit);fit();
+function show(i){cur=Math.max(0,Math.min(slides.length-1,i));slides.forEach((s,k)=>s.classList.toggle("active",k===cur));
+  pageNum.textContent=(cur+1)+" / "+slides.length;progress.style.width=((cur+1)/slides.length*100)+"%";
+  const n=slides[cur].querySelector("aside.notes");notes.textContent=n?n.textContent:"";try{history.replaceState(null,"","#"+(cur+1));}catch(e){}}
+document.addEventListener("keydown",e=>{const tg=e.target.tagName;if(tg==="INPUT"||tg==="SELECT")return;
+  if(["ArrowRight","PageDown"," ","Enter"].includes(e.key)){e.preventDefault();show(cur+1);}
+  else if(["ArrowLeft","PageUp","Backspace"].includes(e.key)){e.preventDefault();show(cur-1);}
+  else if(e.key==="Home")show(0);else if(e.key==="End")show(slides.length-1);
+  else if(e.key==="n"||e.key==="N")notes.classList.toggle("show");else if(e.key==="f"||e.key==="F")toggleFS();});
+function toggleFS(){if(!document.fullscreenElement){document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen().catch(()=>{});}else document.exitFullscreen&&document.exitFullscreen();}
+document.getElementById("prevB").onclick=()=>show(cur-1);document.getElementById("nextB").onclick=()=>show(cur+1);
+document.getElementById("notesB").onclick=()=>notes.classList.toggle("show");document.getElementById("fsB").onclick=toggleFS;
+const h=parseInt((location.hash||"#1").slice(1),10);show(isNaN(h)?0:h-1);
+})();
+</script>
+</body>
+</html>
