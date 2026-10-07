@@ -30,11 +30,7 @@ image:
   caption: 'IDWSDS 2026, Session S115, sponsored by the Bernoulli Society'
   focal_point: Center
 
-links:
-  - icon: person-chalkboard
-    icon_pack: fas
-    name: Interactive slides
-    url: /talks/idwsds2026/
+links: []
 url_code: ''
 url_pdf: ''
 url_slides: /talks/idwsds2026/
