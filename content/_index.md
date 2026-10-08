@@ -346,7 +346,7 @@ sections:
       title: Popular Topics
     design:
       columns: '2'
-    - block: markdown
+  - block: markdown
     id: visitors
     content:
       title: 'Visitors'
