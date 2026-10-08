@@ -341,18 +341,18 @@ sections:
     design:
       columns: '2'
       view: compact
- - block: collection
-   id: teaching
-   content:
-     title: Teaching
-     count: 0
-     filters:
-       folders:
-         - teaching
-     order: desc
-     design:
-       columns: '2'
-       view: compact
+  - block: collection
+    id: teaching
+    content:
+      title: Teaching
+      count: 0
+      filters:
+        folders:
+          - teaching
+      order: desc
+    design:
+      view: card
+      columns: '1'
   - block: tag_cloud
     content:
       title: Popular Topics
