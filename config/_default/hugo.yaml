@@ -3,8 +3,8 @@
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: Academic # Website name
-baseURL: 'https://example.com/' # Website URL
+title: Mina Norouzirad # Website name
+baseURL: 'https://mnrzrad.github.io/'
 
 ############################
 ## LANGUAGE
@@ -51,6 +51,9 @@ taxonomies:
   author: authors
 markup:
   _merge: deep
+  goldmark:
+    renderer:
+      unsafe: true
 related:
   threshold: 80
   includeNewer: true
