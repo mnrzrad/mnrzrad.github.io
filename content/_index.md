@@ -346,6 +346,16 @@ sections:
       title: Popular Topics
     design:
       columns: '2'
+  - block: markdown
+    id: visitors
+    content:
+      title: 'Visitors'
+      text: |-
+        <div style="max-width:400px; margin:auto;">
+        <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=YOUR_CODE&cl=ffffff&w=a"></script>
+        </div>
+    design:
+      columns: '1'
   - block: contact
     id: contact
     content:
