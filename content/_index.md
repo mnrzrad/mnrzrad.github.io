@@ -352,7 +352,7 @@ sections:
       title: 'Visitors'
       text: |-
         <div style="max-width:400px; margin:auto;">
-        <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=YOUR_CODE&cl=ffffff&w=a"></script>
+       <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=7LBfNrwxqZvD5nWlBbUevm4oxI7rdTlBGAaK5Thgl3Y&cl=ffffff&w=a"></script>
         </div>
     design:
       columns: '1'
