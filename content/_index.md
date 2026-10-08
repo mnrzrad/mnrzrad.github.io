@@ -346,13 +346,14 @@ sections:
       title: Popular Topics
     design:
       columns: '2'
-  - block: markdown
+    - block: markdown
     id: visitors
     content:
       title: 'Visitors'
       text: |-
         <div style="max-width:400px; margin:auto;">
-      <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=7LBfNrwxqZvD5nWlBbUevm4oxI7rdTlBGAaK5Thgl3Y&cl=ffffff&w=a"></script>  </div>
+        <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=7LBfNrwxqZvD5nWlBbUevm4oxI7rdTlBGAaK5Thgl3Y&cl=ffffff&w=a"></script>
+        </div>
     design:
       columns: '1'
   - block: contact
