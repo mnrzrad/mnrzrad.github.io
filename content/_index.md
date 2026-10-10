@@ -363,9 +363,7 @@ sections:
     content:
       title: 'Visitors'
       text: |-
-        <div style="max-width:400px; margin:auto;">
-        <script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=LrPaIbiepFdkBLmit-ZmuMg81xTHLEi7OJRKvyIR9I4"></script>
-        </div>
+        <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=7LBfNrwxqZvD5nWlBbUevm4oxI7rdTlBGAaK5Thgl3Y&cl=ffffff&w=a"></script>
     design:
       columns: '1'
   - block: contact
