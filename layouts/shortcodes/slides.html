@@ -1,0 +1,9 @@
+{{/* Shows a slide PDF from the page's folder, e.g. {{< slides "slides-en.pdf" >}}. Shows nothing until the file is added. */}}
+{{- with .Page.Resources.GetMatch (.Get 0) -}}
+<div class="rbm-slides" style="margin: 1.5rem 0;">
+  <object data="{{ .RelPermalink }}" type="application/pdf" style="width: 100%; aspect-ratio: 16 / 10; border: 1px solid #ddd; border-radius: 8px;">
+    <a href="{{ .RelPermalink }}">{{ .Name }}</a>
+  </object>
+  <p style="margin-top: 0.5rem;"><a href="{{ .RelPermalink }}" download>⬇ PDF</a></p>
+</div>
+{{- end -}}

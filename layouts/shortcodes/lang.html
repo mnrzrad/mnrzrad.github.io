@@ -1,0 +1,5 @@
+{{/* Wraps content in one language: {{< lang en >}} ... {{< /lang >}} or {{< lang fa >}} ... {{< /lang >}} */}}
+{{- $l := .Get 0 | default "en" -}}
+<div class="rbm-lang rbm-lang-{{ $l }}" lang="{{ $l }}"{{ if eq $l "fa" }} dir="rtl"{{ end }}>
+{{ .Inner | .Page.RenderString (dict "display" "block") }}
+</div>

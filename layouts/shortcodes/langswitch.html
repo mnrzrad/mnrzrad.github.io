@@ -1,0 +1,35 @@
+{{/* Language switch for bilingual pages. English is the default; ?lang=fa opens the Persian version. */}}
+<div class="rbm-switch" role="group" aria-label="Language">
+  <button type="button" data-rbm-lang="en" aria-pressed="true">English</button>
+  <button type="button" data-rbm-lang="fa" aria-pressed="false" lang="fa">فارسی</button>
+</div>
+<style>
+  .rbm-switch { display: inline-flex; gap: 0; margin: 0.5rem 0 1.5rem; border: 1px solid #9A4F1F; border-radius: 999px; overflow: hidden; }
+  .rbm-switch button { border: 0; background: transparent; color: #9A4F1F; padding: 0.35rem 1.1rem; font-size: 0.95rem; cursor: pointer; }
+  .rbm-switch button[aria-pressed="true"] { background: #9A4F1F; color: #fff; }
+  .rbm-lang-fa { display: none; }
+  body.rbm-fa .rbm-lang-fa { display: block; }
+  body.rbm-fa .rbm-lang-en { display: none; }
+  .rbm-lang-fa { direction: rtl; text-align: right; font-family: Vazirmatn, Tahoma, sans-serif; line-height: 1.9; }
+  .rbm-lang-fa blockquote { border-left: 0; border-right: 0.25rem solid #ccc; padding-left: 0; padding-right: 1.25rem; }
+  .rbm-lang-fa ul, .rbm-lang-fa ol { padding-left: 0; padding-right: 1.5rem; }
+</style>
+<script>
+  (function () {
+    function setLang(lang) {
+      document.body.classList.toggle('rbm-fa', lang === 'fa');
+      document.querySelectorAll('[data-rbm-lang]').forEach(function (b) {
+        b.setAttribute('aria-pressed', b.getAttribute('data-rbm-lang') === lang ? 'true' : 'false');
+      });
+      try { localStorage.setItem('rbm-lang', lang); } catch (e) {}
+    }
+    var lang = 'en';
+    var fromUrl = new URLSearchParams(window.location.search).get('lang');
+    if (fromUrl === 'fa' || fromUrl === 'en') { lang = fromUrl; }
+    else { try { if (localStorage.getItem('rbm-lang') === 'fa') { lang = 'fa'; } } catch (e) {} }
+    document.querySelectorAll('[data-rbm-lang]').forEach(function (b) {
+      b.addEventListener('click', function () { setLang(b.getAttribute('data-rbm-lang')); });
+    });
+    setLang(lang);
+  })();
+</script>
