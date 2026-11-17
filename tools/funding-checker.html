@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Funding Acknowledgement Checker</title>
+<style>
+  :root{
+    --bg:#fafaf8; --card:#ffffff; --ink:#1d2327; --muted:#5f6b73; --line:#dfe3e6;
+    --accent:#1f5fa8; --accent-ink:#ffffff; --yes:#17794a; --yes-bg:#e3f4ea;
+    --no:#a23a2a; --no-bg:#fbe9e5; --unk:#7a6a1c; --unk-bg:#f7f0cf; --warn-bg:#fff4d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#14171a; --card:#1c2024; --ink:#e7eaec; --muted:#98a3ab; --line:#2f353b;
+      --accent:#6aa6e8; --accent-ink:#0b1c30; --yes:#6fd3a0; --yes-bg:#173626;
+      --no:#f2a394; --no-bg:#3b1e19; --unk:#e6d37a; --unk-bg:#3a3414; --warn-bg:#3a3414; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  main{max-width:1100px;margin:0 auto;padding:28px 18px 64px}
+  h1{font-size:1.6rem;margin:0 0 4px}
+  .lead{color:var(--muted);margin:0 0 20px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px;margin-bottom:18px}
+  details.card summary{cursor:pointer;font-weight:600}
+  label{display:block;font-weight:600;margin:12px 0 4px}
+  textarea,input[type=text],input[type=email]{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font:inherit}
+  textarea{min-height:84px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.9rem}
+  .hint{color:var(--muted);font-size:.88rem;margin:4px 0 0}
+  .tabs{display:flex;gap:6px;margin-bottom:-1px}
+  .tab{padding:9px 16px;border:1px solid var(--line);border-bottom:none;border-radius:8px 8px 0 0;background:transparent;color:var(--muted);cursor:pointer;font:inherit}
+  .tab[aria-selected=true]{background:var(--card);color:var(--ink);font-weight:600}
+  .panel{border:1px solid var(--line);border-radius:0 10px 10px 10px;background:var(--card);padding:18px}
+  .drop{border:2px dashed var(--line);border-radius:10px;padding:26px;text-align:center;cursor:pointer;color:var(--muted);transition:.15s}
+  .drop:hover,.drop.over{border-color:var(--accent);color:var(--ink);background:var(--bg)}
+  .drop strong{color:var(--ink)}
+  button.btn{background:var(--accent);color:var(--accent-ink);border:0;border-radius:6px;padding:8px 14px;font:inherit;font-weight:600;cursor:pointer}
+  button.btn.secondary{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+  button.btn:disabled{opacity:.5;cursor:not-allowed}
+  .bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:14px 0 6px}
+  progress{width:220px;height:10px}
+  .status{color:var(--muted);font-size:.92rem;min-height:1.4em}
+  .msg{background:var(--warn-bg);border-radius:6px;padding:8px 12px;margin:10px 0;font-size:.92rem}
+  .summary{display:flex;gap:14px;flex-wrap:wrap;margin:14px 0}
+  .stat{border:1px solid var(--line);border-radius:8px;padding:8px 14px;min-width:120px}
+  .stat b{display:block;font-size:1.3rem}
+  .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
+  table{border-collapse:collapse;width:100%;font-size:.88rem}
+  th,td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+  th{background:var(--bg);position:sticky;top:0;white-space:nowrap}
+  td.wrap{min-width:220px;max-width:420px;word-break:break-word}
+  .pill{display:inline-block;padding:1px 9px;border-radius:99px;font-weight:600;font-size:.8rem}
+  .pill.Yes{background:var(--yes-bg);color:var(--yes)}
+  .pill.No{background:var(--no-bg);color:var(--no)}
+  .pill.Unknown{background:var(--unk-bg);color:var(--unk)}
+  .snip{color:var(--muted);font-size:.82rem}
+  footer{color:var(--muted);font-size:.85rem;margin-top:26px}
+  .hidden{display:none}
+</style>
+</head>
+<body>
+<main>
+  <h1>Funding Acknowledgement Checker</h1>
+  <p class="lead">Find out which project grants a paper acknowledges. Upload PDFs, or upload a spreadsheet / CSV containing DOIs, and download the result as CSV.</p>
+
+  <details class="card">
+    <summary>Settings: grants to look for</summary>
+    <label for="codes">Grant codes (one per line)</label>
+    <textarea id="codes" spellcheck="false">UID/00297/2025
+UID/PRR/00297/2025
+UID/PRR2/00297/2025</textarea>
+    <p class="hint">Matching ignores spaces around “/”, line breaks and the doi.org form (e.g. 10.54499/UID/PRR/00297/2025). Any other UID-type code found in a paper is reported separately.</p>
+    <label style="display:flex;gap:8px;align-items:center;font-weight:600"><input type="checkbox" id="use-proxy" checked> Also read the publisher page (https://doi.org/…) for the funding statement</label>
+    <textarea id="proxy-url" spellcheck="false" style="min-height:70px">https://r.jina.ai/{raw}
+https://api.allorigins.win/raw?url=
+https://api.codetabs.com/v1/proxy?quest=</textarea>
+    <p class="hint">Browsers block reading publisher websites directly, so pages are fetched through public CORS proxies, tried in order (one per line; they only see the public paper URL). In a line, <code>{url}</code> is replaced by the URL-encoded page address and <code>{raw}</code> by the plain address (otherwise the encoded address is appended). Best option: your own free Cloudflare Worker (see proxy-worker.js), e.g. <code>https://yourname.workers.dev/?url={url}</code>, placed on the first line. Clear the box to try direct access only. You can always click a row's website link to look yourself.</p>
+    <label for="email">Your email (optional, used only for the “polite pool” of the Crossref / OpenAlex APIs)</label>
+    <input type="email" id="email" placeholder="name@example.org" autocomplete="email">
+  </details>
+
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" id="tab-pdf" aria-selected="true" aria-controls="panel-pdf">PDF files</button>
+    <button class="tab" role="tab" id="tab-sheet" aria-selected="false" aria-controls="panel-sheet">DOIs: spreadsheet, CSV or paste</button>
+  </div>
+
+  <!-- PDF PANEL -->
+  <section class="panel" id="panel-pdf" role="tabpanel" aria-labelledby="tab-pdf">
+    <div class="drop" id="drop-pdf" tabindex="0" role="button" aria-label="Choose PDF files">
+      <strong>Drop one or more PDFs here</strong> or click to choose<br>
+      <span class="hint">Text is extracted in your browser. Nothing is uploaded anywhere.</span>
+    </div>
+    <input type="file" id="file-pdf" accept="application/pdf,.pdf" multiple class="hidden">
+    <div class="status" id="status-pdf" role="status" aria-live="polite"></div>
+    <div id="out-pdf"></div>
+  </section>
+
+  <!-- SHEET PANEL -->
+  <section class="panel hidden" id="panel-sheet" role="tabpanel" aria-labelledby="tab-sheet">
+    <div class="drop" id="drop-sheet" tabindex="0" role="button" aria-label="Choose spreadsheet or CSV">
+      <strong>Drop an Excel (.xlsx/.xls) or CSV file here</strong> or click to choose<br>
+      <span class="hint">DOIs are found anywhere in any cell, including inside full citation text.</span>
+    </div>
+    <input type="file" id="file-sheet" accept=".xlsx,.xls,.csv,.tsv,.txt" class="hidden">
+    <label for="paste-dois">…or paste DOIs here</label>
+    <textarea id="paste-dois" spellcheck="false" placeholder="10.1007/978-3-032-30518-3_17&#10;https://doi.org/10.3934/dcds.2026.105521"></textarea>
+    <p class="hint">One per line, or any text containing DOIs or doi.org links.</p>
+    <div class="bar"><button class="btn" id="btn-paste">Check pasted DOIs</button></div>
+    <div class="status" id="status-sheet" role="status" aria-live="polite"></div>
+    <div id="out-sheet"></div>
+  </section>
+
+  <footer>
+    Everything runs in your browser. For the spreadsheet mode, only the DOIs are sent to the public
+    Crossref, OpenAlex and Europe PMC APIs. Papers behind a paywall usually have no readable acknowledgement
+    online; those rows are marked so you can upload the PDF to confirm.
+  </footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script>
+// <core>
+// ---------- Pure functions (no DOM) ----------
+function normalizeText(s){
+  return String(s||'')
+    .normalize('NFKC')
+    .replace(/[­​-‍﻿]/g,'')      // soft hyphen, zero-width chars
+    .replace(/[‐-―−]/g,'-')            // dash variants -> hyphen
+    .replace(/⁄|∕|／/g,'/')             // fraction/division slash variants -> /
+    .replace(/[  -  ]/g,' ');
+}
+function escapeRe(s){ return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'); }
+function codeRegex(code,flags){
+  const parts = code.trim().split('/').map(p=>escapeRe(p.trim()));
+  return new RegExp(parts.join('\\s*\\/\\s*') + '(?![0-9])', flags||'i');
+}
+function parseCodes(text){
+  const seen=new Set(), out=[];
+  String(text||'').split(/\r?\n/).map(l=>l.trim()).filter(Boolean).forEach(c=>{
+    if(!seen.has(c.toUpperCase())){ seen.add(c.toUpperCase()); out.push({label:c, code:c, re:codeRegex(c,'i')}); }
+  });
+  return out;
+}
+const OTHER_RE = /UID[A-Z0-9]{0,4}\s*\/\s*(?:PRR2?\s*\/\s*)?\d{5}\s*\/\s*\d{4}(?![0-9])/gi;
+function canonCode(s){ return s.replace(/\s+/g,'').toUpperCase(); }
+
+function detectFunds(rawText, funds){
+  const text = normalizeText(rawText);
+  const compactText = text.replace(/\s+/g,'').toLowerCase();
+  const hits = {}, snippets = [];
+  funds.forEach(f=>{
+    const m = f.re.exec(text);
+    let found = !!m;
+    if(!found){ // fallback: whitespace removed (PDF text split oddly)
+      found = compactText.includes(f.code.replace(/\s+/g,'').toLowerCase()) &&
+              new RegExp(escapeRe(f.code.replace(/\s+/g,'').toLowerCase())+'(?![0-9])').test(compactText);
+    }
+    hits[f.label] = found;
+    if(m){
+      const a = Math.max(0, m.index-110), b = Math.min(text.length, m.index+m[0].length+110);
+      snippets.push(text.slice(a,b).replace(/\s+/g,' ').trim());
+    }
+  });
+  const known = new Set(funds.map(f=>canonCode(f.code)));
+  const others = new Set();
+  let mm; OTHER_RE.lastIndex = 0;
+  while((mm = OTHER_RE.exec(text))){ const c = canonCode(mm[0]); if(!known.has(c)) others.add(c); }
+  const fct = /Funda[cç][aã]o\s+para\s+a\s+Ci[eê]ncia\s+e\s+(?:a\s+)?Tecnologia|\bFCT\b/i.test(text);
+  return { hits, snippet: snippets[0]||'', others:[...others], fct };
+}
+
+function cleanDoi(d){
+  d = d.replace(/[.,;:'"\]}]+$/,'');
+  while(d.endsWith(')') && (d.match(/\(/g)||[]).length < (d.match(/\)/g)||[]).length) d = d.slice(0,-1);
+  return d.replace(/[.,;:]+$/,'');
+}
+function extractDois(text){
+  const re = /\b10\.\d{4,9}\/[^\s"'<>\[\]{}|\\^`]+/g;
+  const out = []; const seen = new Set();
+  String(text||'').replace(/ /g,' ').replace(re, m=>{
+    const d = cleanDoi(m);
+    const k = d.toLowerCase();
+    if(d.length>8 && !seen.has(k)){ seen.add(k); out.push(d); }
+    return m;
+  });
+  return out;
+}
+const GRANT_DOI_PREFIX = '10.54499/';   // FCT grant DOIs, not paper DOIs
+
+function csvCell(v){
+  let s = (v===null||v===undefined) ? '' : String(v);
+  if(/^[=+\-@\t\r]/.test(s)) s = "'" + s;          // neutralise spreadsheet formulas
+  return /[",\n\r]/.test(s) ? '"'+s.replace(/"/g,'""')+'"' : s;
+}
+function toCsv(columns, rows){
+  const head = columns.map(c=>csvCell(c.title)).join(',');
+  const body = rows.map(r=>columns.map(c=>csvCell(c.get(r))).join(','));
+  return [head, ...body].join('\r\n');
+}
+// </core>
+
+// ---------- Browser-only code ----------
+const $ = id => document.getElementById(id);
+function el(tag, attrs, ...kids){
+  const e = document.createElement(tag);
+  for(const [k,v] of Object.entries(attrs||{})){
+    if(k==='class') e.className=v; else if(k==='text') e.textContent=v;
+    else if(k.startsWith('on')) e.addEventListener(k.slice(2), v); else e.setAttribute(k,v);
+  }
+  kids.flat().forEach(k=>{ if(k!=null) e.append(k.nodeType? k : document.createTextNode(k)); });
+  return e;
+}
+function libsOk(){
+  const miss=[]; if(typeof pdfjsLib==='undefined') miss.push('pdf.js'); if(typeof XLSX==='undefined') miss.push('SheetJS');
+  return miss;
+}
+if(typeof pdfjsLib!=='undefined'){
+  // Worker script is also loaded as a normal <script> (defines pdfjsWorker), so if the browser or
+  // preview pane blocks Web Workers, pdf.js transparently parses on the main thread instead.
+  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+}
+
+async function pdfToText(buf){
+  const pdf = await pdfjsLib.getDocument({data:buf}).promise;
+  const pages=[];
+  for(let i=1;i<=pdf.numPages;i++){
+    const tc = await (await pdf.getPage(i)).getTextContent();
+    pages.push(tc.items.map(it=>it.str + (it.hasEOL?'\n':' ')).join(''));
+  }
+  let title=''; try{ const m=await pdf.getMetadata(); title=(m&&m.info&&m.info.Title)||''; }catch(e){}
+  if(/^(microsoft|untitled|\s*$)/i.test(title) || /\.(docx?|tex|pdf|dvi)$/i.test(title)) title='';
+  return { text: pages.join('\n'), pages: pdf.numPages, title: title.trim() };
+}
+
+// ---------- Tabs ----------
+['pdf','sheet'].forEach(n=>{
+  $('tab-'+n).addEventListener('click',()=>{
+    ['pdf','sheet'].forEach(m=>{
+      $('tab-'+m).setAttribute('aria-selected', m===n);
+      $('panel-'+m).classList.toggle('hidden', m!==n);
+    });
+  });
+});
+function wireDrop(zone, input, handler){
+  zone.addEventListener('click',()=>input.click());
+  zone.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); input.click(); }});
+  ['dragenter','dragover'].forEach(ev=>zone.addEventListener(ev,e=>{e.preventDefault(); zone.classList.add('over');}));
+  ['dragleave','drop'].forEach(ev=>zone.addEventListener(ev,e=>{e.preventDefault(); zone.classList.remove('over');}));
+  zone.addEventListener('drop',e=>handler([...e.dataTransfer.files]));
+  input.addEventListener('change',()=>{ handler([...input.files]); input.value=''; });
+}
+
+// ---------- Shared result handling ----------
+function newRow(funds){
+  const hits={}; funds.forEach(f=>hits[f.label]='Unknown');
+  return { src:'', doi:'', title:'', ref:'', hits, others:[], fct:false, sources:[], snippet:'', status:'', fullText:false, note:'' };
+}
+function absorb(row, funds, text, sourceName, isFullText){
+  const d = detectFunds(text, funds);
+  funds.forEach(f=>{ if(d.hits[f.label]) row.hits[f.label]='Yes'; });
+  d.others.forEach(o=>{ if(!row.others.includes(o)) row.others.push(o); });
+  row.fct = row.fct || d.fct;
+  if(d.snippet && !row.snippet) row.snippet = d.snippet;
+  if(!row.sources.includes(sourceName)) row.sources.push(sourceName);
+  if(isFullText) row.fullText = true;
+  return d;
+}
+function finalise(row, funds){
+  if(row.fullText) funds.forEach(f=>{ if(row.hits[f.label]==='Unknown') row.hits[f.label]='No'; });
+}
+function anyFound(row){
+  const v = Object.values(row.hits);
+  if(v.includes('Yes')) return 'Yes';
+  return v.every(x=>x==='No') ? 'No' : 'Unknown';
+}
+function columnsFor(funds){
+  return [
+    {title:'Title', get:r=>r.title},
+    {title:'DOI', get:r=>r.doi},
+    {title:'Website', get:r=>r.doi?'https://doi.org/'+r.doi:''},
+    ...funds.map(f=>({title:f.label, get:r=>r.hits[f.label]})),
+    {title:'Any listed grant', get:r=>anyFound(r)},
+    {title:'Other UID-type codes', get:r=>r.others.join('; ')},
+    {title:'FCT mentioned', get:r=>r.fct?'Yes':'No'},
+    {title:'Evidence from', get:r=>r.sources.join('; ')},
+    {title:'Status', get:r=>r.status},
+    {title:'Evidence snippet', get:r=>r.snippet},
+    {title:'Reference (from input)', get:r=>r.ref},
+    {title:'Input row / file', get:r=>r.src},
+  ];
+}
+function download(name, csv){
+  const blob = new Blob(['﻿'+csv],{type:'text/csv;charset=utf-8'});
+  const a = el('a',{href:URL.createObjectURL(blob), download:name});
+  document.body.append(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(a.href),2000);
+}
+function downloadXlsx(name, columns, rows){
+  const aoa = [columns.map(c=>c.title), ...rows.map(r=>columns.map(c=>{ const v=c.get(r); return v==null?'':String(v); }))];
+  const ws = XLSX.utils.aoa_to_sheet(aoa);
+  ws['!cols'] = columns.map(c=>({wch: /snippet|Reference|Title/.test(c.title)?60:(/Status|Input|Website/.test(c.title)?32:20)}));
+  const wb = XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb, ws, 'Funding');
+  XLSX.writeFile(wb, name);
+}
+function renderResults(container, state, extra){
+  container.replaceChildren();
+  const {rows, funds} = state;
+  if(!rows.length) return;
+  const count = v => rows.filter(r=>anyFound(r)===v).length;
+  container.append(el('div',{class:'summary'},
+    el('div',{class:'stat'},el('b',{text:String(rows.length)}),'papers'),
+    el('div',{class:'stat'},el('b',{text:String(count('Yes'))}),'with a listed grant'),
+    el('div',{class:'stat'},el('b',{text:String(count('No'))}),'confirmed without'),
+    el('div',{class:'stat'},el('b',{text:String(count('Unknown'))}),'unverified')));
+  container.append(el('div',{class:'bar'},
+    el('button',{class:'btn',onclick:()=>download(state.filename, toCsv(columnsFor(funds), rows))},'Download CSV'),
+    el('button',{class:'btn',onclick:()=>downloadXlsx(state.filename.replace(/\.csv$/,'.xlsx'), columnsFor(funds), rows)},'Download Excel'),
+    extra||null));
+  const cols = columnsFor(funds);
+  const th = el('tr',{}, ...cols.slice(0,-2).map(c=>el('th',{text:c.title})), state.attach?el('th',{text:'Action'}):null);
+  const body = rows.map(r=>{
+    const tds = cols.slice(0,-2).map(c=>{
+      const v = c.get(r);
+      if(['Yes','No','Unknown'].includes(v) && c.title!=='FCT mentioned') return el('td',{},el('span',{class:'pill '+v,text:v}));
+      const wrap = ['Title','Evidence snippet','Status'].includes(c.title);
+      return el('td',{class:wrap?'wrap':''}, c.title==='Evidence snippet'? el('span',{class:'snip',text:v}) : (c.title==='Website'&&v ? el('a',{href:v,target:'_blank',rel:'noopener noreferrer'},'Open') : v));
+    });
+    if(state.attach) tds.push(el('td',{}, r.fullText?'':el('button',{class:'btn secondary',onclick:()=>state.attach(r)},'Attach PDF')));
+    return el('tr',{},...tds);
+  });
+  container.append(el('div',{class:'tablewrap'},el('table',{},el('thead',{},th),el('tbody',{},...body))));
+}
+
+// ---------- PDF tab ----------
+const pdfState = {rows:[], funds:[], filename:'funding-from-pdfs.csv'};
+wireDrop($('drop-pdf'), $('file-pdf'), async files=>{
+  const miss=libsOk(); if(miss.length){ $('status-pdf').textContent='Could not load: '+miss.join(', ')+'. Check your connection.'; return; }
+  files = files.filter(f=>/pdf$/i.test(f.name)||f.type==='application/pdf');
+  if(!files.length) return;
+  const funds = parseCodes($('codes').value); pdfState.funds=funds; pdfState.rows=[];
+  for(let i=0;i<files.length;i++){
+    $('status-pdf').textContent = `Reading ${i+1}/${files.length}: ${files[i].name}`;
+    const row = newRow(funds); row.src = files[i].name; row.title = files[i].name.replace(/\.pdf$/i,'');
+    try{
+      const {text,pages,title} = await pdfToText(await files[i].arrayBuffer());
+      row.title = title || files[i].name.replace(/\.pdf$/i,'');
+      if(text.replace(/\s/g,'').length<200){ row.status='No text layer found (scanned PDF?)'; }
+      else{
+        absorb(row,funds,text,'uploaded PDF',true);
+        const dois = extractDois(text).filter(d=>!d.startsWith(GRANT_DOI_PREFIX));
+        row.doi = dois[0]||''; row.status = `Full text checked (${pages} pages)`;
+      }
+    }catch(e){ row.status='Could not read PDF: '+(e.message||e); }
+    finalise(row,funds); pdfState.rows.push(row);
+    renderResults($('out-pdf'), pdfState);
+  }
+  $('status-pdf').textContent = `Done: ${files.length} file(s).`;
+});
+
+// ---------- Spreadsheet tab ----------
+const sheetState = {rows:[], funds:[], filename:'funding-from-dois.csv', attach:null};
+let stopFlag=false;
+
+async function getJson(url, tries=3){
+  for(let t=0;t<tries;t++){
+    const ctl = new AbortController(); const to = setTimeout(()=>ctl.abort(),20000);
+    try{
+      const r = await fetch(url,{signal:ctl.signal, headers:{'Accept':'application/json'}});
+      clearTimeout(to);
+      if(r.status===404) return null;
+      if(r.status===429 || r.status>=500){ await new Promise(s=>setTimeout(s,1200*(t+1))); continue; }
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return await r.json();
+    }catch(e){ clearTimeout(to); if(t===tries-1) throw e; await new Promise(s=>setTimeout(s,800)); }
+  }
+  return null;
+}
+
+function guessTitle(ref){ const m=String(ref||'').match(/\(\s*\d{4}\s*\)\.\s*(.+?)\.\s/); return m?m[1].trim():''; }
+function pageCandidates(doi){
+  const c=[];
+  if(/^10\.1007\//i.test(doi)) c.push('https://link.springer.com/'+(/^10\.1007\/978/i.test(doi)?'chapter/':'article/')+doi);
+  c.push('https://doi.org/'+doi);
+  return c;
+}
+async function fetchOne(u){
+  const ctl=new AbortController(); const to=setTimeout(()=>ctl.abort(),18000);
+  try{
+    const r=await fetch(u,{signal:ctl.signal,redirect:'follow'}); clearTimeout(to);
+    if(!r.ok) return '';
+    const t=await r.text();
+    return (t.length>1500 && !/^\s*\{/.test(t)) ? t : '';
+  }catch(e){ clearTimeout(to); return ''; }
+}
+async function fetchPage(doi, proxies){
+  for(const url of pageCandidates(doi)){
+    if(!proxies.length){ const t=await fetchOne(url); if(t) return t; continue; }
+    for(const px of proxies){
+      const u = px.includes('{raw}') ? px.replace('{raw}',url) : px.includes('{url}') ? px.replace('{url}',encodeURIComponent(url)) : px+encodeURIComponent(url);
+      const t=await fetchOne(u); if(t) return t;
+    }
+  }
+  return '';
+}
+function pageToText(html){
+  if(!/<html|<!doctype|<body/i.test(html.slice(0,3000))){   // plain text / markdown (e.g. from r.jina.ai)
+    const tm=html.match(/^Title:\s*(.+)$/m);
+    const sections=[]; const re=/^\s*#{0,6}\s*(?:Acknowledg\w*|Funding|Financial support)\s*$/gim; let m;
+    while((m=re.exec(html))){ sections.push(html.slice(m.index, m.index+700).replace(/\s+/g,' ').trim()); }
+    return {title: tm?tm[1].trim():'', text: html, sections};
+  }
+  const d=new DOMParser().parseFromString(html,'text/html');
+  const meta=n=>{const e=d.querySelector(`meta[name="${n}"],meta[property="${n}"]`); return e?e.content:'';};
+  const title=(meta('citation_title')||meta('og:title')||d.title||'').trim();
+  const metas=[...d.querySelectorAll('meta')].map(m=>m.content||'').join(' ');
+  d.querySelectorAll('script,style,noscript').forEach(n=>n.remove());
+  // Acknowledgements / Funding sections (what the publisher page shows under those headings)
+  const sections=[];
+  d.querySelectorAll('h1,h2,h3,h4').forEach(hd=>{
+    if(/^\s*(acknowledg|funding|financial support)/i.test(hd.textContent)){
+      const box=hd.closest('section')||hd.parentElement;
+      const t=(box?box.textContent:hd.textContent).replace(/\s+/g,' ').trim();
+      if(t) sections.push(t.slice(0,700));
+    }
+  });
+  return {title, text:(d.body?d.body.textContent:'')+' '+metas, sections};
+}
+async function testConnections(proxies){
+  const probe = async(name,url)=>{
+    const ctl=new AbortController(); const to=setTimeout(()=>ctl.abort(),10000);
+    try{ const r=await fetch(url,{signal:ctl.signal}); clearTimeout(to); return {name, ok:true, text:`${name}: reachable (HTTP ${r.status})`}; }
+    catch(e){ clearTimeout(to); return {name, ok:false, text:`${name}: BLOCKED or offline (${e.name==='AbortError'?'timeout':(e.message||e)})`}; }
+  };
+  const target='https://link.springer.com/chapter/10.1007/978-3-032-30518-3_17', enc=encodeURIComponent(target);
+  return Promise.all([
+    probe('Crossref','https://api.crossref.org/works/10.1007/978-3-032-30518-3_17?rows=0'),
+    probe('OpenAlex','https://api.openalex.org/works/doi:10.1007/978-3-032-30518-3_17?select=id'),
+    ...proxies.map((px,i)=>probe('Proxy '+(i+1)+' ('+px.replace(/^https?:\/\//,'').split('/')[0]+')', px.includes('{raw}')?px.replace('{raw}',target):px.includes('{url}')?px.replace('{url}',enc):px+enc))
+  ]);
+}
+async function lookupDoi(row, funds, email){
+  const errs=[];
+  const enc = encodeURIComponent(row.doi);
+  const mail = email ? '&mailto='+encodeURIComponent(email) : '';
+  let failures = 0, answered = 0, oaPdf = '';
+  // 1) Crossref: funder/award metadata
+  try{
+    const j = await getJson(`https://api.crossref.org/works/${row.doi.split('/').map(encodeURIComponent).join('/')}?${mail.slice(1)}`);
+    if(j && j.message){ answered++;
+      const m=j.message;
+      row.title = (m.title&&m.title[0])||row.title;
+      const aw = (m.funder||[]).map(f=>`${f.name||''} ${(f.award||[]).join(' ')}`).join(' | ');
+      if(aw.trim()){ const d=absorb(row,funds,aw,'Crossref funder metadata',false);
+        if(!d.snippet && aw) row.snippet = row.snippet || ('Crossref funders: '+aw.slice(0,220)); }
+    }
+  }catch(e){ failures++; errs.push('Crossref: '+(e.message||e)); }
+  // 2) OpenAlex: grants + open-access location
+  try{
+    const j = await getJson(`https://api.openalex.org/works/doi:${enc}?select=title,grants,best_oa_location,open_access${mail?'&mailto='+encodeURIComponent(email):''}`);
+    if(j){ answered++;
+      row.title = row.title || j.title || '';
+      const g = (j.grants||[]).map(x=>`${x.funder_display_name||''} ${x.award_id||''}`).join(' | ');
+      if(g.trim()) absorb(row,funds,g,'OpenAlex grants',false);
+      oaPdf = (j.best_oa_location&&j.best_oa_location.pdf_url) || '';
+    }
+  }catch(e){ failures++; errs.push('OpenAlex: '+(e.message||e)); }
+  // 3) Europe PMC full text (open-access biomedical papers)
+  try{
+    const j = await getJson(`https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=${encodeURIComponent('DOI:"'+row.doi+'"')}&resultType=core&format=json`);
+    const rec = j && j.resultList && j.resultList.result && j.resultList.result[0];
+    if(rec){ answered++;
+      if(rec.grantsList&&rec.grantsList.grant){
+        const g = rec.grantsList.grant.map(x=>`${x.agency||''} ${x.grantId||''}`).join(' | ');
+        absorb(row,funds,g,'Europe PMC grants',false);
+      }
+      if(rec.pmcid && rec.isOpenAccess==='Y'){
+        const r = await fetch(`https://www.ebi.ac.uk/europepmc/webservices/rest/${rec.pmcid}/fullTextXML`);
+        if(r.ok){ const doc = new DOMParser().parseFromString(await r.text(),'text/xml');
+          absorb(row,funds,doc.documentElement.textContent,'Europe PMC full text',true); }
+      }
+    }
+  }catch(e){ failures++; errs.push('Europe PMC: '+(e.message||e)); }
+  // 4) Open-access PDF (works only when the host allows cross-origin reads)
+  if(!row.fullText && oaPdf){
+    try{
+      const r = await fetch(oaPdf);
+      if(r.ok){ const buf = await r.arrayBuffer();
+        if(buf.byteLength<30e6 && new TextDecoder().decode(buf.slice(0,5))==='%PDF-'){
+          const {text}=await pdfToText(buf);
+          if(text.replace(/\s/g,'').length>200) absorb(row,funds,text,'open-access PDF',true);
+        }
+      }
+    }catch(e){ /* blocked by CORS: fall through to manual upload */ }
+  }
+  // 5) Publisher landing page (https://doi.org/<DOI>): funding statements are often shown there
+  let pageRead=false;
+  if(!row.fullText){
+    const proxies = $('use-proxy').checked ? $('proxy-url').value.split(/\r?\n/).map(s=>s.trim()).filter(Boolean) : [];
+    const html = await fetchPage(row.doi, proxies);
+    if(html){ pageRead=true; const pg=pageToText(html);
+      if(pg.title && (!row.title || row.title===guessTitle(row.ref))) row.title=pg.title;
+      // an Acknowledgements/Funding section was visible on the page => that statement was really checked
+      absorb(row,funds,pg.text,'publisher website',pg.sections.length>0);
+      if(pg.sections.length) row.snippet = pg.sections.join(' | ').slice(0,600);
+    }
+  }
+  finalise(row,funds);
+  const any = anyFound(row)==='Yes';
+  if(row.fullText) row.status = (row.sources.includes('publisher website') && !row.sources.some(s=>/full text|PDF/.test(s)))
+      ? 'Checked on publisher website (acknowledgements section)' : 'Full text checked';
+  else if(answered===0 && !pageRead) row.status = (errs.length? 'Could not reach the databases ('+errs[0]+')' : 'DOI not found in public databases') + ': upload the PDF';
+  else if(any) row.status='Found online (metadata / publisher page); upload PDF to double-check';
+  else row.status = (pageRead?'Publisher page read but no acknowledgements section found':'Publisher page could not be read (proxy blocked?)') + ': upload the PDF to confirm';
+}
+
+async function decodeText(file){
+  const buf = await file.arrayBuffer();
+  try{ return new TextDecoder('utf-8',{fatal:true}).decode(buf); }
+  catch(e){ return new TextDecoder('windows-1252').decode(buf); }   // CSVs saved by older Excel
+}
+async function readSheet(file){
+  const isText = /\.(csv|tsv|txt)$/i.test(file.name);
+  const wb = isText ? XLSX.read(await decodeText(file),{type:'string'}) : XLSX.read(await file.arrayBuffer(),{type:'array'});
+  const found=[]; const seen=new Map(); let noDoi=0;
+  wb.SheetNames.forEach(sn=>{
+    XLSX.utils.sheet_to_json(wb.Sheets[sn],{header:1,raw:false,defval:''}).forEach((cells,i)=>{
+      const rowText = cells.map(c=>String(c).replace(/\uFFFD/g,' ')).join(' ');
+      const ref = cells.map(c=>String(c).replace(/[\u00a0\uFFFD]/g,' ').trim()).sort((a,b)=>b.length-a.length)[0]||'';
+      const dois = extractDois(rowText).filter(d=>!d.startsWith(GRANT_DOI_PREFIX));
+      if(!dois.length){ if(rowText.trim()){ noDoi++; found.push({doi:'', src:`${sn}!row ${i+1}`, ref}); } return; }
+      dois.forEach(d=>{ const k=d.toLowerCase(); if(!seen.has(k)){ seen.set(k,1); found.push({doi:d, src:`${sn}!row ${i+1}`, ref}); } });
+    });
+  });
+  return {found, noDoi};
+}
+
+wireDrop($('drop-sheet'), $('file-sheet'), async files=>{
+  const file = files[0]; if(!file) return;
+  const miss=libsOk(); if(miss.length){ $('status-sheet').textContent='Could not load: '+miss.join(', ')+'. Check your connection.'; return; }
+  let parsed;
+  try{ parsed = await readSheet(file); }catch(e){ $('status-sheet').textContent='Could not read file: '+(e.message||e); return; }
+  await runLookup(parsed);
+});
+$('btn-paste').addEventListener('click', async()=>{
+  const dois = extractDois($('paste-dois').value).filter(d=>!d.startsWith(GRANT_DOI_PREFIX));
+  await runLookup({found: dois.map((d,i)=>({doi:d, src:'pasted DOI '+(i+1), ref:''})), noDoi:0});
+});
+async function runLookup(parsed){
+  const miss=libsOk(); if(miss.length){ $('status-sheet').textContent='Could not load: '+miss.join(', ')+'. Check your connection.'; return; }
+  const funds = parseCodes($('codes').value); const email=$('email').value.trim();
+  sheetState.funds=funds; sheetState.rows=[]; stopFlag=false;
+  const out=$('out-sheet'); out.replaceChildren();
+  const diag = el('div',{class:'msg'},'Testing connection to Crossref, OpenAlex and the proxies…'); out.append(diag);
+  const proxyList = $('use-proxy').checked ? $('proxy-url').value.split(/\r?\n/).map(s=>s.trim()).filter(Boolean) : [];
+  testConnections(proxyList).then(res=>{
+    const bad = res.filter(r=>!r.ok);
+    const inFrame = (window.self!==window.top) || location.protocol==='blob:' || location.origin==='null';
+    diag.replaceChildren(el('b',{},'Connection test'), el('br'), ...res.flatMap(r=>[r.text, el('br')]),
+      bad.length===res.length ? el('div',{}, 'No online service can be reached from this page, so nothing can be looked up automatically. '+
+        (inFrame?'This page is running inside a sandboxed preview. ':'')+
+        'Open the file directly in Chrome/Firefox (double-click it, or publish it on your website) and try again; until then, use PDF upload.') :
+      bad.length ? el('div',{}, 'Some services are blocked; the tool will use the ones that work.') : null);
+    if(!bad.length) diag.style.background='var(--yes-bg)';
+  });
+  if(!parsed.found.length){ $('status-sheet').textContent='No DOIs found in this file.'; return; }
+  const rows = parsed.found.map(f=>{ const r=newRow(funds); r.doi=f.doi; r.src=f.src; r.ref=f.ref; r.title=guessTitle(f.ref); r.status=f.doi?'Waiting…':'No DOI in this row: upload the PDF to check'; return r; });
+  sheetState.rows = rows;
+  sheetState.attach = row=>{
+    const inp = el('input',{type:'file',accept:'application/pdf'});
+    inp.addEventListener('change', async()=>{
+      if(!inp.files[0]) return; await applyPdfToRow(row, inp.files[0]); redraw();
+    }); inp.click();
+  };
+  const prog = el('progress',{max:String(rows.length), value:'0'});
+  const stopBtn = el('button',{class:'btn secondary',onclick:()=>{stopFlag=true;}},'Stop');
+  const bar = el('div',{class:'bar'},prog,stopBtn);
+  out.append(bar);
+  let done=0, next=0;
+  const redraw = ()=>{ renderResults(resultsBox, sheetState, bulkUi()); };
+  const resultsBox = el('div'); out.append(resultsBox);
+  const worker = async()=>{
+    while(next<rows.length && !stopFlag){
+      const r = rows[next++];
+      if(r.doi){ try{ await lookupDoi(r,funds,email); }catch(e){ r.status='Lookup failed: upload the PDF'; } }
+      done++; prog.value=done; $('status-sheet').textContent=`Checked ${done}/${rows.length} DOIs` + (parsed.noDoi?` (${parsed.noDoi} rows have no DOI)`:'');
+      if(done%5===0||done===rows.length) redraw();
+    }
+  };
+  await Promise.all([worker(),worker(),worker()]);
+  rows.forEach(r=>{ if(r.status==='Waiting…') r.status='Skipped (stopped)'; });
+  bar.remove(); redraw();
+  $('status-sheet').textContent = `Done: ${done}/${rows.length} DOIs checked.` + (parsed.noDoi?` ${parsed.noDoi} rows contain no DOI and need a PDF.`:'');
+}
+
+async function applyPdfToRow(row, file){
+  try{
+    const {text,title} = await pdfToText(await file.arrayBuffer());
+    if(!row.title && title) row.title=title;
+    if(text.replace(/\s/g,'').length<200){ row.note='No text layer'; row.status='Uploaded PDF has no text layer (scanned?)'; return false; }
+    // reset then re-evaluate from the real PDF, which is authoritative
+    Object.keys(row.hits).forEach(k=>row.hits[k]='Unknown'); row.others=[]; row.snippet=''; row.sources=[]; row.fullText=false;
+    absorb(row, sheetState.funds, text, 'uploaded PDF', true);
+    finalise(row, sheetState.funds); row.status='Full text checked (uploaded PDF)'; return true;
+  }catch(e){ row.status='Could not read PDF: '+(e.message||e); return false; }
+}
+
+function bulkUi(){
+  const pending = sheetState.rows.filter(r=>!r.fullText).length;
+  if(!pending) return null;
+  const inp = el('input',{type:'file',accept:'application/pdf',multiple:'multiple',class:'hidden'});
+  inp.addEventListener('change', async()=>{
+    const files=[...inp.files]; const unmatched=[]; let matched=0;
+    for(const f of files){
+      $('status-sheet').textContent='Reading '+f.name;
+      try{
+        const {text} = await pdfToText(await f.arrayBuffer());
+        const dois = extractDois(text).map(d=>d.toLowerCase());
+        const row = sheetState.rows.find(r=>!r.fullText && dois.includes(r.doi.toLowerCase()));
+        if(row && await applyPdfToRow(row,f)) matched++; else unmatched.push(f.name);
+      }catch(e){ unmatched.push(f.name); }
+    }
+    renderResults($('out-sheet').lastElementChild, sheetState, bulkUi());
+    $('status-sheet').textContent = `Matched ${matched} PDF(s) to rows by DOI.` + (unmatched.length?` No match for: ${unmatched.join(', ')}. Use the “Attach PDF” button on the right row instead.`:'');
+  });
+  return el('span',{}, el('button',{class:'btn secondary',onclick:()=>inp.click()},`Upload PDFs for the ${pending} unverified papers`), inp);
+}
+</script>
+</body>
+</html>
